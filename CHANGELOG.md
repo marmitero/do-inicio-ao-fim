@@ -15,3 +15,4 @@ Mudanças significativas do projeto. Datas em UTC.
 - Realizada revisão interna factual e narrativa v01 de `GENESIS-001`, com matriz de referências por cenas e duas correções de precisão.
 - Movido `GENESIS-001` de `SCRIPT` para `SCRIPT_REVIEW`; aprovação explícita do proprietário permanece obrigatória antes da produção.
 - Roteiro v01 de `GENESIS-001` aprovado pelo proprietário via decisão Arena para pré-produção; criado plano de teste de TTS e estado atualizado para `SCRIPT_APPROVED`.
+- Registrada audição do candidato `voice-00`, gerada uma amostra curta local ignorada pelo Git e criado plano de assets sem downloads; licença/custo de TTS permanecem pendentes.

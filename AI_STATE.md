@@ -18,12 +18,12 @@
 
 ## STATUS ATUAL
 
-- **Fase do programa:** Fundação documental e pré-produção de voz/assets do MVP.
+- **Fase do programa:** Fundação documental, teste de voz e planejamento de assets do MVP.
 - **Conteúdo ativo:** `GENESIS-001` — vídeo longo, pt-BR.
-- **Estado do conteúdo ativo:** `SCRIPT_APPROVED` (roteiro v01 aprovado pelo proprietário para pré-produção; aprovação de publicação continua pendente).
-- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, plano de teste de TTS, metadados iniciais, backlog de Shorts e registries vazios.
-- **Entregáveis inexistentes de propósito:** voz final, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação.
-- **Próximo portão:** audicionar voz masculina pt-BR, verificar licença/custo e obter aceitação do proprietário para uma amostra de voz antes da geração integral.
+- **Estado do conteúdo ativo:** `VOICE` (candidato de voz selecionado para audição e amostra curta gerada; licença/custo e aceitação longa pendentes).
+- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, plano e registro de audição de TTS, plano de assets, metadados iniciais, backlog de Shorts e registries vazios.
+- **Entregáveis inexistentes de propósito:** voz final aprovada, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. Existe apenas uma amostra curta de voz local e ignorada pelo Git.
+- **Próximo portão:** verificar licença/custo do candidato de voz, ouvir/aceitar a amostra curta e gerar uma amostra longa somente se o uso comercial/YouTube for documentado.
 
 ## OBJETIVO DO PROJETO
 
@@ -61,7 +61,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | Publicação somente manual | inegociável | proprietário retém a decisão final; pipeline bloqueia automação |
 | Nenhum asset sem registro de licença | inegociável | rastreabilidade e segurança jurídica |
 | Automação somente depois do MVP avaliado | aceita | evitar automatizar processo não validado |
-| TTS será escolhido por audição e verificação de licença/custo | em avaliação | roteiro foi aprovado; `TTS_TEST_PLAN.md` define critérios e bloqueios |
+| `voice-00` foi selecionada apenas como candidata de audição | em avaliação | amostra curta gerada; licença/custo e aprovação de amostra longa continuam pendentes |
 
 ## DECISÕES REJEITADAS / NÃO FAZER
 
@@ -88,7 +88,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | --- | --- | --- |
 | Python 3 padrão | em uso | somente para `tools/validate_catalog.py`; sem dependências externas |
 | Git | em uso | memória e histórico operacional |
-| TTS | não selecionado | avaliar licença comercial, pt-BR, voz masculina grave e portabilidade |
+| TTS | candidato de audição selecionado | `voice-00` é técnico/session-scoped; licença comercial, custo e portabilidade continuam pendentes |
 | Edição | não selecionada | escolher depois de aprovado roteiro e plano de assets |
 | Stock / música / SFX | não selecionados | validar item a item, nunca por suposição de plataforma |
 | YouTube API | não configurada | futura preparação permitida, publicação continua manual |
@@ -118,7 +118,7 @@ Produzidos apenas documentos de pré-produção do MVP:
 
 | ID | Formato | Idioma | Estado | Local |
 | --- | --- | --- | --- | --- |
-| GENESIS-001 | longo | pt-BR | SCRIPT_APPROVED | `content/long/GENESIS-001/` e `scripts/long/GENESIS-001/` |
+| GENESIS-001 | longo | pt-BR | VOICE | `content/long/GENESIS-001/` e `scripts/long/GENESIS-001/` |
 
 ## CONTEÚDOS EM PRODUÇÃO
 
@@ -127,14 +127,14 @@ Produzidos apenas documentos de pré-produção do MVP:
 - **Escopo:** narrativa dos principais movimentos de Gênesis 1–50, conectando a criação à chegada da família de Jacó ao Egito.
 - **Roteiro:** 22 cenas, 1.617 palavras aproximadas e 12:30 de plano; revisão interna v01 aplicada e roteiro aprovado pelo proprietário em 2026-09-02 UTC para pré-produção.
 - **Referências:** catalogadas por cena; brief e revisão registram limites e pontos sensíveis.
-- **Bloqueios:** nova revisão se entrar contexto externo; seleção/licença de TTS antes da geração integral; nenhum asset foi ainda pesquisado/baixado; aprovação final/publicação continuam pendentes.
+- **Bloqueios:** nova revisão se entrar contexto externo; licença/custo e aceitação longa de TTS antes da geração integral; nenhum asset foi ainda pesquisado/baixado; aprovação final/publicação continuam pendentes.
 - **Derivados previstos:** 12 oportunidades de Shorts, ainda em `IDEA`.
 
 ## BACKLOG PRIORIZADO
 
-1. **P0 — Audicionar e selecionar TTS para `GENESIS-001`.** Aplicar `TTS_TEST_PLAN.md`, verificar termos comerciais/YouTube e registrar ferramenta, voz, custo e escolha do proprietário.
-2. **P0 — Se houver alteração editorial/contexto externo, atualizar brief, roteiro e revisão.** Não avançar na geração integral até a nova decisão humana.
-3. **P1 — Criar amostra longa e obter aceitação do proprietário antes de gerar a narração completa.** Registrar licença/comercial, custo, teste de pronúncia e voz selecionada.
+1. **P0 — Verificar licença/custo do candidato `voice-00` ou substituto.** A amostra curta existe, mas não é elegível para o corte final até o uso comercial/YouTube estar documentado.
+2. **P0 — Obter aceitação do proprietário para a amostra curta e, somente após a verificação de licença, gerar amostra longa de 45–60 segundos.**
+3. **P0 — Se houver alteração editorial/contexto externo, atualizar brief, roteiro e revisão.** Não avançar na geração integral até a nova decisão humana. Registrar licença/comercial, custo, teste de pronúncia e voz selecionada.
 4. **P1 — Criar plano de assets para cenas aprovadas.** Pesquisar item a item; preencher registries antes de editar.
 5. **P1 — Produzir áudio, edição, legendas, opções de thumbnail e pacote de QA de Gênesis.**
 6. **P1 — Avaliar o MVP com dados de esforço, custo e qualidade; documentar lições.**
@@ -182,8 +182,8 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 | A — pesquisa assistida | manual assistida por documentos |
 | B — geração de roteiro | manual assistida; roteiro de Gênesis aprovado para pré-produção |
 | C — geração de cenas | manual estruturada; modelo validado no rascunho |
-| D — assets | plano/licença não iniciados operacionalmente |
-| E — TTS | plano de teste criado; audição/validação de licença pendentes |
+| D — assets | plano de necessidades criado; pesquisa/licença não iniciadas operacionalmente |
+| E — TTS | plano e audição curta concluídos; licença, custo e aceitação longa pendentes |
 | F a I — edição, legendas, thumbnail, SEO | não iniciadas operacionalmente |
 | J — pipeline completo | proibido por enquanto; depende de MVP avaliado |
 | publicação | sempre humana; não automatizar |
@@ -193,3 +193,4 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-02:** Inicializada a fundação documental, arquitetura de conteúdo, registries de assets, modelos, validador e pré-produção de `GENESIS-001`.
 - **2026-09-02:** Concluída revisão interna factual e narrativa v01 de `GENESIS-001`; aplicadas duas correções de precisão e movido o pacote para `SCRIPT_REVIEW`.
 - **2026-09-02:** Proprietário aprovou o roteiro v01 de `GENESIS-001` para pré-produção via decisão Arena; criado plano de teste de TTS e movido o pacote para `SCRIPT_APPROVED`.
+- **2026-09-02:** Proprietário escolheu `voice-00` como candidata de audição; gerada amostra curta local, criado plano de assets e movido o pacote para `VOICE`. Uso comercial/YouTube ainda não foi verificado.

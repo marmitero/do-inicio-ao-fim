@@ -4,7 +4,7 @@
 
 ## Estado atual
 
-**Fase:** fundação + pré-produção de voz/assets do MVP
+**Fase:** fundação + teste de voz e planejamento de assets do MVP
 **Marco em curso:** `GENESIS-001` — *Gênesis: Como Tudo Começou*
 **Publicação automática:** proibida. Todo vídeo precisa de aprovação explícita do proprietário.
 
@@ -51,7 +51,7 @@ O pacote editorial inicial está em:
 - [roteiro e mapa de cenas](scripts/long/GENESIS-001/SCRIPT_DRAFT.md)
 - [metadados e Shorts derivados](content/long/GENESIS-001/metadata.md)
 
-O roteiro passou por revisão interna v01 e foi aprovado pelo proprietário para **pré-produção**, estando em **`SCRIPT_APPROVED`**. Isso não autoriza publicação: voz, assets, QA e uma aprovação final explícita continuam obrigatórios.
+O roteiro passou por revisão interna v01 e foi aprovado pelo proprietário para pré-produção. O pacote está em **`VOICE`**: uma candidata de voz foi testada, mas sua licença/custo ainda não foram verificados. Isso não autoriza publicação: voz final, assets, QA e uma aprovação final explícita continuam obrigatórios.
 
 ## Segurança e mídia
 
