@@ -12,3 +12,5 @@ Mudanças significativas do projeto. Datas em UTC.
 - Criado o pacote de pré-produção `GENESIS-001`: pesquisa, outline, roteiro autoral com cenas, metadados e backlog de derivados.
 - Criados registries CSV vazios com cabeçalhos para assets, assets de IA, música e SFX; nenhum asset de mídia foi baixado ou aprovado nesta etapa.
 - Adicionada validação local sem dependências do catálogo e de manifests.
+- Realizada revisão interna factual e narrativa v01 de `GENESIS-001`, com matriz de referências por cenas e duas correções de precisão.
+- Movido `GENESIS-001` de `SCRIPT` para `SCRIPT_REVIEW`; aprovação explícita do proprietário permanece obrigatória antes da produção.

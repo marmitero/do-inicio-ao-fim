@@ -18,12 +18,12 @@
 
 ## STATUS ATUAL
 
-- **Fase do programa:** Fundação documental e pré-produção do MVP.
+- **Fase do programa:** Fundação documental e revisão de roteiro do MVP.
 - **Conteúdo ativo:** `GENESIS-001` — vídeo longo, pt-BR.
-- **Estado do conteúdo ativo:** `SCRIPT` (rascunho criado; ainda não passou por revisão factual/narrativa independente).
-- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, metadados iniciais, backlog de Shorts e registries vazios.
+- **Estado do conteúdo ativo:** `SCRIPT_REVIEW` (revisão interna factual e narrativa v01 concluída; aprovação do proprietário pendente).
+- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, metadados iniciais, backlog de Shorts e registries vazios.
 - **Entregáveis inexistentes de propósito:** voz final, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação.
-- **Próximo portão:** revisão factual do roteiro de Gênesis contra o brief e as passagens listadas; registrar o resultado no manifest e no changelog.
+- **Próximo portão:** proprietário revisa `SCRIPT_DRAFT.md` com o parecer v01 e decide se libera o roteiro para produção ou solicita alterações.
 
 ## OBJETIVO DO PROJETO
 
@@ -125,22 +125,22 @@ Produzidos apenas documentos de pré-produção do MVP:
 ### GENESIS-001 — *Gênesis: Como Tudo Começou*
 
 - **Escopo:** narrativa dos principais movimentos de Gênesis 1–50, conectando a criação à chegada da família de Jacó ao Egito.
-- **Roteiro:** primeiro rascunho autoral dividido em 22 cenas; estimativa de 12–14 minutos.
-- **Referências:** catalogadas por cena no script; brief de pesquisa inclui limites e pontos sensíveis.
-- **Bloqueios:** revisão factual independente; decisão humana sobre abordagem interpretativa/escopo; seleção de TTS só após aprovação do texto; nenhum asset foi ainda pesquisado/baixado.
+- **Roteiro:** 22 cenas, 1.617 palavras aproximadas e 12:30 de plano; revisão interna v01 aplicada.
+- **Referências:** catalogadas por cena; brief e revisão registram limites e pontos sensíveis.
+- **Bloqueios:** aprovação explícita do proprietário para a versão revisada; nova revisão se entrar contexto externo; seleção de TTS só após aprovação do texto; nenhum asset foi ainda pesquisado/baixado.
 - **Derivados previstos:** 12 oportunidades de Shorts, ainda em `IDEA`.
 
 ## BACKLOG PRIORIZADO
 
-1. **P0 — Revisar factualmente `GENESIS-001`.** Conferir cada cena com as referências, principalmente Gn 1–2, 6–9, 11, 15, 19, 22, 32, 37–50; separar narração e contexto.
-2. **P0 — Fazer revisão narrativa e obter aprovação humana do roteiro.** Ajustar duração, tom, foco e metadados somente após as revisões.
+1. **P0 — Obter decisão do proprietário sobre `GENESIS-001`.** Revisar `SCRIPT_DRAFT.md` e `SCRIPT_FACTUAL_NARRATIVE_REVIEW_v01.md`; registrar aprovação ou alterações solicitadas no manifesto.
+2. **P0 — Se houver alteração editorial/contexto externo, atualizar brief, roteiro e revisão.** Não avançar para produção até a nova decisão humana.
 3. **P1 — Avaliar e escolher TTS substituível.** Registrar licença/comercial, custo, teste de pronúncia e voz selecionada.
 4. **P1 — Criar plano de assets para cenas aprovadas.** Pesquisar item a item; preencher registries antes de editar.
 5. **P1 — Produzir áudio, edição, legendas, opções de thumbnail e pacote de QA de Gênesis.**
 6. **P1 — Avaliar o MVP com dados de esforço, custo e qualidade; documentar lições.**
 7. **P2 — Selecionar e produzir poucos Shorts derivados de Gênesis após o longo estar validado.**
 8. **P2 — Criar pré-produção de `EXODUS-001` somente após aprendizagem do MVP.**
-9. **P3 — Automatizar tarefas repetitivas aprovadas, etapa por etapa.**
+9. **P3 — Automatizar tarefas repetitivas aprovadas, etapa por etapa.
 
 ## PROBLEMAS CONHECIDOS E SOLUÇÕES
 
@@ -148,7 +148,7 @@ Produzidos apenas documentos de pré-produção do MVP:
 | --- | --- | --- |
 | Não há proprietário/revisor designado no repositório | aberto | não inferir aprovação; pedir aprovação explícita em cada gate humano |
 | TTS, editor e fontes de assets ainda não foram escolhidos | esperado | arquitetura modular; não criar lock-in antes do teste |
-| Risco de interpretações controversas em Gênesis | aberto | roteiro usa linguagem de atribuição e exige revisão factual/teológica editorial |
+| Risco de interpretações controversas em Gênesis | aberto | revisão interna v01 preservou qualificadores; proprietário pode exigir especialista antes de aprovar roteiro |
 | Direitos autorais e licença de mídia | controlado, sem assets | registry obrigatório, política e bloqueio de QA |
 | Duração real do roteiro só será conhecida após teste de voz | esperado | a estimativa é provisória; recalibrar após voz aprovada |
 | Não existem métricas de canal | esperado | canal ainda não publicou; modelo de coleta está documentado |
@@ -180,7 +180,7 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 | Fase | Estado |
 | --- | --- |
 | A — pesquisa assistida | manual assistida por documentos |
-| B — geração de roteiro | manual assistida; rascunho de Gênesis criado |
+| B — geração de roteiro | manual assistida; rascunho de Gênesis revisado internamente |
 | C — geração de cenas | manual estruturada; modelo validado no rascunho |
 | D a I — assets, TTS, edição, legendas, thumbnail, SEO | não iniciadas operacionalmente |
 | J — pipeline completo | proibido por enquanto; depende de MVP avaliado |
@@ -189,3 +189,4 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 ## CHANGELOG RESUMIDO
 
 - **2026-09-02:** Inicializada a fundação documental, arquitetura de conteúdo, registries de assets, modelos, validador e pré-produção de `GENESIS-001`.
+- **2026-09-02:** Concluída revisão interna factual e narrativa v01 de `GENESIS-001`; aplicadas duas correções de precisão e movido o pacote para `SCRIPT_REVIEW`.

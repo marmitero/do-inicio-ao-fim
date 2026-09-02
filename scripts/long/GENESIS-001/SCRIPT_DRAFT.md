@@ -214,7 +214,7 @@
 
 - **Etapa narrativa:** ATO 3 — Uma família e uma promessa
 - **Narração:**
-  > A promessa segue para Isaque, mas a próxima geração também é dividida. Esaú e Jacó crescem diferentes e entram em conflito pela primogenitura e pela bênção do pai. Com a ajuda de Rebeca, Jacó se apresenta diante de Isaque como se fosse o irmão e recebe a bênção. Depois, foge. Na estrada, vê em sonho uma escada entre terra e céu e ouve a promessa que já acompanhava Abraão. A família continua avançando — muitas vezes pelo caminho torto de suas próprias escolhas.
+  > A promessa segue para Isaque, mas a próxima geração também é dividida. Esaú e Jacó crescem diferentes e entram em conflito pela primogenitura e pela bênção do pai. Com a ajuda de Rebeca, Jacó se apresenta diante de Isaque como se fosse o irmão e recebe a bênção. Depois, foge. Na estrada, vê em sonho uma estrutura que liga terra e céu e ouve a promessa que já acompanhava Abraão. A família continua avançando — muitas vezes pelo caminho torto de suas próprias escolhas.
 - **Referências bíblicas:** Gênesis 25:19–34; 27:1–45; 28:10–22.
 - **Objetivo narrativo:** transmitir herança da promessa e a ambiguidade moral da história de Jacó.
 - **Visual sugerido:** dois mantos/objetos contrastantes, porta de tenda em sombra, pessoa caminhando só, escada/luz como imagem onírica abstrata.
@@ -223,7 +223,7 @@
 - **SFX:** passos, noite com grilos; transição aérea sutil no sonho.
 - **Música / função musical:** tema de viagem mais inquieto, abrindo em suspensão no sonho.
 - **Duração estimada:** 0:40.
-- **Notas de rigor:** não reduzir Jacó a um rótulo psicológico nem afirmar motivo de cada personagem além das ações narradas.
+- **Notas de rigor:** a imagem de Gn 28 é traduzida/visualizada de modos diferentes; muitas traduções a representam como escada. Não reduzir Jacó a um rótulo psicológico nem afirmar motivo de cada personagem além das ações narradas.
 
 ## SCN-GENESIS-001-15 — Uma casa que vira povo
 
@@ -334,7 +334,7 @@
 
 - **Etapa narrativa:** TRANSIÇÃO
 - **Narração:**
-  > José morre no Egito, mas pede que seus ossos sejam levados dali quando Deus visitar seu povo. Essa frase deixa Gênesis olhando para frente. A família de Abraão chegou ao Egito para sobreviver. No próximo capítulo da grande história, seus descendentes ainda estarão ali — só que já não serão recebidos como hóspedes. É assim que Gênesis entrega a narrativa a Êxodo.
+  > José morre no Egito, mas pede que seus ossos sejam levados dali quando Deus visitar seu povo. Essa frase deixa Gênesis olhando para frente. A família de Abraão chegou ao Egito para sobreviver. No próximo capítulo da grande história, seus descendentes ainda estarão ali — só que sua situação vai mudar de modo brutal. É assim que Gênesis entrega a narrativa a Êxodo.
 - **Referências bíblicas:** Gênesis 50:22–26; transição editorial para Êxodo 1:1–14.
 - **Objetivo narrativo:** criar transição honesta para Êxodo e encerrar com memória/promessa aberta.
 - **Visual sugerido:** grão em mãos se dissolve em horizonte/rio; cartela discreta “A seguir: Êxodo”.

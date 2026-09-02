@@ -4,7 +4,7 @@
 
 ## Estado atual
 
-**Fase:** fundação + pré-produção do MVP
+**Fase:** fundação + revisão de roteiro do MVP
 **Marco em curso:** `GENESIS-001` — *Gênesis: Como Tudo Começou*
 **Publicação automática:** proibida. Todo vídeo precisa de aprovação explícita do proprietário.
 
@@ -51,7 +51,7 @@ O pacote editorial inicial está em:
 - [roteiro e mapa de cenas](scripts/long/GENESIS-001/SCRIPT_DRAFT.md)
 - [metadados e Shorts derivados](content/long/GENESIS-001/metadata.md)
 
-Trata-se de um **rascunho de pré-produção**, não de uma autorização para produzir ou publicar. As pendências e os gates estão no manifesto e em `AI_STATE.md`.
+O roteiro passou por revisão interna v01 e está em **`SCRIPT_REVIEW`**, mas isso não é autorização para produzir ou publicar. A decisão explícita do proprietário e todos os gates restantes estão no manifesto e em `AI_STATE.md`.
 
 ## Segurança e mídia
 
