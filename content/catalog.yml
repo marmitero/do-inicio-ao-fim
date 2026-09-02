@@ -8,7 +8,7 @@ content:
     type: long
     language: pt-BR
     working_title: 'Gênesis: Como Tudo Começou'
-    state: SCRIPT_REVIEW
+    state: SCRIPT_APPROVED
     canonical_book: GENESIS
     chapters: '1-50'
     package: content/long/GENESIS-001

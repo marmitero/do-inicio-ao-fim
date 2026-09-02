@@ -2,7 +2,7 @@ content_id: GENESIS-001
 type: long
 language: pt-BR
 working_title: 'Gênesis: Como Tudo Começou'
-state: SCRIPT_REVIEW
+state: SCRIPT_APPROVED
 updated_at_utc: '2026-09-02'
 canonical_scope:
   book: GENESIS
@@ -31,10 +31,12 @@ source_files:
   script: scripts/long/GENESIS-001/SCRIPT_DRAFT.md
   metadata: content/long/GENESIS-001/metadata.md
   review: content/long/GENESIS-001/SCRIPT_FACTUAL_NARRATIVE_REVIEW_v01.md
+  tts_test_plan: content/long/GENESIS-001/TTS_TEST_PLAN.md
 approval:
   script_factual_review: completed_internal_v01
   script_narrative_review: completed_internal_v01
-  script_owner_approval: pending
+  script_owner_approval: approved
+  script_owner_approval_record: "Owner approval via Arena decision on 2026-09-02 UTC; scope: voice and asset pre-production only."
   final_human_review: pending
   publish_owner_approval: pending
 production:
@@ -67,11 +69,11 @@ derived_content:
   - GENESIS-001-S11
   - GENESIS-001-S12
 blockers:
-  - 'Aprovação explícita do proprietário para a versão revisada do roteiro.'
   - 'Qualquer novo contexto extrabíblico exige fonte secundária e nova revisão factual.'
-  - 'Seleção documentada de TTS com licença adequada após aprovação do texto.'
+  - 'Seleção documentada de TTS com licença adequada antes da geração integral.'
   - 'Plano de assets e registro/licenças antes da edição.'
 notes:
+  - 'Roteiro aprovado pelo proprietário para pré-produção em 2026-09-02 UTC.'
   - 'Revisão interna v01 concluída; ver SCRIPT_FACTUAL_NARRATIVE_REVIEW_v01.md.'
   - 'Nenhum asset, áudio, render, thumbnail ou publicação existe neste momento.'
   - 'Aprovação de roteiro e aprovação de publicação são gates distintos.'
