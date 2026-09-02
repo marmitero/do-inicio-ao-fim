@@ -1,0 +1,14 @@
+# Registro de decisões
+
+Decisões duráveis. Não substituir uma decisão silenciosamente: crie nova entrada que a altere e atualize `AI_STATE.md`.
+
+| ID | Data | Decisão | Estado | Justificativa | Consequência |
+| --- | --- | --- | --- | --- | --- |
+| ADR-001 | 2026-09-02 | O MVP será um vídeo longo sobre Gênesis em português brasileiro. | aceita | É o primeiro livro e contém diversos eventos que testam narrativa, contexto e reutilização. | `GENESIS-001` é a prioridade; não escalar antes de avaliá-lo. |
+| ADR-002 | 2026-09-02 | Narrativa autoral com referências, sem reprodução extensa de traduções bíblicas modernas. | aceita | Preserva fidelidade e reduz dependência/licenciamento de texto. | Referências são obrigatórias por cena; citações curtas só quando justificadas e licenciadas. |
+| ADR-003 | 2026-09-02 | Conteúdo diferencia fato bíblico, contexto, tradição/interpretação e hipótese. | aceita | Evita apresentar inferência como narrativa do texto. | Roteiro e revisão devem usar linguagem de atribuição. |
+| ADR-004 | 2026-09-02 | Asset registry é obrigatório antes do uso em edição final. | aceita | Garante proveniência, licença e auditoria. | Sem ID no registry, sem asset no corte final. |
+| ADR-005 | 2026-09-02 | Publicação depende sempre de autorização explícita do proprietário. | inegociável | Controle editorial, jurídico e de conta. | Nenhuma automação recebe poder de publicar. |
+| ADR-006 | 2026-09-02 | Preferir validação manual/semi-automática antes de construir automação. | aceita | Evita automatizar baixa qualidade e custos prematuros. | Roadmap começa por workflow e medição do MVP. |
+| ADR-007 | 2026-09-02 | Binários de mídia e projetos pesados ficam fora do Git por padrão; metadados são versionados. | aceita | Mantém histórico leve e rastreável. | `.gitignore` protege diretórios de output; exceções devem ser deliberadas. |
+| ADR-008 | 2026-09-02 | TTS e editor serão escolhidos após aprovação do roteiro por meio de teste comparável. | pendente deliberada | Voz, custo, licença e pronúncia precisam de evidência. | Não acoplar manifestos a fornecedor. |

@@ -1,0 +1,47 @@
+# Secrets and machine-local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated media and editing exports: store outside Git unless intentionally curated.
+audio/*
+!audio/.gitkeep
+video/*
+!video/.gitkeep
+thumbnails/*
+!thumbnails/.gitkeep
+assets/video/*
+!assets/video/.gitkeep
+assets/images/*
+!assets/images/.gitkeep
+assets/music/*
+!assets/music/.gitkeep
+assets/sfx/*
+!assets/sfx/.gitkeep
+assets/generated/*
+!assets/generated/.gitkeep
+
+# Editing software, temporary render files, and OS noise
+*.prproj
+*.dra
+*.fcpxml
+*.mov
+*.mp4
+*.mkv
+*.wav
+*.aiff
+*.flac
+*.mp3
+*.aac
+*.m4a
+*.ogg
+*.opus
+*.srt
+*.vtt
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+.venv/

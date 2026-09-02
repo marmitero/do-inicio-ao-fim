@@ -1,0 +1,45 @@
+content_id: BOOK-001
+type: long # superlong | long | short
+language: pt-BR
+working_title: 'Título de trabalho'
+state: IDEA
+updated_at_utc: 'YYYY-MM-DD'
+canonical_scope:
+  book: BOOK
+  chapters: '1-1'
+  event_ids: []
+editorial:
+  format_goal: ''
+  target_duration: ''
+  audience: ''
+  source_policy: 'Roteiro autoral; referências internas; sem reprodução extensa de tradução moderna'
+source_files:
+  research: ''
+  outline: ''
+  script: ''
+  metadata: ''
+approval:
+  script_factual_review: pending
+  script_narrative_review: pending
+  script_owner_approval: pending
+  final_human_review: pending
+  publish_owner_approval: pending
+production:
+  tts_provider: null
+  tts_voice: null
+  asset_registry_status: not_started
+  audio_status: not_started
+  edit_status: not_started
+  captions_status: not_started
+  thumbnail_status: not_started
+  metadata_status: not_started
+  qa_status: not_started
+outputs:
+  audio: []
+  video: []
+  captions: []
+  thumbnails: []
+  asset_ids: []
+derived_content: []
+blockers: []
+notes: []

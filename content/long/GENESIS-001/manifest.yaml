@@ -1,0 +1,75 @@
+content_id: GENESIS-001
+type: long
+language: pt-BR
+working_title: 'Gênesis: Como Tudo Começou'
+state: SCRIPT
+updated_at_utc: '2026-09-02'
+canonical_scope:
+  book: GENESIS
+  chapters: '1-50'
+  event_ids:
+    - EVT-GEN-01
+    - EVT-GEN-02
+    - EVT-GEN-03
+    - EVT-GEN-04
+    - EVT-GEN-05
+    - EVT-GEN-06
+    - EVT-GEN-07
+    - EVT-GEN-08
+    - EVT-GEN-09
+    - EVT-GEN-10
+    - EVT-GEN-11
+    - EVT-GEN-12
+editorial:
+  format_goal: 'Vídeo longo narrativo/documental do livro de Gênesis'
+  target_duration: '12-14 min provisional; validate with approved voice'
+  audience: 'Falantes de português brasileiro interessados em compreender a narrativa bíblica'
+  source_policy: 'Roteiro autoral; referências internas; sem reprodução extensa de tradução moderna'
+source_files:
+  research: research/GENESIS-001/RESEARCH_BRIEF.md
+  outline: content/long/GENESIS-001/outline.md
+  script: scripts/long/GENESIS-001/SCRIPT_DRAFT.md
+  metadata: content/long/GENESIS-001/metadata.md
+approval:
+  script_factual_review: pending
+  script_narrative_review: pending
+  script_owner_approval: pending
+  final_human_review: pending
+  publish_owner_approval: pending
+production:
+  tts_provider: null
+  tts_voice: null
+  asset_registry_status: not_started
+  audio_status: not_started
+  edit_status: not_started
+  captions_status: not_started
+  thumbnail_status: not_started
+  metadata_status: draft
+  qa_status: not_started
+outputs:
+  audio: []
+  video: []
+  captions: []
+  thumbnails: []
+  asset_ids: []
+derived_content:
+  - GENESIS-001-S01
+  - GENESIS-001-S02
+  - GENESIS-001-S03
+  - GENESIS-001-S04
+  - GENESIS-001-S05
+  - GENESIS-001-S06
+  - GENESIS-001-S07
+  - GENESIS-001-S08
+  - GENESIS-001-S09
+  - GENESIS-001-S10
+  - GENESIS-001-S11
+  - GENESIS-001-S12
+blockers:
+  - 'Revisão factual independente do rascunho, incluindo limites interpretativos.'
+  - 'Revisão narrativa e aprovação explícita do proprietário para o roteiro.'
+  - 'Seleção documentada de TTS com licença adequada após aprovação do texto.'
+  - 'Plano de assets e registro/licenças antes da edição.'
+notes:
+  - 'Nenhum asset, áudio, render, thumbnail ou publicação existe neste momento.'
+  - 'Aprovação de roteiro e aprovação de publicação são gates distintos.'

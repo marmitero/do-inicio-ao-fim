@@ -1,0 +1,31 @@
+# Catálogo editorial central. O manifesto do pacote contém os detalhes e gates.
+project: do-inicio-ao-fim
+primary_language: pt-BR
+publication_policy: human_explicit_approval_required
+updated_at_utc: '2026-09-02'
+content:
+  - content_id: GENESIS-001
+    type: long
+    language: pt-BR
+    working_title: 'Gênesis: Como Tudo Começou'
+    state: SCRIPT
+    canonical_book: GENESIS
+    chapters: '1-50'
+    package: content/long/GENESIS-001
+    script: scripts/long/GENESIS-001/SCRIPT_DRAFT.md
+    research: research/GENESIS-001/RESEARCH_BRIEF.md
+    derived_content_ids:
+      - GENESIS-001-S01
+      - GENESIS-001-S02
+      - GENESIS-001-S03
+      - GENESIS-001-S04
+      - GENESIS-001-S05
+      - GENESIS-001-S06
+      - GENESIS-001-S07
+      - GENESIS-001-S08
+      - GENESIS-001-S09
+      - GENESIS-001-S10
+      - GENESIS-001-S11
+      - GENESIS-001-S12
+    owner_approval_required: true
+    published_url: null
