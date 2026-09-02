@@ -23,7 +23,7 @@
 - **Estado do conteúdo ativo:** `VOICE` (candidato de voz selecionado para audição e amostra curta gerada; licença/custo e aceitação longa pendentes).
 - **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, plano e registro de audição de TTS, plano de assets, metadados iniciais, backlog de Shorts e registries vazios.
 - **Entregáveis inexistentes de propósito:** voz final aprovada, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. Existe apenas uma amostra curta de voz local e ignorada pelo Git.
-- **Próximo portão:** verificar licença/custo do candidato de voz, ouvir/aceitar a amostra curta e gerar uma amostra longa somente se o uso comercial/YouTube for documentado.
+- **Próximo portão:** proprietário escolhe entre testar Kokoro local (candidata open-weight triada) ou pesquisar outro fornecedor; em seguida, validar licença/artefato/custo e gerar amostra longa.
 
 ## OBJETIVO DO PROJETO
 
@@ -61,7 +61,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | Publicação somente manual | inegociável | proprietário retém a decisão final; pipeline bloqueia automação |
 | Nenhum asset sem registro de licença | inegociável | rastreabilidade e segurança jurídica |
 | Automação somente depois do MVP avaliado | aceita | evitar automatizar processo não validado |
-| `voice-00` foi selecionada apenas como candidata de audição | em avaliação | amostra curta gerada; licença/custo e aprovação de amostra longa continuam pendentes |
+| `voice-00` foi aprovada sonoramente só para teste condicional | em avaliação | licença/custo/portabilidade ausentes; Kokoro local é a candidata open-weight triada em `docs/TTS_OPTIONS_EVALUATION_2026-09-02.md` |
 
 ## DECISÕES REJEITADAS / NÃO FAZER
 
@@ -88,7 +88,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | --- | --- | --- |
 | Python 3 padrão | em uso | somente para `tools/validate_catalog.py`; sem dependências externas |
 | Git | em uso | memória e histórico operacional |
-| TTS | candidato de audição selecionado | `voice-00` é técnico/session-scoped; licença comercial, custo e portabilidade continuam pendentes |
+| TTS | candidatura sonora + shortlist documentada | `voice-00` é técnico/session-scoped e não homologada; Kokoro local v1 é a próxima candidata para teste, sujeito a artefato/licença/qualidade |
 | Edição | não selecionada | escolher depois de aprovado roteiro e plano de assets |
 | Stock / música / SFX | não selecionados | validar item a item, nunca por suposição de plataforma |
 | YouTube API | não configurada | futura preparação permitida, publicação continua manual |
@@ -127,13 +127,13 @@ Produzidos apenas documentos de pré-produção do MVP:
 - **Escopo:** narrativa dos principais movimentos de Gênesis 1–50, conectando a criação à chegada da família de Jacó ao Egito.
 - **Roteiro:** 22 cenas, 1.617 palavras aproximadas e 12:30 de plano; revisão interna v01 aplicada e roteiro aprovado pelo proprietário em 2026-09-02 UTC para pré-produção.
 - **Referências:** catalogadas por cena; brief e revisão registram limites e pontos sensíveis.
-- **Bloqueios:** nova revisão se entrar contexto externo; licença/custo e aceitação longa de TTS antes da geração integral; nenhum asset foi ainda pesquisado/baixado; aprovação final/publicação continuam pendentes.
+- **Bloqueios:** nova revisão se entrar contexto externo; decisão de fornecedor e licença/artefato/custo, depois aceitação longa de TTS antes da geração integral; nenhum asset foi ainda pesquisado/baixado; aprovação final/publicação continuam pendentes.
 - **Derivados previstos:** 12 oportunidades de Shorts, ainda em `IDEA`.
 
 ## BACKLOG PRIORIZADO
 
-1. **P0 — Verificar licença/custo do candidato `voice-00` ou substituto.** A amostra curta existe, mas não é elegível para o corte final até o uso comercial/YouTube estar documentado.
-2. **P0 — Obter aceitação do proprietário para a amostra curta e, somente após a verificação de licença, gerar amostra longa de 45–60 segundos.**
+1. **P0 — Proprietário decide o caminho de TTS.** Priorizar teste local Kokoro com `pm_alex` e `pm_santa` ou solicitar outra pesquisa; `voice-00` não é elegível para corte final enquanto termos forem desconhecidos.
+2. **P0 — Validar licença/artefato/custo e gerar amostra longa de 45–60 segundos.** Registrar versão, hash, dependências, voz e escuta do proprietário.
 3. **P0 — Se houver alteração editorial/contexto externo, atualizar brief, roteiro e revisão.** Não avançar na geração integral até a nova decisão humana. Registrar licença/comercial, custo, teste de pronúncia e voz selecionada.
 4. **P1 — Criar plano de assets para cenas aprovadas.** Pesquisar item a item; preencher registries antes de editar.
 5. **P1 — Produzir áudio, edição, legendas, opções de thumbnail e pacote de QA de Gênesis.**
@@ -183,7 +183,7 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 | B — geração de roteiro | manual assistida; roteiro de Gênesis aprovado para pré-produção |
 | C — geração de cenas | manual estruturada; modelo validado no rascunho |
 | D — assets | plano de necessidades criado; pesquisa/licença não iniciadas operacionalmente |
-| E — TTS | plano e audição curta concluídos; licença, custo e aceitação longa pendentes |
+| E — TTS | audição curta aceita condicionalmente; shortlist/licença inicial documentada; decisão de fornecedor e teste local pendentes |
 | F a I — edição, legendas, thumbnail, SEO | não iniciadas operacionalmente |
 | J — pipeline completo | proibido por enquanto; depende de MVP avaliado |
 | publicação | sempre humana; não automatizar |
@@ -194,3 +194,4 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-02:** Concluída revisão interna factual e narrativa v01 de `GENESIS-001`; aplicadas duas correções de precisão e movido o pacote para `SCRIPT_REVIEW`.
 - **2026-09-02:** Proprietário aprovou o roteiro v01 de `GENESIS-001` para pré-produção via decisão Arena; criado plano de teste de TTS e movido o pacote para `SCRIPT_APPROVED`.
 - **2026-09-02:** Proprietário escolheu `voice-00` como candidata de audição; gerada amostra curta local, criado plano de assets e movido o pacote para `VOICE`. Uso comercial/YouTube ainda não foi verificado.
+- **2026-09-02:** Proprietário aceitou a qualidade sonora da candidata para teste longo condicional. Avaliadas alternativas de TTS; Kokoro local é a opção open-weight prioritária para teste, sem homologação final.

@@ -14,13 +14,13 @@
 | Ambiente de síntese | Arena speech synthesis, sessão de audição |
 | Identificador técnico | `voice-00` (não presumir portabilidade fora desta sessão) |
 | Arquivo local de amostra | `audio/GENESIS-001/voice-test/GENESIS-001_TTS_AUDITION_voice-00.mp3` |
-| Estado de qualidade sonora | amostra gerada; escuta/aceitação longa pendente |
+| Estado de qualidade sonora | proprietário aceitou a candidata para teste longo condicional; amostra longa ainda não gerada |
 | Estado de licença comercial/YouTube | **PENDENTE DE VERIFICAÇÃO** |
 | Estado de custo | **PENDENTE DE VERIFICAÇÃO** |
 
 ## Decisão registrada
 
-O proprietário selecionou `voice-00` como **candidato de audição** por meio da comparação de vozes disponível na sessão. Essa escolha libera somente a criação e a avaliação da amostra curta acima. Ela não significa que a voz/ferramenta está aprovada para o vídeo publicável.
+O proprietário selecionou `voice-00` como **candidato de audição** por meio da comparação de vozes disponível na sessão e aceitou sua qualidade sonora para um futuro teste longo condicional. Essa decisão não homologa a ferramenta: licença, custo, portabilidade e a aceitação de uma amostra longa continuam necessários antes do vídeo publicável.
 
 ## Critérios ainda não comprovados
 

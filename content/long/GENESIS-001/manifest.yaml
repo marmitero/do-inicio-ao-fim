@@ -33,6 +33,7 @@ source_files:
   review: content/long/GENESIS-001/SCRIPT_FACTUAL_NARRATIVE_REVIEW_v01.md
   tts_test_plan: content/long/GENESIS-001/TTS_TEST_PLAN.md
   tts_audition_log: content/long/GENESIS-001/TTS_AUDITION_LOG_v01.md
+  tts_options_evaluation: docs/TTS_OPTIONS_EVALUATION_2026-09-02.md
   asset_plan: content/long/GENESIS-001/ASSET_PLAN_v01.md
 approval:
   script_factual_review: completed_internal_v01
@@ -44,7 +45,7 @@ approval:
 production:
   tts_provider: "Arena speech synthesis (audition only; commercial terms pending)"
   tts_voice: "voice-00 (session-scoped audition candidate)"
-  tts_license_status: pending_verification
+  tts_license_status: arena_candidate_unverified; kokoro_local_candidate_screened
   asset_registry_status: planning_only
   audio_status: audition_generated_not_approved
   edit_status: not_started
@@ -74,7 +75,8 @@ derived_content:
   - GENESIS-001-S12
 blockers:
   - 'Qualquer novo contexto extrabíblico exige fonte secundária e nova revisão factual.'
-  - 'Licença comercial/YouTube e custo do candidato de TTS devem ser verificados antes da geração integral.'
+  - 'Licença comercial/YouTube, artefato e custo do candidato de TTS devem ser verificados antes da geração integral.'
+  - 'O proprietário deve decidir entre testar Kokoro local ou pesquisar outro fornecedor; voice-00 não tem termos comerciais documentados.'
   - 'Aceitação do proprietário para uma amostra longa de voz antes da geração integral.'
   - 'Plano de assets e registro/licenças antes da edição.'
 notes:
