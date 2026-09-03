@@ -39,3 +39,7 @@ A segmentação **não** resolve os limites de edição: antes de uma timeline f
 ## Limite de licença
 
 O proprietário autorizou o rascunho Arena. Os termos comerciais/YouTube ainda não estão documentados no projeto; por isso, estes MP3s são somente artefatos internos para validar a narração e o ritmo. Não usar em publicação até o gate de licença ser resolvido.
+
+## Decisão do proprietário
+
+Em 2026-09-02 (America/Sao_Paulo), o proprietário aprovou este rascunho segmentado para **pesquisa de assets e edição interna de rascunho**. A decisão não aprova QA de áudio, corte final, uso comercial/YouTube ou publicação.

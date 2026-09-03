@@ -2,7 +2,7 @@ content_id: GENESIS-001
 type: long
 language: pt-BR
 working_title: 'Gênesis: Como Tudo Começou'
-state: VOICE
+state: ASSETS
 updated_at_utc: '2026-09-02'
 canonical_scope:
   book: GENESIS
@@ -43,19 +43,22 @@ source_files:
   audio_draft_manifest_v02: content/long/GENESIS-001/AUDIO_DRAFT_MANIFEST_v02.csv
   audio_generation_log_v02: content/long/GENESIS-001/AUDIO_GENERATION_LOG_v02.md
   asset_plan: content/long/GENESIS-001/ASSET_PLAN_v01.md
+  asset_shortlist: content/long/GENESIS-001/ASSET_SHORTLIST_v01.md
 approval:
   script_factual_review: completed_internal_v01
   script_narrative_review: completed_internal_v01
   script_owner_approval: approved
   script_owner_approval_record: "Owner approval via Arena decision on 2026-09-02 UTC; scope: voice and asset pre-production only."
+  voice_draft_owner_approval: approved_for_draft_edit
+  voice_draft_owner_approval_record: "Owner approval via Arena decision on 2026-09-02 America/Sao_Paulo; scope: internal asset sourcing and draft edit only."
   final_human_review: pending
   publish_owner_approval: pending
 production:
   tts_provider: "Arena speech synthesis (owner-directed production draft; commercial terms pending)"
   tts_voice: "voice-00 (owner-selected; session-scoped)"
   tts_license_status: arena_terms_not_documented_owner_directed_draft; kokoro_mission_aborted
-  asset_registry_status: planning_only
-  audio_status: arena_full_segmented_draft_scenes_01_22_generated; human_audio_qa_and_edit_boundaries_pending; not_qa_approved
+  asset_registry_status: shortlist_v01_candidates_0001_to_0005; no_downloads_or_approved_assets
+  audio_status: arena_full_segmented_draft_scenes_01_22_owner_approved_for_draft_edit; detailed_qa_and_edit_boundaries_pending; not_final_approved
   edit_status: not_started
   captions_status: not_started
   thumbnail_status: not_started
@@ -93,6 +96,7 @@ derived_content:
 blockers:
   - 'Qualquer novo contexto extrabíblico exige fonte secundária e nova revisão factual.'
   - 'Termos comerciais/YouTube, custo e atribuição do ambiente Arena devem ser confirmados antes de qualquer entrega/publicação.'
+  - 'Assets precisam de origem, licença, download registrado e aprovação antes da timeline de edição.'
   - 'Plano de assets e registro/licenças antes da edição.'
 notes:
   - 'Roteiro aprovado pelo proprietário para pré-produção em 2026-09-02 UTC.'
@@ -100,7 +104,8 @@ notes:
   - 'Missão Kokoro abortada pelo proprietário em 2026-09-02; registros v01/v02 são histórico e não devem disparar nova tentativa.'
   - 'Proprietário escolheu voice-00 para gerar rascunho de narração por cena; ver TTS_PROVIDER_DECISION_v01.md.'
   - 'Revisão interna v01 concluída; ver SCRIPT_FACTUAL_NARRATIVE_REVIEW_v01.md.'
-  - 'Rascunho integral Arena segmentado (cenas 01–22) foi gerado; ver AUDIO_DRAFT_MANIFEST_v02.csv e AUDIO_GENERATION_LOG_v02.md.'
+  - 'Rascunho integral Arena segmentado (cenas 01–22) foi gerado e aprovado pelo proprietário apenas para edição de rascunho; ver AUDIO_DRAFT_MANIFEST_v02.csv e AUDIO_GENERATION_LOG_v02.md.'
   - 'Lote v01 por cena é histórico/efêmero e não está disponível; não usá-lo como fonte de edição.'
-  - 'Nenhum asset, render, thumbnail ou publicação existe neste momento.'
+  - 'Cinco candidatos Pexels estão registrados, mas nenhum asset foi baixado, aprovado ou usado. Ver ASSET_SHORTLIST_v01.md.'
+  - 'Nenhum render, thumbnail ou publicação existe neste momento.'
   - 'Aprovação de roteiro e aprovação de publicação são gates distintos.'

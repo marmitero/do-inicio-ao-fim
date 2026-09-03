@@ -47,3 +47,7 @@ A produção alterna quatro famílias visuais para evitar slideshow e falsa prec
 - [ ] Créditos exigidos constam em `metadata.md`.
 - [ ] Reconstituições e IA foram marcadas internamente e não fazem alegação histórica além do roteiro.
 - [ ] Nenhuma busca/asset usa rosto, marca, obra ou música sem direitos claros.
+
+## Shortlist criada
+
+A primeira shortlist de cinco vídeos genéricos de natureza/material foi registrada em `ASSET_SHORTLIST_v01.md` e `assets/registries/asset_registry.csv`. Todos permanecem `candidate`; a existência no registry não é autorização para download ou uso.
