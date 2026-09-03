@@ -19,3 +19,5 @@ Mudanças significativas do projeto. Datas em UTC.
 - Qualidade sonora de `voice-00` aceita pelo proprietário apenas para teste longo condicional; documentada triagem de TTS e Kokoro local definido como candidata open-weight prioritária para teste, sem homologação final.
 - Proprietário aprovou teste local Kokoro; ambiente isolado foi provisionado, mas a obtenção do artefato oficial falhou por TLS/SSL. Nenhum áudio Kokoro foi produzido; criada ferramenta reprodutível e log do bloqueio.
 - Reexecução solicitada confirmou `SSL_ERROR_SYSCALL` no endpoint oficial do modelo. O bloqueio foi documentado em v02, sem usar mirrors ou artefatos sem proveniência.
+- Missão Kokoro abortada por decisão do proprietário; `voice-00` Arena selecionada para rascunho de narração por cena. Termos comerciais/YouTube continuam bloqueando uso final/publicação.
+- Gerado lote inicial de narração Arena `voice-00` para as cenas 01–10 de Gênesis; criado manifest com hashes e log de geração. Áudios continuam como rascunhos internos.

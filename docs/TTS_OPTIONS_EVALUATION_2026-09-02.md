@@ -47,3 +47,7 @@ O ambiente atual não possui `kokoro`, `torch`, `soundfile` ou executável `espe
 ## Decisão pendente do proprietário
 
 Escolher se o próximo teste deve priorizar o piloto local Kokoro com as duas vozes masculinas pt-BR ou se deve ser pesquisada outra solução com licença comercial explicitamente contratada. A aprovação sonora de `voice-00` não resolve essa decisão de fornecedor.
+
+## Atualização de decisão — 2026-09-02
+
+Por decisão explícita do proprietário, a missão Kokoro foi **abortada para este MVP** após os bloqueios de acesso registrados. `voice-00` Arena será usada para rascunhos internos por cena. Esta atualização não altera a lacuna de termos comerciais/YouTube: sem evidência desses termos, o áudio Arena não é elegível para o corte final ou publicação.
