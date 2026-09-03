@@ -18,12 +18,12 @@
 
 ## STATUS ATUAL
 
-- **Fase do programa:** Fundação documental, voz Arena aprovada para edição de rascunho; shortlist inicial de assets do MVP criada.
+- **Fase do programa:** Fundação documental, voz Arena aprovada para edição de rascunho; shortlist inicial e conceitos visuais de assets do MVP criados.
 - **Conteúdo ativo:** `GENESIS-001` — vídeo longo, pt-BR.
-- **Estado do conteúdo ativo:** `ASSETS` (rascunho Arena das 22 cenas aprovado para edição interna; cinco candidatos de asset foram registrados. Nenhum arquivo foi baixado/aprovado; QA final e termos comerciais seguem pendentes).
-- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, rascunho Arena completo em 10 segmentos com hashes/durações, plano e shortlist inicial de assets, metadados iniciais, backlog de Shorts e registry de candidatos.
+- **Estado do conteúdo ativo:** `ASSETS` (rascunho Arena das 22 cenas aprovado para edição interna; cinco candidatos Pexels e seis conceitos de IA foram mantidos como candidatos. Nenhum asset está aprovado para corte final; termos/licenças seguem pendentes).
+- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, rascunho Arena completo em 10 segmentos com hashes/durações, plano, shortlist Pexels e seis conceitos visuais de IA revisados, metadados iniciais, backlog de Shorts e registries de candidatos.
 - **Entregáveis inexistentes de propósito:** voz final aprovada por QA, marcadores/arquivos de edição por cena, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. A narração Arena permanece rascunho até que os termos comerciais sejam documentados.
-- **Próximo portão:** revalidar páginas/termos e baixar apenas candidatos aprovados, registrando filename e hash; completar a cobertura visual sem usar imagens humanas/IA sem necessidade.
+- **Próximo portão:** proprietário avalia a direção visual dos seis conceitos IA; em paralelo, completar cobertura de baixo risco e revalidar/downloader apenas assets com origem/termos acessíveis.
 
 ## OBJETIVO DO PROJETO
 
@@ -128,19 +128,20 @@ Produzidos apenas documentos de pré-produção do MVP:
 - **Roteiro:** 22 cenas, 1.617 palavras aproximadas e 12:30 de plano; revisão interna v01 aplicada e roteiro aprovado pelo proprietário em 2026-09-02 UTC para pré-produção.
 - **Áudio:** rascunho Arena integral das cenas 01–22 foi gerado em 10 segmentos, hasheado e medido em 11:37; proprietário aprovou seu uso em edição de rascunho. QA detalhado, marcadores por cena e liberação comercial permanecem pendentes.
 - **Referências:** catalogadas por cena; brief e revisão registram limites e pontos sensíveis.
-- **Bloqueios:** nova revisão se entrar contexto externo; termos comerciais/YouTube, custo e atribuição da voz Arena antes de entrega/publicação; assets precisam de origem/licença, download rastreável e aprovação antes da timeline; aprovação final/publicação continuam pendentes.
+- **Bloqueios:** nova revisão se entrar contexto externo; termos comerciais/YouTube, custo e atribuição da voz Arena antes de entrega/publicação; termos da imagem IA Arena e origem/licença/download rastreável de assets antes da timeline final; aprovação final/publicação continuam pendentes.
 - **Derivados previstos:** 12 oportunidades de Shorts, ainda em `IDEA`.
 
 ## BACKLOG PRIORIZADO
 
-1. **P0 — Revalidar/download de assets candidatos e completar a cobertura visual.** Verificar termos/página de cada candidato no momento do download; registrar arquivo e SHA-256 antes de uso.
-2. **P0 — Criar marcadores de limites para as 22 cenas ou regenerar arquivos individuais em armazenamento persistente.** Não estimar pontos de corte sem escuta/medição.
-3. **P0 — Confirmar termos comerciais/YouTube, custo e atribuição Arena.** Sem essa evidência, a narração permanece rascunho e não pode chegar à publicação.
-4. **P1 — Produzir edição, legendas, opções de thumbnail e pacote de QA de Gênesis.**
-5. **P1 — Avaliar o MVP com dados de esforço, custo e qualidade; documentar lições.**
-6. **P2 — Selecionar e produzir poucos Shorts derivados de Gênesis após o longo estar validado.**
-7. **P2 — Criar pré-produção de `EXODUS-001` somente após aprendizagem do MVP.**
-8. **P3 — Automatizar tarefas repetitivas aprovadas, etapa por etapa.**
+1. **P0 — Proprietário avalia a direção visual da primeira bateria de IA.** Decidir se os seis candidatos devem orientar a continuação; `AI-ASSET-0002` já foi rejeitada por revisão.
+2. **P0 — Completar cobertura visual e revalidar/download de stock.** Verificar termos/página de cada candidato no momento do download; registrar arquivo e SHA-256 antes de uso. Não contornar TLS com espelhos desconhecidos.
+3. **P0 — Criar marcadores de limites para as 22 cenas ou regenerar arquivos individuais em armazenamento persistente.** Não estimar pontos de corte sem escuta/medição.
+4. **P0 — Confirmar termos comerciais/YouTube, custo e atribuição Arena.** Sem essa evidência, voz/imagens Arena permanecem rascunhos e não podem chegar à publicação.
+5. **P1 — Produzir edição, legendas, opções de thumbnail e pacote de QA de Gênesis.**
+6. **P1 — Avaliar o MVP com dados de esforço, custo e qualidade; documentar lições.**
+7. **P2 — Selecionar e produzir poucos Shorts derivados de Gênesis após o longo estar validado.**
+8. **P2 — Criar pré-produção de `EXODUS-001` somente após aprendizagem do MVP.**
+9. **P3 — Automatizar tarefas repetitivas aprovadas, etapa por etapa.**
 
 ## PROBLEMAS CONHECIDOS E SOLUÇÕES
 
@@ -150,7 +151,7 @@ Produzidos apenas documentos de pré-produção do MVP:
 | TTS, editor e fontes de assets ainda não foram escolhidos | esperado | arquitetura modular; não criar lock-in antes do teste |
 | Risco de interpretações controversas em Gênesis | aberto | revisão interna v01 preservou qualificadores; proprietário pode exigir especialista antes de aprovar roteiro |
 | Termos comerciais da voz Arena não estão registrados | aberto | voz pode ser usada para rascunho por decisão do proprietário; exigir evidência antes de entrega/publicação |
-| Direitos autorais e licença de mídia | em controle | cinco candidatos Pexels registrados, sem download/uso; revalidar item e registrar hash antes de aprovar |
+| Direitos autorais/licença de mídia e IA | aberto | Pexels tem candidatos sem download; seis imagens Arena têm termos comerciais pendentes. Revalidar/licenciar e registrar hash antes de aprovar |
 | Duração real do roteiro só será conhecida após teste de voz | esperado | a estimativa é provisória; recalibrar após voz aprovada |
 | Não existem métricas de canal | esperado | canal ainda não publicou; modelo de coleta está documentado |
 
@@ -183,7 +184,7 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 | A — pesquisa assistida | manual assistida por documentos |
 | B — geração de roteiro | manual assistida; roteiro de Gênesis aprovado para pré-produção |
 | C — geração de cenas | manual estruturada; modelo validado no rascunho |
-| D — assets | plano e shortlist de cinco candidatos criados; nenhum download/aprovação, cobertura visual ainda incompleta |
+| D — assets | cinco candidatos Pexels sem download; primeira bateria IA tem seis candidatas e uma rejeitada, com termos pendentes; cobertura ainda incompleta |
 | E — TTS | rascunho Arena integral aprovado pelo proprietário para edição interna; QA detalhado/limites de edição e condições comerciais ainda bloqueiam entrega final |
 | F a I — edição, legendas, thumbnail, SEO | não iniciadas operacionalmente |
 | J — pipeline completo | proibido por enquanto; depende de MVP avaliado |
@@ -203,3 +204,4 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-02:** Gerado rascunho Arena integral das cenas 01–22 em dez segmentos; duração MP3 total 11:37, hashes e relações de cena registrados.
 - **2026-09-02:** Proprietário aprovou o rascunho Arena para sourcing de assets e edição interna; `GENESIS-001` avançou para `ASSETS`.
 - **2026-09-02:** Criada shortlist inicial de cinco vídeos Pexels com origem, autor, licença e uso proposto registrados como candidatos; nenhum download ou uso foi aprovado.
+- **2026-09-02:** Geradas sete imagens IA para teste visual; seis candidatas foram mantidas e a primeira versão do jardim foi rejeitada por conter ruínas. Prompts, hashes, dimensões, cenas e limitações foram registrados.

@@ -51,3 +51,7 @@ A produção alterna quatro famílias visuais para evitar slideshow e falsa prec
 ## Shortlist criada
 
 A primeira shortlist de cinco vídeos genéricos de natureza/material foi registrada em `ASSET_SHORTLIST_v01.md` e `assets/registries/asset_registry.csv`. Todos permanecem `candidate`; a existência no registry não é autorização para download ou uso.
+
+## Primeira bateria de IA
+
+Seis conceitos de IA passaram à condição de candidata e um foi rejeitado por trazer ruínas não solicitadas no jardim. Prompts, hashes, dimensões, cenas e limites estão em `assets/registries/ai_asset_registry.csv`; a avaliação visual está em `ASSET_VISUAL_REVIEW_v01.md`. A seleção não substitui verificação dos termos comerciais/YouTube da ferramenta.

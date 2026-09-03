@@ -37,3 +37,7 @@ As próximas buscas devem priorizar:
 - Preencher `local_filename` e SHA-256 depois do download; confirmar que o arquivo usado é aquele registrado.
 - Inserir créditos na descrição se houver qualquer mudança de termo/necessidade de atribuição.
 - Se a página/termo sumir, mudar o status para `rejected` ou `pending`; não usar o arquivo por suposição.
+
+## Resultado do preflight de download
+
+As páginas individuais de `ASSET-0001`, `ASSET-0002`, `ASSET-0003` e `ASSET-0005` foram abertas e conferidas contra a licença de plataforma. O host de download direto `videos.pexels.com` retornou `curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL` neste ambiente. Nenhum binário foi salvo e nenhum candidato mudou para `approved`. Essa falha de conectividade não reduz a exigência de revalidar licença/autor/item no momento de um download futuro.

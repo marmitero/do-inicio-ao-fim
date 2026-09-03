@@ -24,3 +24,4 @@ Mudanças significativas do projeto. Datas em UTC.
 - Gerado rascunho integral Arena `voice-00` para as 22 cenas em 10 segmentos; duração MP3 medida em 11:37 e hashes/limites de edição registrados.
 - Proprietário aprovou o rascunho Arena para pesquisa de assets e edição interna; `GENESIS-001` avançou para `ASSETS`, sem aprovação de publicação.
 - Registrada shortlist inicial de cinco vídeos Pexels como candidatos de baixo risco visual; nenhum arquivo foi baixado, aprovado ou usado.
+- Geradas e revisadas sete imagens Arena para o estilo visual de Gênesis: seis candidatas, uma rejeitada; prompts, hashes, dimensões, cenas e limitações foram registrados.
