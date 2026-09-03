@@ -38,8 +38,10 @@ source_files:
   tts_local_test_execution: content/long/GENESIS-001/TTS_LOCAL_TEST_EXECUTION_v01.md
   tts_local_test_execution_v02: content/long/GENESIS-001/TTS_LOCAL_TEST_EXECUTION_v02.md
   tts_provider_decision: content/long/GENESIS-001/TTS_PROVIDER_DECISION_v01.md
-  audio_draft_manifest: content/long/GENESIS-001/AUDIO_DRAFT_MANIFEST_v01.csv
-  audio_generation_log: content/long/GENESIS-001/AUDIO_GENERATION_LOG_v01.md
+  audio_draft_manifest_v01: content/long/GENESIS-001/AUDIO_DRAFT_MANIFEST_v01.csv
+  audio_generation_log_v01: content/long/GENESIS-001/AUDIO_GENERATION_LOG_v01.md
+  audio_draft_manifest_v02: content/long/GENESIS-001/AUDIO_DRAFT_MANIFEST_v02.csv
+  audio_generation_log_v02: content/long/GENESIS-001/AUDIO_GENERATION_LOG_v02.md
   asset_plan: content/long/GENESIS-001/ASSET_PLAN_v01.md
 approval:
   script_factual_review: completed_internal_v01
@@ -53,7 +55,7 @@ production:
   tts_voice: "voice-00 (owner-selected; session-scoped)"
   tts_license_status: arena_terms_not_documented_owner_directed_draft; kokoro_mission_aborted
   asset_registry_status: planning_only
-  audio_status: arena_draft_batch_01_scenes_01_10_generated; scenes_11_22_pending; not_qa_approved
+  audio_status: arena_full_segmented_draft_scenes_01_22_generated; human_audio_qa_and_edit_boundaries_pending; not_qa_approved
   edit_status: not_started
   captions_status: not_started
   thumbnail_status: not_started
@@ -61,16 +63,16 @@ production:
   qa_status: not_started
 outputs:
   audio:
-    - audio/GENESIS-001/draft/SCN-GENESIS-001-01_voice-00_draft.mp3
-    - audio/GENESIS-001/draft/SCN-GENESIS-001-02_voice-00_draft.mp3
-    - audio/GENESIS-001/draft/SCN-GENESIS-001-03_voice-00_draft.mp3
-    - audio/GENESIS-001/draft/SCN-GENESIS-001-04_voice-00_draft.mp3
-    - audio/GENESIS-001/draft/SCN-GENESIS-001-05_voice-00_draft.mp3
-    - audio/GENESIS-001/draft/SCN-GENESIS-001-06_voice-00_draft.mp3
-    - audio/GENESIS-001/draft/SCN-GENESIS-001-07_voice-00_draft.mp3
-    - audio/GENESIS-001/draft/SCN-GENESIS-001-08_voice-00_draft.mp3
-    - audio/GENESIS-001/draft/SCN-GENESIS-001-09_voice-00_draft.mp3
-    - audio/GENESIS-001/draft/SCN-GENESIS-001-10_voice-00_draft.mp3
+    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-01_SCN-01-02_voice-00_draft.mp3
+    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-02_SCN-03-04_voice-00_draft.mp3
+    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-03_SCN-05-06_voice-00_draft.mp3
+    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-04_SCN-07-08_voice-00_draft.mp3
+    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-05_SCN-09-10_voice-00_draft.mp3
+    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-06_SCN-11-12_voice-00_draft.mp3
+    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-07_SCN-13-15_voice-00_draft.mp3
+    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-08_SCN-16-17_voice-00_draft.mp3
+    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-09_SCN-18-20_voice-00_draft.mp3
+    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-10_SCN-21-22_voice-00_draft.mp3
   video: []
   captions: []
   thumbnails: []
@@ -98,6 +100,7 @@ notes:
   - 'Missão Kokoro abortada pelo proprietário em 2026-09-02; registros v01/v02 são histórico e não devem disparar nova tentativa.'
   - 'Proprietário escolheu voice-00 para gerar rascunho de narração por cena; ver TTS_PROVIDER_DECISION_v01.md.'
   - 'Revisão interna v01 concluída; ver SCRIPT_FACTUAL_NARRATIVE_REVIEW_v01.md.'
-  - 'Lote de áudio Arena 01 (cenas 01–10) foi gerado como rascunho; ver AUDIO_DRAFT_MANIFEST_v01.csv e AUDIO_GENERATION_LOG_v01.md.'
+  - 'Rascunho integral Arena segmentado (cenas 01–22) foi gerado; ver AUDIO_DRAFT_MANIFEST_v02.csv e AUDIO_GENERATION_LOG_v02.md.'
+  - 'Lote v01 por cena é histórico/efêmero e não está disponível; não usá-lo como fonte de edição.'
   - 'Nenhum asset, render, thumbnail ou publicação existe neste momento.'
   - 'Aprovação de roteiro e aprovação de publicação são gates distintos.'

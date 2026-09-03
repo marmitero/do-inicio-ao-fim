@@ -21,3 +21,7 @@ As cenas `11–22` permanecem `pending_generation`: o serviço de síntese permi
 ## Limite de licença
 
 O proprietário autorizou a geração do rascunho, mas os termos comerciais/YouTube da voz Arena não foram documentados. Portanto, os arquivos são adequados somente para validação interna de voz, ritmo e montagem. O gate de publicação continua bloqueado, conforme `TTS_PROVIDER_DECISION_v01.md`.
+
+## Superseded status
+
+The per-scene batch was a transient workspace output and is no longer available for continuation. Its hashes remain in the v01 manifest as historical generation evidence. `AUDIO_DRAFT_MANIFEST_v02.csv` and `AUDIO_GENERATION_LOG_v02.md` supersede it as the current complete, segmented audition draft.

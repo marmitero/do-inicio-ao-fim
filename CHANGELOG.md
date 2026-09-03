@@ -21,3 +21,4 @@ Mudanças significativas do projeto. Datas em UTC.
 - Reexecução solicitada confirmou `SSL_ERROR_SYSCALL` no endpoint oficial do modelo. O bloqueio foi documentado em v02, sem usar mirrors ou artefatos sem proveniência.
 - Missão Kokoro abortada por decisão do proprietário; `voice-00` Arena selecionada para rascunho de narração por cena. Termos comerciais/YouTube continuam bloqueando uso final/publicação.
 - Gerado lote inicial de narração Arena `voice-00` para as cenas 01–10 de Gênesis; criado manifest com hashes e log de geração. Áudios continuam como rascunhos internos.
+- Gerado rascunho integral Arena `voice-00` para as 22 cenas em 10 segmentos; duração MP3 medida em 11:37 e hashes/limites de edição registrados.

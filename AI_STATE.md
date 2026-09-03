@@ -18,12 +18,12 @@
 
 ## STATUS ATUAL
 
-- **Fase do programa:** Fundação documental, geração e QA de rascunho de voz Arena, planejamento de assets do MVP.
+- **Fase do programa:** Fundação documental, rascunho integral de voz Arena gerado; QA de áudio e planejamento de assets do MVP.
 - **Conteúdo ativo:** `GENESIS-001` — vídeo longo, pt-BR.
-- **Estado do conteúdo ativo:** `VOICE` (Kokoro abortado; lote Arena das cenas 01–10 gerado como rascunho. Cenas 11–22, QA de áudio e termos comerciais continuam pendentes).
-- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, lote de rascunho Arena para cenas 01–10, plano de assets, metadados iniciais, backlog de Shorts e registries vazios.
-- **Entregáveis inexistentes de propósito:** blocos Arena das cenas 11–22, voz final aprovada, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. A narração Arena permanece rascunho até que os termos comerciais sejam documentados.
-- **Próximo portão:** gerar as cenas Arena 11–22 na próxima sessão de síntese, ouvir todos os 22 blocos e registrar QA de pronúncia/ritmo; confirmar termos comerciais/YouTube antes de considerar a voz no corte final.
+- **Estado do conteúdo ativo:** `VOICE` (Kokoro abortado; rascunho Arena completo das cenas 01–22 gerado em 10 segmentos. QA de áudio, limites de edição e termos comerciais continuam pendentes).
+- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, rascunho Arena completo em 10 segmentos com hashes/durações, plano de assets, metadados iniciais, backlog de Shorts e registries vazios.
+- **Entregáveis inexistentes de propósito:** voz final aprovada por QA, marcadores/arquivos de edição por cena, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. A narração Arena permanece rascunho até que os termos comerciais sejam documentados.
+- **Próximo portão:** proprietário ouve os 10 segmentos Arena e decide se a voz/ritmo seguem para edição de rascunho; editor cria marcadores por cena e termos comerciais/YouTube precisam ser confirmados antes do corte final.
 
 ## OBJETIVO DO PROJETO
 
@@ -88,7 +88,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | --- | --- | --- |
 | Python 3 padrão | em uso | somente para `tools/validate_catalog.py`; sem dependências externas |
 | Git | em uso | memória e histórico operacional |
-| TTS | primeiro lote de rascunho Arena gerado | `voice-00` gerou cenas 01–10; cenas 11–22 e QA pendentes; licença/custo/portabilidade Arena ainda não homologados |
+| TTS | rascunho Arena integral segmentado gerado | `voice-00` cobre cenas 01–22 em 10 MP3s; QA e pontos de corte pendentes; licença/custo/portabilidade Arena ainda não homologados |
 | Edição | não selecionada | escolher depois de aprovado roteiro e plano de assets |
 | Stock / música / SFX | não selecionados | validar item a item, nunca por suposição de plataforma |
 | YouTube API | não configurada | futura preparação permitida, publicação continua manual |
@@ -126,15 +126,15 @@ Produzidos apenas documentos de pré-produção do MVP:
 
 - **Escopo:** narrativa dos principais movimentos de Gênesis 1–50, conectando a criação à chegada da família de Jacó ao Egito.
 - **Roteiro:** 22 cenas, 1.617 palavras aproximadas e 12:30 de plano; revisão interna v01 aplicada e roteiro aprovado pelo proprietário em 2026-09-02 UTC para pré-produção.
-- **Áudio:** lote Arena de rascunho das cenas 01–10 gerado e hasheado; as cenas 11–22 e toda escuta/QA permanecem pendentes.
+- **Áudio:** rascunho Arena integral das cenas 01–22 foi gerado em 10 segmentos, hasheado e medido em 11:37; escuta humana, QA e marcadores por cena permanecem pendentes.
 - **Referências:** catalogadas por cena; brief e revisão registram limites e pontos sensíveis.
 - **Bloqueios:** nova revisão se entrar contexto externo; termos comerciais/YouTube, custo e atribuição da voz Arena antes de entrega/publicação; nenhum asset foi ainda pesquisado/baixado; aprovação final/publicação continuam pendentes.
 - **Derivados previstos:** 12 oportunidades de Shorts, ainda em `IDEA`.
 
 ## BACKLOG PRIORIZADO
 
-1. **P0 — Gerar cenas Arena 11–22.** Usar `voice-00`, mesmo texto aprovado e padrão de nomes; a síntese permite no máximo 10 clips por sessão, portanto serão necessários dois lotes.
-2. **P0 — Ouvir e registrar QA dos 22 blocos.** Checar pronúncia, ritmo, cortes, volume e continuidade em `AUDIO_DRAFT_MANIFEST_v01.csv`.
+1. **P0 — Proprietário ouve e avalia os 10 segmentos Arena.** Registrar aprovação, alterações de pronúncia/ritmo ou rejeição em `AUDIO_DRAFT_MANIFEST_v02.csv` e no log de QA.
+2. **P0 — Criar marcadores de limites para as 22 cenas ou regenerar arquivos individuais em armazenamento persistente.** Não estimar pontos de corte sem escuta/medição.
 3. **P0 — Confirmar termos comerciais/YouTube, custo e atribuição Arena.** Sem essa evidência, a narração permanece rascunho e não pode chegar à publicação.
 4. **P1 — Pesquisar e registrar assets para as cenas aprovadas.** Preencher registries antes de editar.
 5. **P1 — Produzir edição, legendas, opções de thumbnail e pacote de QA de Gênesis.**
@@ -185,7 +185,7 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 | B — geração de roteiro | manual assistida; roteiro de Gênesis aprovado para pré-produção |
 | C — geração de cenas | manual estruturada; modelo validado no rascunho |
 | D — assets | plano de necessidades criado; pesquisa/licença não iniciadas operacionalmente |
-| E — TTS | lote Arena 01 das cenas 01–10 gerado como rascunho; mais dois lotes e QA pendentes; condições comerciais ainda bloqueiam entrega final |
+| E — TTS | rascunho Arena integral das 22 cenas gerado em 10 segmentos; escuta, QA e limites de edição pendentes; condições comerciais bloqueiam entrega final |
 | F a I — edição, legendas, thumbnail, SEO | não iniciadas operacionalmente |
 | J — pipeline completo | proibido por enquanto; depende de MVP avaliado |
 | publicação | sempre humana; não automatizar |
@@ -200,4 +200,5 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-02:** Proprietário aprovou o teste local Kokoro. Runtime isolado foi provisionado, mas a obtenção do artefato oficial falhou por TLS/SSL; nenhum áudio Kokoro foi gerado e a falha foi registrada.
 - **2026-09-02:** Reexecução solicitada pelo proprietário confirmou erro `SSL_ERROR_SYSCALL` ao resolver o endpoint oficial do modelo; nenhum artefato não verificado foi usado.
 - **2026-09-02:** Proprietário abortou a missão Kokoro e escolheu `voice-00` Arena para o rascunho de narração de Gênesis. Termos comerciais/YouTube continuam pendentes e impedem publicação.
-- **2026-09-02:** Gerado lote 01 de rascunho Arena para as cenas 01–10 de Gênesis; hashes e caminhos registrados. Limite de dez clips exigirá novos lotes para as cenas restantes.
+- **2026-09-02:** Gerado lote 01 de rascunho Arena para as cenas 01–10 de Gênesis; hashes e caminhos registrados.
+- **2026-09-02:** Gerado rascunho Arena integral das cenas 01–22 em dez segmentos; duração MP3 total 11:37, hashes e relações de cena registrados.
