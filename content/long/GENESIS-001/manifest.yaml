@@ -36,6 +36,7 @@ source_files:
   tts_options_evaluation: docs/TTS_OPTIONS_EVALUATION_2026-09-02.md
   tts_long_sample: content/long/GENESIS-001/TTS_LONG_SAMPLE_v01.txt
   tts_local_test_execution: content/long/GENESIS-001/TTS_LOCAL_TEST_EXECUTION_v01.md
+  tts_local_test_execution_v02: content/long/GENESIS-001/TTS_LOCAL_TEST_EXECUTION_v02.md
   asset_plan: content/long/GENESIS-001/ASSET_PLAN_v01.md
 approval:
   script_factual_review: completed_internal_v01
@@ -49,15 +50,14 @@ production:
   tts_voice: "voice-00 (session-scoped audition candidate)"
   tts_license_status: arena_candidate_unverified; kokoro_local_candidate_screened_artifact_not_downloaded
   asset_registry_status: planning_only
-  audio_status: arena_audition_generated_not_approved; kokoro_test_blocked_by_network
+  audio_status: arena_audition_session_only_not_approved; kokoro_test_blocked_by_network_v01_v02
   edit_status: not_started
   captions_status: not_started
   thumbnail_status: not_started
   metadata_status: draft
   qa_status: not_started
 outputs:
-  audio:
-    - audio/GENESIS-001/voice-test/GENESIS-001_TTS_AUDITION_voice-00.mp3
+  audio: []
   video: []
   captions: []
   thumbnails: []
@@ -78,13 +78,13 @@ derived_content:
 blockers:
   - 'Qualquer novo contexto extrabíblico exige fonte secundária e nova revisão factual.'
   - 'Licença comercial/YouTube, artefato e custo do candidato de TTS devem ser verificados antes da geração integral.'
-  - 'Download do artefato oficial Kokoro está bloqueado por falha TLS/SSL neste ambiente; testar somente com rede/artefato verificável.'
+  - 'Download do artefato oficial Kokoro foi bloqueado por falha TLS/SSL em duas tentativas neste ambiente; testar somente com rede/artefato verificável.'
   - 'Aceitação do proprietário para uma amostra longa de voz antes da geração integral.'
   - 'Plano de assets e registro/licenças antes da edição.'
 notes:
   - 'Roteiro aprovado pelo proprietário para pré-produção em 2026-09-02 UTC.'
   - 'Candidato de voz voice-00 selecionado pelo proprietário para audição; não homologado para uso final.'
-  - 'Proprietário aprovou testar Kokoro local; primeira tentativa foi bloqueada antes da geração. Ver TTS_LOCAL_TEST_EXECUTION_v01.md.'
+  - 'Proprietário aprovou testar Kokoro local; duas tentativas foram bloqueadas antes da geração. Ver TTS_LOCAL_TEST_EXECUTION_v01.md e v02.'
   - 'Revisão interna v01 concluída; ver SCRIPT_FACTUAL_NARRATIVE_REVIEW_v01.md.'
   - 'Nenhum asset, áudio, render, thumbnail ou publicação existe neste momento.'
   - 'Aprovação de roteiro e aprovação de publicação são gates distintos.'

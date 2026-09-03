@@ -20,10 +20,10 @@
 
 - **Fase do programa:** Fundação documental, teste de voz bloqueado por ambiente e planejamento de assets do MVP.
 - **Conteúdo ativo:** `GENESIS-001` — vídeo longo, pt-BR.
-- **Estado do conteúdo ativo:** `VOICE` (amostra Arena aceita condicionalmente; teste local Kokoro aprovado, mas bloqueado antes de baixar artefatos oficiais).
+- **Estado do conteúdo ativo:** `VOICE` (amostra Arena aceita condicionalmente; teste local Kokoro aprovado, mas duas tentativas foram bloqueadas antes de baixar artefatos oficiais).
 - **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, plano e registro de audição de TTS, plano de assets, metadados iniciais, backlog de Shorts e registries vazios.
-- **Entregáveis inexistentes de propósito:** voz final aprovada, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. Existe apenas uma amostra curta de voz local e ignorada pelo Git.
-- **Próximo portão:** executar teste Kokoro em rede/máquina com acesso ao artefato oficial verificável ou decidir por outro fornecedor; depois validar licença/artefato/custo e gerar amostra longa.
+- **Entregáveis inexistentes de propósito:** voz final aprovada, outputs Kokoro, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. A amostra Arena foi de sessão e não é um output de produção persistente.
+- **Próximo portão:** executar teste Kokoro em rede/máquina com acesso ao artefato oficial verificável ou receber artefato offline verificável; depois validar licença/artefato/custo e gerar amostra longa.
 
 ## OBJETIVO DO PROJETO
 
@@ -61,7 +61,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | Publicação somente manual | inegociável | proprietário retém a decisão final; pipeline bloqueia automação |
 | Nenhum asset sem registro de licença | inegociável | rastreabilidade e segurança jurídica |
 | Automação somente depois do MVP avaliado | aceita | evitar automatizar processo não validado |
-| `voice-00` foi aprovada sonoramente só para teste condicional | em avaliação | licença/custo/portabilidade ausentes; Kokoro local é a candidata priorizada, mas o download do artefato falhou por TLS neste ambiente |
+| `voice-00` foi aprovada sonoramente só para teste condicional | em avaliação | licença/custo/portabilidade ausentes; Kokoro local é a candidata priorizada, mas duas verificações do host oficial falharam por TLS neste ambiente |
 
 ## DECISÕES REJEITADAS / NÃO FAZER
 
@@ -88,7 +88,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | --- | --- | --- |
 | Python 3 padrão | em uso | somente para `tools/validate_catalog.py`; sem dependências externas |
 | Git | em uso | memória e histórico operacional |
-| TTS | candidatura sonora + tentativa local registrada | `voice-00` não é homologada; Kokoro local v1 foi aprovado para teste, mas o download de artefato oficial falhou por TLS neste ambiente |
+| TTS | candidatura sonora + duas tentativas locais registradas | `voice-00` não é homologada; Kokoro local v1 foi aprovado para teste, mas o download oficial falhou por TLS duas vezes neste ambiente |
 | Edição | não selecionada | escolher depois de aprovado roteiro e plano de assets |
 | Stock / música / SFX | não selecionados | validar item a item, nunca por suposição de plataforma |
 | YouTube API | não configurada | futura preparação permitida, publicação continua manual |
@@ -132,7 +132,7 @@ Produzidos apenas documentos de pré-produção do MVP:
 
 ## BACKLOG PRIORIZADO
 
-1. **P0 — Reexecutar teste local Kokoro em ambiente com acesso à fonte oficial ou com artefato offline verificável.** Consultar `TTS_LOCAL_TEST_EXECUTION_v01.md`; não usar mirrors não verificados.
+1. **P0 — Reexecutar teste local Kokoro fora deste ambiente ou com artefato offline verificável.** Consultar `TTS_LOCAL_TEST_EXECUTION_v01.md` e `v02`; não usar mirrors não verificados.
 2. **P0 — Validar licença/artefato/custo e gerar amostra longa de 45–60 segundos.** Registrar versão, hash, dependências, voz e escuta do proprietário.
 3. **P0 — Se houver alteração editorial/contexto externo, atualizar brief, roteiro e revisão.** Não avançar na geração integral até a nova decisão humana. Registrar licença/comercial, custo, teste de pronúncia e voz selecionada.
 4. **P1 — Criar plano de assets para cenas aprovadas.** Pesquisar item a item; preencher registries antes de editar.
@@ -149,7 +149,7 @@ Produzidos apenas documentos de pré-produção do MVP:
 | Identidade nominal do proprietário/revisor não é armazenada | controlado | aprovação do roteiro foi capturada via decisão Arena; continuar exigindo decisão explícita em cada gate humano |
 | TTS, editor e fontes de assets ainda não foram escolhidos | esperado | arquitetura modular; não criar lock-in antes do teste |
 | Risco de interpretações controversas em Gênesis | aberto | revisão interna v01 preservou qualificadores; proprietário pode exigir especialista antes de aprovar roteiro |
-| Teste local Kokoro não baixou artefato oficial | aberto | falha TLS/SSL no ambiente; repetir apenas com rede/fonte oficial ou artefato offline verificado; ver log de execução |
+| Teste local Kokoro não baixou artefato oficial | aberto | duas falhas TLS/SSL confirmadas; repetir apenas com rede/fonte oficial ou artefato offline verificado; ver logs v01/v02 |
 | Direitos autorais e licença de mídia | controlado, sem assets | registry obrigatório, política e bloqueio de QA |
 | Duração real do roteiro só será conhecida após teste de voz | esperado | a estimativa é provisória; recalibrar após voz aprovada |
 | Não existem métricas de canal | esperado | canal ainda não publicou; modelo de coleta está documentado |
@@ -184,7 +184,7 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 | B — geração de roteiro | manual assistida; roteiro de Gênesis aprovado para pré-produção |
 | C — geração de cenas | manual estruturada; modelo validado no rascunho |
 | D — assets | plano de necessidades criado; pesquisa/licença não iniciadas operacionalmente |
-| E — TTS | audição curta aceita condicionalmente; Kokoro local escolhido para teste, mas geração bloqueada por falha de download do artefato oficial |
+| E — TTS | audição curta aceita condicionalmente; Kokoro local escolhido para teste, mas geração bloqueada por duas falhas de acesso TLS ao artefato oficial |
 | F a I — edição, legendas, thumbnail, SEO | não iniciadas operacionalmente |
 | J — pipeline completo | proibido por enquanto; depende de MVP avaliado |
 | publicação | sempre humana; não automatizar |
@@ -197,3 +197,4 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-02:** Proprietário escolheu `voice-00` como candidata de audição; gerada amostra curta local, criado plano de assets e movido o pacote para `VOICE`. Uso comercial/YouTube ainda não foi verificado.
 - **2026-09-02:** Proprietário aceitou a qualidade sonora da candidata para teste longo condicional. Avaliadas alternativas de TTS; Kokoro local é a opção open-weight prioritária para teste, sem homologação final.
 - **2026-09-02:** Proprietário aprovou o teste local Kokoro. Runtime isolado foi provisionado, mas a obtenção do artefato oficial falhou por TLS/SSL; nenhum áudio Kokoro foi gerado e a falha foi registrada.
+- **2026-09-02:** Reexecução solicitada pelo proprietário confirmou erro `SSL_ERROR_SYSCALL` ao resolver o endpoint oficial do modelo; nenhum artefato não verificado foi usado.

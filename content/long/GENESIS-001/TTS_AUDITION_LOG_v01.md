@@ -13,7 +13,7 @@
 | Voz escolhida pelo proprietário para teste | `voice-00` |
 | Ambiente de síntese | Arena speech synthesis, sessão de audição |
 | Identificador técnico | `voice-00` (não presumir portabilidade fora desta sessão) |
-| Arquivo local de amostra | `audio/GENESIS-001/voice-test/GENESIS-001_TTS_AUDITION_voice-00.mp3` |
+| Arquivo local de amostra | gerado durante a sessão de audição, mas efêmero/ignorado pelo Git; não constitui output disponível de produção |
 | Estado de qualidade sonora | proprietário aceitou a candidata para teste longo condicional; amostra longa ainda não gerada |
 | Estado de licença comercial/YouTube | **PENDENTE DE VERIFICAÇÃO** |
 | Estado de custo | **PENDENTE DE VERIFICAÇÃO** |

@@ -18,3 +18,4 @@ Mudanças significativas do projeto. Datas em UTC.
 - Registrada audição do candidato `voice-00`, gerada uma amostra curta local ignorada pelo Git e criado plano de assets sem downloads; licença/custo de TTS permanecem pendentes.
 - Qualidade sonora de `voice-00` aceita pelo proprietário apenas para teste longo condicional; documentada triagem de TTS e Kokoro local definido como candidata open-weight prioritária para teste, sem homologação final.
 - Proprietário aprovou teste local Kokoro; ambiente isolado foi provisionado, mas a obtenção do artefato oficial falhou por TLS/SSL. Nenhum áudio Kokoro foi produzido; criada ferramenta reprodutível e log do bloqueio.
+- Reexecução solicitada confirmou `SSL_ERROR_SYSCALL` no endpoint oficial do modelo. O bloqueio foi documentado em v02, sem usar mirrors ou artefatos sem proveniência.
