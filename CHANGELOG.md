@@ -25,3 +25,11 @@ Mudanças significativas do projeto. Datas em UTC.
 - Proprietário aprovou o rascunho Arena para pesquisa de assets e edição interna; `GENESIS-001` avançou para `ASSETS`, sem aprovação de publicação.
 - Registrada shortlist inicial de cinco vídeos Pexels como candidatos de baixo risco visual; nenhum arquivo foi baixado, aprovado ou usado.
 - Geradas e revisadas sete imagens Arena para o estilo visual de Gênesis: seis candidatas, uma rejeitada; prompts, hashes, dimensões, cenas e limitações foram registrados.
+
+## 2026-09-03 — Direção visual aprovada e segunda bateria de conceitos
+
+- Proprietário aprovou a direção visual cinematográfica/documental da primeira bateria Arena exclusivamente para continuidade de exploração e QA internos de assets.
+- Geradas, abertas e revisadas dez imagens adicionais Arena; seis se tornaram candidatas e quatro foram rejeitadas por não atenderem o briefing ou por riscos visuais.
+- Registrados prompts/especificações, hashes SHA-256, dimensões, tamanhos, cenas, status e limites dos assets `AI-ASSET-0008` a `AI-ASSET-0017`. As especificações de prompt de `0008`–`0014` são explicitamente marcadas como reconstruídas, pois as chamadas originais não haviam sido persistidas.
+- A cena 16 continua sem cisterna seca candidata: `AI-ASSET-0013` foi rejeitado por prop não solicitado e `AI-ASSET-0016` por conter água.
+- Nenhum conceito Arena foi liberado para uso comercial/YouTube, corte final, upload ou publicação; termos, custo e atribuição continuam gates separados.

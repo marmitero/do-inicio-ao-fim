@@ -55,3 +55,7 @@ A primeira shortlist de cinco vídeos genéricos de natureza/material foi regist
 ## Primeira bateria de IA
 
 Seis conceitos de IA passaram à condição de candidata e um foi rejeitado por trazer ruínas não solicitadas no jardim. Prompts, hashes, dimensões, cenas e limites estão em `assets/registries/ai_asset_registry.csv`; a avaliação visual está em `ASSET_VISUAL_REVIEW_v01.md`. A seleção não substitui verificação dos termos comerciais/YouTube da ferramenta.
+
+## Segunda bateria de IA
+
+Depois de o proprietário aprovar a linguagem visual cinematográfica/documental da primeira bateria **somente para exploração interna**, a bateria v02 produziu mais dez imagens rastreadas. Seis passaram como candidatas de cobertura limitada (cenas 05, 06, 08, 13, 15 e 19); quatro foram rejeitadas por inconsistência de briefing ou por riscos visuais. A cena 16 continua sem cisterna seca candidata após duas rejeições. O detalhamento está em `ASSET_VISUAL_REVIEW_v02.md`. A aprovação de direção não é licença/termo de uso, aprovação para corte final ou autorização de publicação.
