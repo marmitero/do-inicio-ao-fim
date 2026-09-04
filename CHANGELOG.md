@@ -33,3 +33,26 @@ Mudanças significativas do projeto. Datas em UTC.
 - Registrados prompts/especificações, hashes SHA-256, dimensões, tamanhos, cenas, status e limites dos assets `AI-ASSET-0008` a `AI-ASSET-0017`. As especificações de prompt de `0008`–`0014` são explicitamente marcadas como reconstruídas, pois as chamadas originais não haviam sido persistidas.
 - A cena 16 continua sem cisterna seca candidata: `AI-ASSET-0013` foi rejeitado por prop não solicitado e `AI-ASSET-0016` por conter água.
 - Nenhum conceito Arena foi liberado para uso comercial/YouTube, corte final, upload ou publicação; termos, custo e atribuição continuam gates separados.
+
+## 2026-09-03 — Regra global de custo zero e terceira tentativa de cisterna (cena 16)
+
+- Registrada a regra global **custo zero** (ADR-016): todo o processo de desenvolvimento e produção deve ser gratuito; o que for pago será substituído por alternativa gratuita semelhante ou gerado internamente. Regra documentada em `AI_STATE.md`, `DECISION_LOG.md` e nos princípios do `README.md`.
+- Geradas duas novas tentativas de cisterna **seca** para a cena 16 (`AI-ASSET-0018`, vista de cima; `AI-ASSET-0019`, ângulo três-quartos), com brief explícito de poço vazio, sem água/reflexo e sem objetos não solicitados.
+- Registrados prompt, dimensões (1376×768), tamanho e SHA-256 dos dois arquivos em `assets/registries/ai_asset_registry.csv` (inicialmente `pending_visual_review`, pois a revisão visual não pôde ser concluída pelo assistente naquele turno).
+- Criada `ASSET_VISUAL_REVIEW_v03.md`; o proprietário revisou visualmente as duas imagens e **aprovou ambas como candidatas** (ADR-017), encerrando a lacuna de cobertura da cena 16.
+
+## 2026-09-03 — Matriz de cobertura e candidatas para as cenas 02, 11, 12 e 21
+
+- Criada a matriz de cobertura visual `ASSET_COVERAGE_v01.md`: 18 das 22 cenas já tinham candidato de asset (IA e/ou Pexels); as lacunas remanescentes eram as cenas 02, 11, 12 e 21.
+- Geradas quatro novas candidatas IA para essas lacunas (`AI-ASSET-0020` a `AI-ASSET-0023`), com prompts, dimensões (1376×768), tamanhos e SHA-256 registrados em `assets/registries/ai_asset_registry.csv`.
+- O proprietário revisou visualmente e **aprovou as quatro como candidatas** (ADR-018): as **22 cenas passam a ter ao menos um candidato de asset**. Nenhuma aprovação de corte final, termos ou publicação decorre disso.
+- Revalidada a licença Pexels em 2026-09-03: segue **gratuita** e compatível com a regra de custo zero (uso comercial, atribuição não exigida, modificação permitida; proibições de uso ofensivo de pessoas identificáveis, venda de cópias inalteradas, endosso implícito, redistribuição em plataformas de stock e uso como marca).
+- O download de stock permanece bloqueado por `SSL_ERROR_SYSCALL` no host oficial (`www.pexels.com`/`videos.pexels.com`) neste ambiente; a falha foi reproduzida e **não** será contornada com mirrors desconhecidos. Os cinco candidatos Pexels continuam `candidate`, sem download.
+
+## 2026-09-03 — Versionamento de mídia no Git e revisão dos termos da Arena
+
+- Registrada a política de versionar mídia e artefatos de trabalho no Git (ADR-019): binários gitignorados (PNGs e MP3s de rascunho) não persistiram entre sessões e foram perdidos. O `.gitignore` passa a ignorar apenas segredos e ruído de SO/ferramenta.
+- Revisados os termos de uso da Arena (arena.ai, atualizados 2026-02-23) em `docs/ARENA_TERMS_ASSESSMENT_v01.md` (ADR-020): uso limitado a *"personal or internal business use"*; exploração comercial do Output é proibida; serviço gratuito atualmente. Voz/imagens Arena permanecem rascunho interno; publicação exige consentimento escrito ou substituição por ferramenta gratuita com licença comercial.
+- Iniciada a regeneração da mídia perdida (6 imagens `AI-ASSET-0018`–`0023`) e da narração por cena, agora versionadas no Git.
+- Regeneradas as 6 imagens perdidas com os mesmos prompts; hashes atualizados no `ai_asset_registry.csv` (novos renders — re-confirmação visual recomendada, pois os pixels diferem da instância aprovada).
+- Regenerada a narração `voice-00` por cena em arquivos individuais persistentes: cenas 01–10 sintetizadas, com durações reais medidas por parser de frames MP3 (total 2:40,7) e hashes em `AUDIO_DRAFT_MANIFEST_v03.csv`. Cenas 11–22 ficam para a próxima rodada (limite de síntese por turno).

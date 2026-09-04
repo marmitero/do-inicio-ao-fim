@@ -41,4 +41,4 @@ Registrar ferramenta, versão/modelo quando disponível, data, prompt, imagem de
 
 ## Armazenamento
 
-Binários ficam ignorados por padrão nos diretórios `assets/*`. Os registros, URLs, hash/local filename e créditos são versionados. O arquivo físico deve conservar nome que inclua o ID do registry quando possível.
+Binários de mídia são **versionados no Git** (ADR-019) para não se perderem entre sessões; apenas segredos e ruído de OS/ferramenta ficam fora. Os registros, URLs, hash/local filename e créditos também são versionados. O arquivo físico deve conservar nome que inclua o ID do registry quando possível.

@@ -31,6 +31,7 @@ Leia **[AI_STATE.md](AI_STATE.md)** antes de alterar ou continuar o projeto. Ele
 5. **Nenhum vídeo é publicado sem revisão e aprovação humana explícita.**
 6. **O conteúdo é independente do idioma.** Localizações, voz, áudio e metadados são camadas separadas.
 7. **Decisões operacionais ficam no repositório, não apenas em conversas.**
+8. **Custo zero no processo.** Todo o desenvolvimento e a produção devem ser gratuitos; o que for pago será substituído por uma alternativa gratuita semelhante ou gerado internamente.
 
 ## Começar ou retomar o trabalho
 
@@ -56,7 +57,7 @@ O roteiro passou por revisão interna v01 e foi aprovado pelo proprietário para
 ## Segurança e mídia
 
 - Use `.env` para configurações e credenciais locais; `.env.example` só contém nomes de variáveis.
-- Não versione renders, áudio final, downloads de banco ou projetos pesados sem decisão deliberada.
+- Mídia e artefatos de trabalho (áudio, imagens, vídeo, legendas, projetos de edição) são versionados no Git para não se perderem; apenas segredos (`.env`, chaves) e ruído de SO/ferramenta ficam fora.
 - Registre assets antes de usá-los; consulte [`docs/ASSET_POLICY.md`](docs/ASSET_POLICY.md).
 
 ## Escopo desta fase

@@ -18,16 +18,27 @@
 
 ## STATUS ATUAL
 
-- **Fase do programa:** Fundação documental, voz Arena aprovada para edição de rascunho; direção visual Arena aprovada para exploração interna e segunda bateria de conceitos revisada.
+- **Fase do programa:** Fundação documental, voz Arena aprovada para edição de rascunho; direção visual Arena aprovada para exploração interna e três baterias de conceitos revisadas. **Regra global de custo zero vigente (ADR-016).**
 - **Conteúdo ativo:** `GENESIS-001` — vídeo longo, pt-BR.
-- **Estado do conteúdo ativo:** `ASSETS` (rascunho Arena das 22 cenas aprovado para edição interna; cinco candidatos Pexels sem download e doze conceitos IA candidatos. Cinco imagens IA foram rejeitadas. Nenhum asset está aprovado para corte final; termos/licenças seguem pendentes).
-- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, rascunho Arena completo em 10 segmentos com hashes/durações, plano, shortlist Pexels, duas revisões visuais de IA (12 candidatas e 5 rejeições), metadados iniciais, backlog de Shorts e registries de candidatos.
-- **Entregáveis inexistentes de propósito:** voz final aprovada por QA, marcadores/arquivos de edição por cena, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. A narração Arena permanece rascunho até que os termos comerciais sejam documentados.
-- **Próximo portão:** corrigir a cobertura da cena 16 com uma cisterna comprovadamente seca e completar assets de baixo risco; só então avançar após marcadores reais por cena, termos acessíveis e demais gates de edição.
+- **Estado do conteúdo ativo:** `ASSETS` (rascunho Arena das 22 cenas aprovado para edição interna; cinco candidatos Pexels sem download e dezoito conceitos IA candidatos. As 22 cenas têm ao menos um candidato de asset. Cinco imagens IA foram rejeitadas. Nenhum asset está aprovado para corte final; termos/licenças seguem pendentes e devem ser gratuitos).
+- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, rascunho Arena completo em 10 segmentos com hashes/durações, plano, shortlist Pexels, matriz de cobertura e três revisões visuais de IA (18 candidatas e 5 rejeições), metadados iniciais, backlog de Shorts e registries de candidatos.
+- **Entregáveis inexistentes de propósito:** voz final aprovada por QA, marcadores/arquivos de edição por cena, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. A narração Arena permanece rascunho até que os termos comerciais sejam documentados (e, sob a regra de custo zero, sejam gratuitos).
+- **Próximo portão:** com cobertura visual fechada (22/22 cenas com candidato), avançar após marcadores reais por cena, termos gratuitos confirmados e demais gates de edição; download de stock permanece bloqueado por TLS (sem mirrors).
 
 ## OBJETIVO DO PROJETO
 
 Criar uma Content Factory editorial, progressivamente automatizável, que transforme conhecimento bíblico em narrativas audiovisuais de alta qualidade. O primeiro idioma é português brasileiro. O primeiro marco é um vídeo longo de Gênesis que possa ser avaliado para publicação; só após validação do processo haverá automação maior e expansão de idiomas.
+
+## REGRA GLOBAL: CUSTO ZERO (INEGOCIÁVEL)
+
+**Todo o processo de desenvolvimento e produção deve ser gratuito.** O que for pago será substituído por algo semelhante gratuito ou gerado internamente. Aplica-se a todo o projeto, em todas as fases: pesquisa, roteiro, voz, imagens, edição, legendas, thumbnail, música, SFX, publicação e automação.
+
+Implicações práticas:
+
+- Nenhuma etapa pode exigir despesa para avançar; se um recurso em uso for pago, deve-se migrar para alternativa gratuita ou geração própria **antes** de cruzar o gate correspondente.
+- Ferramentas com custo, assinatura ou créditos pagos ficam fora do fluxo; priorizar open-source/open-weight, bibliotecas de licença livre ou geração interna.
+- Imagens/áudio gerados internamente valem como "gerar"; mas, se a ferramenta de geração tiver custo/termos pagos para uso comercial/YouTube, ela entra na regra de substituição (trocar por alternativa gratuita ou regenerar com outra ferramenta livre).
+- Esta regra não substitui os demais gates: licença/proveniência registrada, revisão factual, QA e aprovação humana continuam obrigatórios — agora também com exigência de custo zero.
 
 ## VISÃO
 
@@ -63,6 +74,9 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | Automação somente depois do MVP avaliado | aceita | evitar automatizar processo não validado |
 | `voice-00` foi aprovada para edição de rascunho por decisão do proprietário | aceita condicionalmente | licença/custo/portabilidade Arena seguem pendentes para corte final; missão Kokoro encerrada |
 | Direção visual cinematográfica/documental da primeira bateria Arena aprovada para exploração | aceita condicionalmente | orienta novos conceitos e QA interno, mas termos/custo/atribuição e uso comercial/YouTube de imagens Arena seguem pendentes |
+| Todo o processo de desenvolvimento e produção deve ser gratuito; o que for pago será substituído por alternativa gratuita semelhante ou gerado internamente | inegociável | regra global definida pelo proprietário em 2026-09-03; ver seção "REGRA GLOBAL: CUSTO ZERO" |
+| Mídia e artefatos de trabalho (áudio, imagens, vídeo, música, SFX, legendas e projetos de edição) são versionados no Git | aceita | evita perda de binários entre sessões; altera ADR-007; ver ADR-019 |
+| Termos da Arena revisados: uso limitado a pessoal/negócio interno; exploração comercial do Output proibida; serviço gratuito hoje | aceita (constatação) | revisão operacional de 2026-09-03; ver ADR-020 e `docs/ARENA_TERMS_ASSESSMENT_v01.md` |
 
 ## DECISÕES REJEITADAS / NÃO FAZER
 
@@ -72,7 +86,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 - Não baixar mídia “encontrada na internet” sem licença/proveniência verificável.
 - Não usar voz clonada ou imitação identificável de narrador real sem autorização.
 - Não converter hipóteses, tradição ou harmonizações em fatos bíblicos.
-- Não commit ar áudio, vídeo, projetos pesados, chaves ou arquivos `.env` por padrão.
+- Não commitar segredos (chaves, certificados, `.env`). Mídia e artefatos de trabalho, por outro lado, são versionados no Git para não se perderem (ADR-019).
 
 ## REGRAS EDITORIAIS E DE QUALIDADE
 
@@ -89,7 +103,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | --- | --- | --- |
 | Python 3 padrão | em uso | somente para `tools/validate_catalog.py`; sem dependências externas |
 | Git | em uso | memória e histórico operacional |
-| TTS | rascunho Arena integral segmentado gerado | `voice-00` cobre cenas 01–22 em 10 MP3s; QA e pontos de corte pendentes; licença/custo/portabilidade Arena ainda não homologados |
+| TTS | rascunho Arena por cena em regeneração | `voice-00` cobriu cenas 01–10 em MP3s individuais persistentes (2:40,7 medidos); 11–22 pendentes de síntese. Manifesto `AUDIO_DRAFT_MANIFEST_v03.csv`; licença Arena restrita a uso interno (ADR-020) |
 | Edição | não selecionada | escolher depois de aprovado roteiro e plano de assets |
 | Stock / música / SFX | não selecionados | validar item a item, nunca por suposição de plataforma |
 | YouTube API | não configurada | futura preparação permitida, publicação continua manual |
@@ -134,10 +148,10 @@ Produzidos também documentos de pré-produção do MVP:
 
 ## BACKLOG PRIORIZADO
 
-1. **P0 — Corrigir cobertura da cena 16.** Gerar e revisar uma cisterna explicitamente seca; manter `AI-ASSET-0013` e `AI-ASSET-0016` rejeitados.
-2. **P0 — Completar cobertura visual e revalidar/download de stock.** Verificar termos/página de cada candidato no momento do download; registrar arquivo e SHA-256 antes de uso. Não contornar TLS com espelhos desconhecidos.
-3. **P0 — Criar marcadores de limites para as 22 cenas ou regenerar arquivos individuais em armazenamento persistente.** Não estimar pontos de corte sem escuta/medição.
-4. **P0 — Confirmar termos comerciais/YouTube, custo e atribuição Arena.** Sem essa evidência, voz/imagens Arena permanecem rascunhos e não podem chegar à publicação.
+1. **P0 — ~~Corrigir cobertura da cena 16.~~** ✅ Concluído: `AI-ASSET-0018` e `AI-ASSET-0019` (cisternas secas) foram aprovadas visualmente pelo proprietário como candidatas da cena 16 (ADR-017); `AI-ASSET-0013` e `AI-ASSET-0016` seguem rejeitadas.
+2. **P0 — ~~Completar cobertura visual~~ e revalidar/download de stock (custo zero).** ✅ Cobertura visual fechada: as 22 cenas têm candidato (`ASSET_COVERAGE_v01.md`; ADR-018). Resta o stock: revalidar página de cada candidato Pexels no momento de um download futuro (hoje bloqueado por TLS) + registrar arquivo e SHA-256. Não contornar TLS com espelhos desconhecidos.
+3. **P0 — Criar marcadores de limites para as 22 cenas (arquivos individuais persistentes).** ⏳ Em andamento: narração por cena regenerada e versionada (cenas 01–10 prontas, durações medidas e hasheadas em `AUDIO_DRAFT_MANIFEST_v03.csv`); restam 11–22 (limite de síntese por turno). Sem estimar pontos de corte sem escuta/medição.
+4. **P0 — ~~Confirmar termos Arena.~~** ✅ Revisados (ADR-020): serviço gratuito hoje, mas uso restrito a pessoal/negócio interno e exploração comercial do Output proibida. Voz/imagens Arena ficam como rascunho interno. Próxima decisão do proprietário: consentimento escrito da Arena ou substituição por ferramentas gratuitas com licença comercial. Ver `docs/ARENA_TERMS_ASSESSMENT_v01.md`.
 5. **P1 — Produzir edição, legendas, opções de thumbnail e pacote de QA de Gênesis.**
 6. **P1 — Avaliar o MVP com dados de esforço, custo e qualidade; documentar lições.**
 7. **P2 — Selecionar e produzir poucos Shorts derivados de Gênesis após o longo estar validado.**
@@ -151,8 +165,8 @@ Produzidos também documentos de pré-produção do MVP:
 | Identidade nominal do proprietário/revisor não é armazenada | controlado | aprovação do roteiro foi capturada via decisão Arena; continuar exigindo decisão explícita em cada gate humano |
 | TTS, editor e fontes de assets ainda não foram escolhidos | esperado | arquitetura modular; não criar lock-in antes do teste |
 | Risco de interpretações controversas em Gênesis | aberto | revisão interna v01 preservou qualificadores; proprietário pode exigir especialista antes de aprovar roteiro |
-| Termos comerciais da voz Arena não estão registrados | aberto | voz pode ser usada para rascunho por decisão do proprietário; exigir evidência antes de entrega/publicação |
-| Direitos autorais/licença de mídia e IA | aberto | Pexels tem candidatos sem download; doze imagens Arena candidatas têm termos comerciais pendentes. Revalidar/licenciar e registrar hash antes de aprovar |
+| Termos da Arena restringem uso a pessoal/negócio interno | revisado | ADR-020; voz/imagens Arena permanecem rascunho interno; publicação exige consentimento escrito da Arena ou substituição por ferramenta gratuita com licença comercial |
+| Direitos autorais/licença de mídia e IA | aberto | Pexels é gratuito e compatível; imagens Arena (18 candidatas) têm ToS limitada a uso pessoal/negócio interno (ADR-020) — são rascunho interno até substituição/consentimento. Revalidar/licenciar e registrar hash antes de aprovar |
 | Duração real do roteiro só será conhecida após teste de voz | esperado | a estimativa é provisória; recalibrar após voz aprovada |
 | Não existem métricas de canal | esperado | canal ainda não publicou; modelo de coleta está documentado |
 
@@ -160,7 +174,7 @@ Produzidos também documentos de pré-produção do MVP:
 
 ### Estrutura do repositório
 
-Consulte `README.md` e `docs/CONTENT_DATA_MODEL.md`. Arquivos de mídia são deliberadamente ignorados; metadados e proveniência são versionados.
+Consulte `README.md` e `docs/CONTENT_DATA_MODEL.md`. Mídia e artefatos de trabalho são versionados no Git para não se perderem (ADR-019); apenas segredos e ruído de OS/ferramenta são ignorados. Metadados e proveniência continuam versionados.
 
 ### Padrões editoriais
 
@@ -185,7 +199,7 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 | A — pesquisa assistida | manual assistida por documentos |
 | B — geração de roteiro | manual assistida; roteiro de Gênesis aprovado para pré-produção |
 | C — geração de cenas | manual estruturada; modelo validado no rascunho |
-| D — assets | cinco candidatos Pexels sem download; duas baterias IA têm doze candidatas e cinco rejeitadas, com termos pendentes; a cena 16 ainda não tem cisterna seca candidata e a cobertura segue incompleta |
+| D — assets | cinco candidatos Pexels sem download; dezoito candidatas e cinco rejeitadas nas baterias v01–v04; matriz de cobertura criada com as 22 cenas cobertas por candidato; stock continua bloqueado por TLS sem mirrors |
 | E — TTS | rascunho Arena integral aprovado pelo proprietário para edição interna; QA detalhado/limites de edição e condições comerciais ainda bloqueiam entrega final |
 | F a I — edição, legendas, thumbnail, SEO | não iniciadas operacionalmente |
 | J — pipeline completo | proibido por enquanto; depende de MVP avaliado |
@@ -208,3 +222,8 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-02:** Geradas sete imagens IA para teste visual; seis candidatas foram mantidas e a primeira versão do jardim foi rejeitada por conter ruínas. Prompts, hashes, dimensões, cenas e limitações foram registrados.
 - **2026-09-03:** Proprietário aprovou a direção visual cinematográfica/documental dos candidatos da v01 para exploração interna; a decisão não autoriza uso final/publicação.
 - **2026-09-03:** Segunda bateria IA revisada e registrada: seis novas candidatas foram mantidas, quatro imagens foram rejeitadas (incluindo duas tentativas de cisterna inadequadas) e a cena 16 permanece lacuna de cobertura.
+- **2026-09-03:** Regra global de custo zero registrada (ADR-016): todo o processo de desenvolvimento/produção deve ser gratuito; o que for pago será substituído por alternativa gratuita ou gerado internamente. Geradas duas novas tentativas de cisterna seca para a cena 16 (`AI-ASSET-0018`/`AI-ASSET-0019`); o proprietário revisou visualmente e aprovou ambas como candidatas (ADR-017), fechando a lacuna de cobertura da cena 16.
+- **2026-09-03:** Completada a matriz de cobertura (`ASSET_COVERAGE_v01.md`): geradas candidatas IA para as cenas 02, 11, 12 e 21 (`AI-ASSET-0020` a `0023`) e o proprietário aprovou as quatro (ADR-018). **As 22 cenas têm ao menos um candidato de asset.** Licença Pexels revalidada como gratuita; download de stock segue bloqueado por TLS neste ambiente (sem mirrors).
+- **2026-09-03:** Registrada a política de versionar mídia e artefatos no Git (ADR-019): `.gitignore` passa a ignorar só segredos/ruído de OS; binários deixam de se perder entre sessões.
+- **2026-09-03:** Revisados os termos da Arena (ADR-020): uso restrito a pessoal/negócio interno e exploração comercial do Output proibida; serviço gratuito hoje. Voz/imagens Arena permanecem rascunho interno até consentimento escrito ou substituição gratuita.
+- **2026-09-03:** Regenerada a mídia perdida e iniciada a narração por cena em arquivos persistentes: 6 imagens (`AI-ASSET-0018`–`0023`) e cenas 01–10 de áudio (`voice-00`), com durações reais medidas e hashes em `AUDIO_DRAFT_MANIFEST_v03.csv`. Cenas 11–22 seguem na próxima rodada (limite de síntese por turno).
