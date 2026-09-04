@@ -66,7 +66,7 @@ production:
   tts_voice: "voice-00 (owner-selected; session-scoped)"
   tts_license_status: arena_terms_not_documented_owner_directed_draft; kokoro_mission_aborted
   asset_registry_status: five_pexels_candidates_0001_to_0005_no_downloads; twenty_three_ai_entries_0001_to_0023_eighteen_candidates_five_rejected; no_final_approved_assets
-  audio_status: arena_per_scene_regeneration_in_progress_scenes_01_20_done_21_22_pending; owner_approved_for_draft_edit; detailed_qa_and_edit_boundaries_pending; not_final_approved
+  audio_status: arena_per_scene_complete_22_scenes_total_5m58_6; owner_approved_for_draft_edit; detailed_qa_and_edit_boundaries_pending; not_final_approved
   edit_status: not_started
   captions_status: not_started
   thumbnail_status: not_started
@@ -125,6 +125,6 @@ notes:
   - 'Quatro novas candidatas IA cobrem as cenas 02, 11, 12 e 21 (AI-ASSET-0020/0021/0022/0023); proprietário aprovou as quatro como candidatas (ADR-018). As 22 cenas têm candidato. Ver ASSET_COVERAGE_v01.md.'
   - 'Licença Pexels revalidada em 2026-09-03 como gratuita e compatível com ADR-016; download continua bloqueado por SSL_ERROR_SYSCALL neste ambiente e não será contornado por mirrors.'
   - 'Termos da Arena revisados em 2026-09-03 (ADR-020; docs/ARENA_TERMS_ASSESSMENT_v01.md): uso restrito a pessoal/negócio interno e exploração comercial do Output proibida. Voz/imagens Arena permanecem rascunho interno; publicação exige consentimento escrito ou substituição gratuita.'
-  - 'Narração por cena em arquivos individuais persistentes sendo regenerada (voice-00): cenas 01-20 prontas (5:27,6), 21-22 pendentes. Ver AUDIO_DRAFT_MANIFEST_v03.csv.'
+  - 'Narração por cena concluída para as 22 cenas (voice-00), arquivos individuais persistentes: total 5:58,6. Ver AUDIO_DRAFT_MANIFEST_v03.csv.'
   - 'Política de versionamento de mídia alterada (ADR-019): áudio, imagens, vídeo, legendas e projetos de edição passam a ser commitados no Git.'
   - 'Alvo de duração recalibrado para ~6 min com ritmo coeso/fluido (ADR-021, 2026-09-04); se alongar, ampliar a história.'

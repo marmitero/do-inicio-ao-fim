@@ -62,3 +62,5 @@ Mudanças significativas do projeto. Datas em UTC.
 - Registrada a decisão ADR-021: priorizar um vídeo **coeso e fluido** em vez de longo e morto; alvo de ~6 min; se precisar alongar, ampliar a história (sem pausas demais nem frases lentas). A duração medida da narração (22 cenas ≈ 5:50) é compatível com o alvo.
 - Sintetizada a narração `voice-00` das cenas **11–20** (arquivos individuais persistentes); durações reais medidas e hashes anexados a `AUDIO_DRAFT_MANIFEST_v03.csv`. Total cenas 01–20: **5:27,6**.
 - Restam as cenas **21–22** para completar as 22 cenas por arquivo individual (limite de síntese por turno).
+- Sintetizada a narração `voice-00` das cenas **21–22**; a narração por cena está **completa para as 22 cenas** (arquivos individuais persistentes). Duração total medida: **5:58,6**, com hash/bytes/sample rate/duração por cena em `AUDIO_DRAFT_MANIFEST_v03.csv`.
+- P0 #3 (marcadores reais por cena) concluído: as 22 cenas têm arquivo individual com duração medida. Falta a escuta humana (QA) por cena.
