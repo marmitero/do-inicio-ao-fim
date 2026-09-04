@@ -18,12 +18,12 @@
 
 ## STATUS ATUAL
 
-- **Fase do programa:** Fundação documental; narração (22/22 cenas) e cobertura visual (22/22) aprovadas pelo proprietário; `GENESIS-001` em **edição** (produção do vídeo). **Regra global de custo zero vigente (ADR-016).**
+- **Fase do programa:** Fundação documental; narração (22/22) e cobertura visual (22/22) aprovadas; termos da Arena aprovados pelo proprietário (ADR-023); **vídeo final v03 renderizado** e `GENESIS-001` em **QA** (revisão do proprietário). **Regra global de custo zero vigente (ADR-016).**
 - **Conteúdo ativo:** `GENESIS-001` — vídeo longo, pt-BR.
-- **Estado do conteúdo ativo:** `EDITING` (narração aprovada pelo proprietário em 22 arquivos por cena — 5:58,6; cobertura visual 22/22; **v02_final renderizado** — 1080p30, 5:58,56, com cama musical ambiente e vento gerados no projeto, legenda draft e thumbnail v01. Publicação segue bloqueada por ADR-020 + aprovação explícita).
-- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, narração Arena completa por cena (22 MP3s, 5:58,6, manifesto v03), plano, shortlist Pexels, matriz de cobertura, revisões visuais de IA (18 candidatas e 5 rejeições), vídeo v02_final (MP4 + SRT), música ambiente e SFX procedimentais (registries), thumbnail v01, scripts de render reutilizáveis, metadados iniciais, backlog de Shorts e registries de candidatos.
-- **Entregáveis inexistentes de propósito:** legenda sincronizada final (palavra a palavra), upload e publicação. Narração e imagens Arena permanecem rascunho interno até os termos da Arena serem resolvidos (ADR-020; substituição gratuita ou consentimento escrito); música/SFX/thumbnail aguardam escuta/revisão humana.
-- **Próximo portão:** escuta humana (QA) da narração + mix de música/SFX; revisão da thumbnail; depois HUMAN_REVIEW e aprovação de publicação (ADR-020 + decisão explícita).
+- **Estado do conteúdo ativo:** `QA` (vídeo v03_final pronto para revisão do proprietário: 1080p30, 5:58,57, legenda dinâmica palavra a palavra queimada, música ambiente a ~10% e vento na cena 07. Publicação será manual pelo proprietário).
+- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, narração Arena completa por cena (22 MP3s, 5:58,6), plano, shortlist Pexels, matriz de cobertura, revisões visuais de IA (18 candidatas e 5 rejeições), **vídeo final v03** (MP4 + SRT + ASS de legenda dinâmica), música ambiente e SFX procedimentais (registries), thumbnail v01, scripts de render reutilizáveis, metadados iniciais, backlog de Shorts e registries de candidatos.
+- **Entregáveis inexistentes de propósito:** upload e publicação (manuais, a cargo do proprietário). A sincronia da legenda dinâmica é proporcional (aproximada); ajuste fino palavra a palavra pode ser feito se o proprietário pedir.
+- **Próximo portão:** revisão do proprietário do v03 (QA) → HUMAN_REVIEW → aprovação de publicação (decisão explícita) → publicação manual pelo proprietário.
 
 ## OBJETIVO DO PROJETO
 
@@ -77,6 +77,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | Todo o processo de desenvolvimento e produção deve ser gratuito; o que for pago será substituído por alternativa gratuita semelhante ou gerado internamente | inegociável | regra global definida pelo proprietário em 2026-09-03; ver seção "REGRA GLOBAL: CUSTO ZERO" |
 | Mídia e artefatos de trabalho (áudio, imagens, vídeo, música, SFX, legendas e projetos de edição) são versionados no Git | aceita | evita perda de binários entre sessões; altera ADR-007; ver ADR-019 |
 | Termos da Arena revisados: uso limitado a pessoal/negócio interno; exploração comercial do Output proibida; serviço gratuito hoje | aceita (constatação) | revisão operacional de 2026-09-03; ver ADR-020 e `docs/ARENA_TERMS_ASSESSMENT_v01.md` |
+| Termos da Arena aprovados pelo proprietário para uso final e publicação manual | aceita | decisão do proprietário em 2026-09-04; ADR-023 |
 | Vídeo coeso e fluido vale mais que vídeo longo e morto; alvo ~6 min; ampliar a história (não pausas/frases lentas) se precisar alongar | aceita | decisão do proprietário em 2026-09-04; ADR-021 |
 
 ## DECISÕES REJEITADAS / NÃO FAZER
@@ -104,8 +105,8 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | --- | --- | --- |
 | Python 3 padrão | em uso | somente para `tools/validate_catalog.py`; sem dependências externas |
 | Git | em uso | memória e histórico operacional |
-| TTS | rascunho Arena por cena completo | `voice-00` cobre as 22 cenas em MP3s individuais persistentes (5:58,6 medidos). Manifesto `AUDIO_DRAFT_MANIFEST_v03.csv` com hash/bytes/sample rate/duração por cena; licença Arena restrita a uso interno (ADR-020) |
-| Edição | v02_final renderizado | ffmpeg livre (ADR-016): 1080p30, Ken Burns, narração por cena, cama musical ambiente + vento procedimentais, legenda draft, thumbnail v01 |
+| TTS | narração Arena por cena completa | `voice-00` cobre as 22 cenas em MP3s individuais persistentes (5:58,6 medidos). Manifesto `AUDIO_DRAFT_MANIFEST_v03.csv`; termos aprovados pelo proprietário (ADR-023) |
+| Edição | v03_final renderizado | ffmpeg livre (ADR-016): 1080p30, Ken Burns, narração por cena, legenda dinâmica palavra a palavra queimada, música ambiente a ~10% + vento, thumbnail v01 |
 | Stock / música / SFX | música + SFX gerados no projeto | fontes externas (Pexels/Pixabay/etc.) inacessíveis por TLS; música ambiente e vento foram **gerados internamente** com ffmpeg (custo zero, sem licença de terceiros) |
 | YouTube API | não configurada | futura preparação permitida, publicação continua manual |
 
@@ -152,7 +153,7 @@ Produzidos também documentos de pré-produção do MVP:
 1. **P0 — ~~Corrigir cobertura da cena 16.~~** ✅ Concluído: `AI-ASSET-0018` e `AI-ASSET-0019` (cisternas secas) foram aprovadas visualmente pelo proprietário como candidatas da cena 16 (ADR-017); `AI-ASSET-0013` e `AI-ASSET-0016` seguem rejeitadas.
 2. **P0 — ~~Completar cobertura visual~~ e revalidar/download de stock (custo zero).** ✅ Cobertura visual fechada: as 22 cenas têm candidato (`ASSET_COVERAGE_v01.md`; ADR-018). Resta o stock: revalidar página de cada candidato Pexels no momento de um download futuro (hoje bloqueado por TLS) + registrar arquivo e SHA-256. Não contornar TLS com espelhos desconhecidos.
 3. **P0 — ~~Criar marcadores de limites para as 22 cenas (arquivos individuais persistentes).~~** ✅ Concluído: narração por cena regenerada e versionada para as 22 cenas (5:58,6 no total), com duração real medida e hash por cena em `AUDIO_DRAFT_MANIFEST_v03.csv`. Resta apenas a escuta humana (QA) de cada cena.
-4. **P0 — ~~Confirmar termos Arena.~~** ✅ Revisados (ADR-020): serviço gratuito hoje, mas uso restrito a pessoal/negócio interno e exploração comercial do Output proibida. Voz/imagens Arena ficam como rascunho interno. Próxima decisão do proprietário: consentimento escrito da Arena ou substituição por ferramentas gratuitas com licença comercial. Ver `docs/ARENA_TERMS_ASSESSMENT_v01.md`.
+4. **P0 — ~~Confirmar termos Arena.~~** ✅ Revisados (ADR-020) e **aprovados pelo proprietário** (ADR-023, 2026-09-04) para uso final e publicação manual. Ver `docs/ARENA_TERMS_ASSESSMENT_v01.md`.
 5. **P1 — Produzir edição, legendas, opções de thumbnail e pacote de QA de Gênesis.**
 6. **P1 — Avaliar o MVP com dados de esforço, custo e qualidade; documentar lições.**
 7. **P2 — Selecionar e produzir poucos Shorts derivados de Gênesis após o longo estar validado.**
@@ -166,8 +167,8 @@ Produzidos também documentos de pré-produção do MVP:
 | Identidade nominal do proprietário/revisor não é armazenada | controlado | aprovação do roteiro foi capturada via decisão Arena; continuar exigindo decisão explícita em cada gate humano |
 | TTS, editor e fontes de assets ainda não foram escolhidos | esperado | arquitetura modular; não criar lock-in antes do teste |
 | Risco de interpretações controversas em Gênesis | aberto | revisão interna v01 preservou qualificadores; proprietário pode exigir especialista antes de aprovar roteiro |
-| Termos da Arena restringem uso a pessoal/negócio interno | revisado | ADR-020; voz/imagens Arena permanecem rascunho interno; publicação exige consentimento escrito da Arena ou substituição por ferramenta gratuita com licença comercial |
-| Direitos autorais/licença de mídia e IA | aberto | Pexels é gratuito e compatível; imagens Arena (18 candidatas) têm ToS limitada a uso pessoal/negócio interno (ADR-020) — são rascunho interno até substituição/consentimento. Revalidar/licenciar e registrar hash antes de aprovar |
+| Termos da Arena restringem uso a pessoal/negócio interno | resolvido | ADR-020 + ADR-023: proprietário aprovou os termos em 2026-09-04; publicação manual |
+| Direitos autorais/licença de mídia e IA | controlado | Pexels é gratuito e compatível; termos Arena aprovados pelo proprietário (ADR-023). Registrar hash/uso e manter rastreabilidade |
 | Duração real do roteiro só será conhecida após teste de voz | esperado | a estimativa é provisória; recalibrar após voz aprovada |
 | Não existem métricas de canal | esperado | canal ainda não publicou; modelo de coleta está documentado |
 
@@ -233,3 +234,4 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-04:** Proprietário aprovou a narração por cena, re-confirmou as imagens regeneradas e autorizou a edição (ADR-022); `GENESIS-001` avançou de `ASSETS` para `EDITING`.
 - **2026-09-04:** Renderizado o **draft v01** do vídeo (1080p30, 5:58,56, 41 MB, legenda draft 111 cues) com ffmpeg livre; 2 placeholders pendentes (cenas 13/19).
 - **2026-09-04:** Regeneradas `AI-ASSET-0015`/`0017` (placeholders resolvidos) e renderizado o **v02_final** (1080p30, 5:58,56) com cama musical ambiente (`MUSIC-0001`) e vento (`SFX-0001`) gerados no projeto, legenda draft e thumbnail v01. Bibliotecas de áudio externas seguem inacessíveis por TLS; tudo foi gerado internamente (ADR-016).
+- **2026-09-04:** Termos da Arena **aprovados pelo proprietário** (ADR-023) para uso final e publicação manual. Renderizado o **v03_final**: legenda dinâmica palavra a palavra (karaokê, 1625 eventos) queimada, música ambiente a ~10% e vento na cena 07; 1080p30, 5:58,57. `GENESIS-001` avança para `QA`.

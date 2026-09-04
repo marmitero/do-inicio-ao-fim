@@ -85,3 +85,12 @@ Mudanças significativas do projeto. Datas em UTC.
 - **Renderizado o v02_final**: `video/GENESIS-001/GENESIS-001_v02_final.mp4` — 1080p30, **5:58,56**, H.264/AAC, com música e vento; legenda `GENESIS-001_v02_final.srt`.
 - Criada a **thumbnail v01** `thumbnails/GENESIS-001_thumbnail_v01.png` (1280×720, base criação + título "GÊNESIS — Como Tudo Começou" via Pillow/DejaVu).
 - Música/SFX/thumbnail são rascunho interno; escuta e revisão humanas pendentes.
+
+## 2026-09-04 — Aprovação dos termos Arena e vídeo final (v03, legenda dinâmica + música 10%)
+
+- Termos da Arena **aprovados pelo proprietário** (ADR-023): voz e imagens Arena liberadas para o vídeo final; a publicação será **manual**.
+- Atualizados os registries: `commercial_use_review` das 18 candidatas IA → `owner_approved_2026-09-04`; licença TTS no manifesto → aprovada; manifestos de áudio/música/SFX com hashes e status atualizados.
+- **Legenda dinâmica**: criada a legenda palavra a palavra (karaokê) em `GENESIS-001_v03_captions.ass` (1.625 eventos de palavra, destaque âmbar na palavra atual) e **queimada** no vídeo via filtro `subtitles` (libass). Sidecar SRT mantido.
+- **Música a ~10%** (pedido do proprietário): cama ambiente `MUSIC-0001` remixada em volume 0.10 para não sobrepor a voz; vento `SFX-0001` mantido na cena 07.
+- **Renderizado o v03_final**: `video/GENESIS-001/GENESIS-001_v03_final.mp4` — 1080p30, **5:58,57**, H.264/AAC, com legenda dinâmica queimada, música e vento.
+- `GENESIS-001` movido de `EDITING` para `QA` (aguardando revisão do proprietário). Sincronia da legenda dinâmica é proporcional (aproximada); ajuste fino palavra a palavra pode ser feito se solicitado.

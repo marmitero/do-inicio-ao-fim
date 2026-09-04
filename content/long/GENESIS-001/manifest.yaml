@@ -2,8 +2,8 @@ content_id: GENESIS-001
 type: long
 language: pt-BR
 working_title: 'Gênesis: Como Tudo Começou'
-state: EDITING
-updated_at_utc: '2026-09-03'
+state: QA
+updated_at_utc: '2026-09-04'
 canonical_scope:
   book: GENESIS
   chapters: '1-50'
@@ -63,29 +63,31 @@ approval:
   audio_qa_owner_approval_record: "Owner approved the per-scene narration draft (listening QA) on 2026-09-04 America/Sao_Paulo; scope: proceed to internal editing."
   edit_proceed_owner_approval: approved
   edit_proceed_owner_approval_record: "Owner authorized moving GENESIS-001 to EDITING on 2026-09-04 with current Arena draft materials (internal production). Publication remains gated by ADR-020 and explicit approval."
+  arena_terms_owner_approval: approved
+  arena_terms_owner_approval_record: "Owner approved the Arena terms for final use of voice and images on 2026-09-04 (ADR-023); publication will be manual."
   final_human_review: pending
   publish_owner_approval: pending
 production:
-  tts_provider: "Arena speech synthesis (owner-directed production draft; commercial terms pending)"
+  tts_provider: "Arena speech synthesis (owner-approved terms 2026-09-04; ADR-023)"
   tts_voice: "voice-00 (owner-selected; session-scoped)"
-  tts_license_status: arena_terms_not_documented_owner_directed_draft; kokoro_mission_aborted
+  tts_license_status: arena_terms_owner_approved_2026-09-04_ADR-023
   asset_registry_status: five_pexels_candidates_0001_to_0005_no_downloads; twenty_three_ai_entries_0001_to_0023_eighteen_candidates_five_rejected; no_final_approved_assets
-  audio_status: arena_per_scene_complete_22_scenes_total_5m58_6; owner_approved_for_draft_edit; detailed_qa_and_edit_boundaries_pending; not_final_approved
-  edit_status: draft_v02_final_1080p30_5m58_56_music_sfx_thumbnail
-  captions_status: draft_auto_timed_111_cues_pending_sync_review
-  music_status: procedural_ambient_bed_MUSIC-0001_pending_human_listen
+  audio_status: arena_per_scene_complete_22_scenes_total_5m58_6; owner_approved_qa; not_final_approved_until_review
+  edit_status: v03_final_1080p30_5m58_57_dynamic_captions_music_10pct
+  captions_status: dynamic_word_by_word_karaoke_burned_in_v03_plus_srt_sidecar
+  music_status: procedural_bed_MUSIC-0001_mixed_10pct_pending_human_listen
   sfx_status: procedural_wind_SFX-0001_scene_07_pending_human_listen
   thumbnail_status: v01_draft_1280x720_pending_owner_review
-  thumbnail_status: not_started
   metadata_status: draft
-  qa_status: not_started
+  qa_status: pending_owner_review_of_v03
 outputs:
   audio:
     - 'audio/GENESIS-001/scenes/ (22 per-scene MP3s; manifest: content/long/GENESIS-001/AUDIO_DRAFT_MANIFEST_v03.csv)'
   video:
-    - video/GENESIS-001/GENESIS-001_v02_final.mp4
+    - video/GENESIS-001/GENESIS-001_v03_final.mp4
   captions:
-    - video/GENESIS-001/GENESIS-001_v02_final.srt
+    - video/GENESIS-001/GENESIS-001_v03_final.srt
+    - video/GENESIS-001/GENESIS-001_v03_captions.ass
   thumbnails:
     - thumbnails/GENESIS-001_thumbnail_v01.png
   music:
@@ -108,10 +110,9 @@ derived_content:
   - GENESIS-001-S12
 blockers:
   - 'Qualquer novo contexto extrabíblico exige fonte secundária e nova revisão factual.'
-  - 'Termos comerciais/YouTube, custo e atribuição do ambiente Arena devem ser confirmados antes de qualquer entrega/publicação.'
   - 'Assets precisam de origem, licença/termos, download/geração registrada e aprovação antes da timeline de edição.'
-  - 'Arena-generated image assets have commercial/YouTube terms pending and cannot be final-approved yet.'
   - 'Plano de assets e registro/licenças antes da edição.'
+  - 'Download de stock Pexels segue bloqueado por TLS neste ambiente (sem mirrors); os 5 candidatos continuam sem download.'
 notes:
   - 'Roteiro aprovado pelo proprietário para pré-produção em 2026-09-02 UTC.'
   - 'Candidato de voz voice-00 selecionado pelo proprietário para audição; não homologado para uso final.'
@@ -135,3 +136,5 @@ notes:
   - 'Alvo de duração recalibrado para ~6 min com ritmo coeso/fluido (ADR-021, 2026-09-04); se alongar, ampliar a história.'
   - 'Draft v01 renderizado em 2026-09-04 (1080p30, 5:58,56, 41 MB, legenda draft 111 cues) via scripts/render_video.py (ffmpeg livre). Placeholders: cena 13 usa AI-ASSET-0005 e cena 19 usa AI-ASSET-0006 até regenerar AI-ASSET-0015/0017.'
   - 'v02_final renderizado em 2026-09-04: placeholders resolvidos (AI-ASSET-0015/0017), cama musical ambiente MUSIC-0001 e vento SFX-0001 (cena 07) gerados no projeto (custo zero, ADR-016), thumbnail v01. Áudio de terceiros indisponível por bloqueio de rede; tudo foi gerado internamente.'
+  - 'Termos da Arena aprovados pelo proprietário em 2026-09-04 (ADR-023): voz/imagens podem ser usadas no vídeo final; publicação será manual.'
+  - 'v03_final renderizado em 2026-09-04: legenda dinâmica palavra a palavra (karaokê, 1625 eventos) queimada no vídeo, música ambiente a ~10% e vento na cena 07; 1080p30, 5:58,57. Ver GENESIS-001_v03_final.mp4.'
