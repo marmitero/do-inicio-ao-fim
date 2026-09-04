@@ -18,12 +18,12 @@
 
 ## STATUS ATUAL
 
-- **Fase do programa:** Fundação documental, voz Arena aprovada para edição de rascunho; direção visual Arena aprovada para exploração interna e três baterias de conceitos revisadas. **Regra global de custo zero vigente (ADR-016).**
+- **Fase do programa:** Fundação documental; narração (22/22 cenas) e cobertura visual (22/22) aprovadas pelo proprietário; `GENESIS-001` em **edição** (produção do vídeo). **Regra global de custo zero vigente (ADR-016).**
 - **Conteúdo ativo:** `GENESIS-001` — vídeo longo, pt-BR.
-- **Estado do conteúdo ativo:** `ASSETS` (rascunho Arena das 22 cenas aprovado para edição interna; cinco candidatos Pexels sem download e dezoito conceitos IA candidatos. As 22 cenas têm ao menos um candidato de asset. Cinco imagens IA foram rejeitadas. Nenhum asset está aprovado para corte final; termos/licenças seguem pendentes e devem ser gratuitos).
-- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, narração Arena completa por cena (22 MP3s, 5:58,6, com manifesto v03), plano, shortlist Pexels, matriz de cobertura e três revisões visuais de IA (18 candidatas e 5 rejeições), metadados iniciais, backlog de Shorts e registries de candidatos.
-- **Entregáveis inexistentes de propósito:** voz final aprovada por QA (escuta humana por cena), downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. A narração Arena permanece rascunho até que os termos da Arena sejam resolvidos (ADR-020; substituição gratuita ou consentimento escrito).
-- **Próximo portão:** com cobertura visual fechada (22/22) e narração por cena medida (22/22), avançar após: escuta humana (QA) da narração, decisão sobre termos Arena (ADR-020) e download de stock (bloqueado por TLS, sem mirrors); então edição.
+- **Estado do conteúdo ativo:** `EDITING` (narração aprovada pelo proprietário em 22 arquivos por cena — 5:58,6; cobertura visual 22/22 aprovada; **draft v01 renderizado** — 1080p30, 5:58,56, 41 MB, legenda draft com 111 cues. Duas cenas (13 e 19) usam placeholder até regenerar `AI-ASSET-0015`/`0017`. Publicação segue bloqueada por ADR-020 + aprovação explícita).
+- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, narração Arena completa por cena (22 MP3s, 5:58,6, manifesto v03), plano, shortlist Pexels, matriz de cobertura, revisões visuais de IA (18 candidatas e 5 rejeições), **draft v01 do vídeo** (MP4 + SRT), script de render reutilizável (`scripts/render_video.py`), metadados iniciais, backlog de Shorts e registries de candidatos.
+- **Entregáveis inexistentes de propósito:** música, SFX, legenda sincronizada final (palavra a palavra), thumbnail final, upload e publicação. A narração e as imagens Arena permanecem rascunho interno até que os termos da Arena sejam resolvidos (ADR-020; substituição gratuita ou consentimento escrito).
+- **Próximo portão:** regenerar `AI-ASSET-0015`/`0017` (placeholders das cenas 13/19), revisar o draft (QA), HUMAN_REVIEW e aprovação de publicação (ADR-020 + decisão explícita).
 
 ## OBJETIVO DO PROJETO
 
@@ -105,7 +105,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | Python 3 padrão | em uso | somente para `tools/validate_catalog.py`; sem dependências externas |
 | Git | em uso | memória e histórico operacional |
 | TTS | rascunho Arena por cena completo | `voice-00` cobre as 22 cenas em MP3s individuais persistentes (5:58,6 medidos). Manifesto `AUDIO_DRAFT_MANIFEST_v03.csv` com hash/bytes/sample rate/duração por cena; licença Arena restrita a uso interno (ADR-020) |
-| Edição | não selecionada | escolher depois de aprovado roteiro e plano de assets |
+| Edição | draft v01 renderizado | ffmpeg livre (ADR-016): 1080p30, Ken Burns, narração por cena, legenda draft; 2 placeholders (cenas 13/19) até regenerar `AI-ASSET-0015`/`0017` |
 | Stock / música / SFX | não selecionados | validar item a item, nunca por suposição de plataforma |
 | YouTube API | não configurada | futura preparação permitida, publicação continua manual |
 
@@ -230,3 +230,5 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-03:** Regenerada a mídia perdida e iniciada a narração por cena em arquivos persistentes: 6 imagens (`AI-ASSET-0018`–`0023`) e cenas 01–10 de áudio (`voice-00`), com durações reais medidas e hashes em `AUDIO_DRAFT_MANIFEST_v03.csv`. Cenas 11–22 seguem na próxima rodada (limite de síntese por turno).
 - **2026-09-04:** Decisão de duração registrada (ADR-021): alvo ~6 min, vídeo coeso/fluido; se alongar, ampliar a história — nunca inserir pausas ou frases lentas. Narração das cenas 11–20 sintetizada (restam 21–22).
 - **2026-09-04:** Narração por cena **concluída para as 22 cenas** (`voice-00`, arquivos individuais persistentes): duração total **5:58,6** medida e hashes por cena em `AUDIO_DRAFT_MANIFEST_v03.csv`. P0 #3 (marcadores reais por cena) está concluído; falta a escuta humana (QA).
+- **2026-09-04:** Proprietário aprovou a narração por cena, re-confirmou as imagens regeneradas e autorizou a edição (ADR-022); `GENESIS-001` avançou de `ASSETS` para `EDITING`.
+- **2026-09-04:** Renderizado o **draft v01** do vídeo (1080p30, 5:58,56, 41 MB, legenda draft 111 cues) com ffmpeg livre; 2 placeholders pendentes (cenas 13/19).

@@ -64,3 +64,13 @@ Mudanças significativas do projeto. Datas em UTC.
 - Restam as cenas **21–22** para completar as 22 cenas por arquivo individual (limite de síntese por turno).
 - Sintetizada a narração `voice-00` das cenas **21–22**; a narração por cena está **completa para as 22 cenas** (arquivos individuais persistentes). Duração total medida: **5:58,6**, com hash/bytes/sample rate/duração por cena em `AUDIO_DRAFT_MANIFEST_v03.csv`.
 - P0 #3 (marcadores reais por cena) concluído: as 22 cenas têm arquivo individual com duração medida. Falta a escuta humana (QA) por cena.
+
+## 2026-09-04 — Aprovação do proprietário e início da edição (EDITING)
+
+- Proprietário aprovou ("tudo aprovado") a narração por cena, re-confirmou as imagens regeneradas e autorizou avançar para a produção do vídeo (ADR-022).
+- `GENESIS-001` movido de `ASSETS` para `EDITING` no `catalog.yml` e no `manifest.yaml`.
+- Início da montagem do draft v01: regeneração dos assets visuais faltantes (arquivos de sessões anteriores se perderam), timeline/EDL e render com ferramenta livre (ffmpeg) — conforme a regra de custo zero (ADR-016).
+- Regeneradas 10 imagens candidatas faltantes (`AI-ASSET-0001`, `0003`–`0010`, `0012`) com os mesmos prompts; hashes atualizados no `ai_asset_registry.csv`. Limite de geração de imagem atingido no turno: `AI-ASSET-0015` (cena 13) e `AI-ASSET-0017` (cena 19) seguem pendentes.
+- Criado `scripts/render_video.py` (reutilizável) e `EDIT_TIMELINE_v01.md` (mapeamento cena→imagem→áudio).
+- **Renderizado o draft v01**: `video/GENESIS-001/GENESIS-001_draft_v01.mp4` — 1920×1080 @30fps, H.264/AAC, **5:58,56**, 41 MB, Ken Burns suave (zoom in/out alternado), sem pausas mortas. Legenda draft `GENESIS-001_draft_v01.srt` (111 cues, tempo proporcional ao texto).
+- Cenas 13 e 19 usam placeholders temporários até a regeneração de `AI-ASSET-0015`/`0017`; o `-t` por cena foi corrigido para eliminar as caudas de vídeo que criavam pausas entre cenas (ADR-021).

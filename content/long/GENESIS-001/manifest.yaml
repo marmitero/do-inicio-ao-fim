@@ -2,7 +2,7 @@ content_id: GENESIS-001
 type: long
 language: pt-BR
 working_title: 'Gênesis: Como Tudo Começou'
-state: ASSETS
+state: EDITING
 updated_at_utc: '2026-09-03'
 canonical_scope:
   book: GENESIS
@@ -59,6 +59,10 @@ approval:
   voice_draft_owner_approval_record: "Owner approval via Arena decision on 2026-09-02 America/Sao_Paulo; scope: internal asset sourcing and draft edit only."
   visual_direction_owner_approval: approved_for_asset_exploration
   visual_direction_owner_approval_record: "Owner approved the v01 cinematic/documentary Arena visual direction via Arena decision on 2026-09-03 America/Sao_Paulo; scope: continued internal asset exploration and QA only."
+  audio_qa_owner_approval: approved
+  audio_qa_owner_approval_record: "Owner approved the per-scene narration draft (listening QA) on 2026-09-04 America/Sao_Paulo; scope: proceed to internal editing."
+  edit_proceed_owner_approval: approved
+  edit_proceed_owner_approval_record: "Owner authorized moving GENESIS-001 to EDITING on 2026-09-04 with current Arena draft materials (internal production). Publication remains gated by ADR-020 and explicit approval."
   final_human_review: pending
   publish_owner_approval: pending
 production:
@@ -67,25 +71,18 @@ production:
   tts_license_status: arena_terms_not_documented_owner_directed_draft; kokoro_mission_aborted
   asset_registry_status: five_pexels_candidates_0001_to_0005_no_downloads; twenty_three_ai_entries_0001_to_0023_eighteen_candidates_five_rejected; no_final_approved_assets
   audio_status: arena_per_scene_complete_22_scenes_total_5m58_6; owner_approved_for_draft_edit; detailed_qa_and_edit_boundaries_pending; not_final_approved
-  edit_status: not_started
-  captions_status: not_started
+  edit_status: draft_v01_rendered_1080p30_5m58_56_placeholders_scn13_19
+  captions_status: draft_auto_timed_111_cues_pending_sync_review
   thumbnail_status: not_started
   metadata_status: draft
   qa_status: not_started
 outputs:
   audio:
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-01_SCN-01-02_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-02_SCN-03-04_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-03_SCN-05-06_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-04_SCN-07-08_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-05_SCN-09-10_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-06_SCN-11-12_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-07_SCN-13-15_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-08_SCN-16-17_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-09_SCN-18-20_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-10_SCN-21-22_voice-00_draft.mp3
-  video: []
-  captions: []
+    - 'audio/GENESIS-001/scenes/ (22 per-scene MP3s; manifest: content/long/GENESIS-001/AUDIO_DRAFT_MANIFEST_v03.csv)'
+  video:
+    - video/GENESIS-001/GENESIS-001_draft_v01.mp4
+  captions:
+    - video/GENESIS-001/GENESIS-001_draft_v01.srt
   thumbnails: []
   asset_ids: []
 derived_content:
@@ -128,3 +125,4 @@ notes:
   - 'Narração por cena concluída para as 22 cenas (voice-00), arquivos individuais persistentes: total 5:58,6. Ver AUDIO_DRAFT_MANIFEST_v03.csv.'
   - 'Política de versionamento de mídia alterada (ADR-019): áudio, imagens, vídeo, legendas e projetos de edição passam a ser commitados no Git.'
   - 'Alvo de duração recalibrado para ~6 min com ritmo coeso/fluido (ADR-021, 2026-09-04); se alongar, ampliar a história.'
+  - 'Draft v01 renderizado em 2026-09-04 (1080p30, 5:58,56, 41 MB, legenda draft 111 cues) via scripts/render_video.py (ffmpeg livre). Placeholders: cena 13 usa AI-ASSET-0005 e cena 19 usa AI-ASSET-0006 até regenerar AI-ASSET-0015/0017.'
