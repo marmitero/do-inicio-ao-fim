@@ -29,8 +29,8 @@ SCRIPT = "scripts/long/GENESIS-001/SCRIPT_DRAFT.md"
 IMG_DIR = Path("assets/generated/GENESIS-001")
 TMP = Path("video/GENESIS-001/tmp")
 OUT_DIR = Path("video/GENESIS-001")
-OUT_VIDEO = OUT_DIR / "GENESIS-001_v03_clean.mp4"
-OUT_SRT = OUT_DIR / "GENESIS-001_v03_clean.srt"
+OUT_VIDEO = OUT_DIR / "GENESIS-001_v04_clean.mp4"
+OUT_SRT = OUT_DIR / "GENESIS-001_v04_clean.srt"
 
 # scene -> image filename (primary). 13 and 19 are placeholders pending regeneration.
 SCENE_IMAGE = {

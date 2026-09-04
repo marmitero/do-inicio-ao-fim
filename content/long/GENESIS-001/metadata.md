@@ -1,6 +1,6 @@
 # Metadados e derivados — GENESIS-001
 
-> **Estado:** rascunho. Título final, descrição, capítulos e thumbnail dependem de roteiro/timeline aprovados. Não usar para upload ainda.
+> **Estado:** rascunho histórico. **Título final, descrição, tags e capítulos de publicação estão em [`RELEASE_METADATA_v01.md`](RELEASE_METADATA_v01.md)** (2026-09-04).
 
 ## Opções de título
 

@@ -94,3 +94,10 @@ Mudanças significativas do projeto. Datas em UTC.
 - **Música a ~10%** (pedido do proprietário): cama ambiente `MUSIC-0001` remixada em volume 0.10 para não sobrepor a voz; vento `SFX-0001` mantido na cena 07.
 - **Renderizado o v03_final**: `video/GENESIS-001/GENESIS-001_v03_final.mp4` — 1080p30, **5:58,57**, H.264/AAC, com legenda dinâmica queimada, música e vento.
 - `GENESIS-001` movido de `EDITING` para `QA` (aguardando revisão do proprietário). Sincronia da legenda dinâmica é proporcional (aproximada); ajuste fino palavra a palavra pode ser feito se solicitado.
+
+## 2026-09-04 — Release sem legenda e metadados de publicação
+
+- Legenda dinâmica **rejeitada pelo proprietário** (sincronia fora do ritmo). Release recompilado **sem legenda** via `scripts/finalize_release.py`: `video/GENESIS-001/GENESIS-001_final.mp4` (1080p30, **5:58,56**, H.264/AAC, música ambiente a ~10% + vento na cena 07, sem legenda queimada).
+- Removidos os artefatos v03 (vídeo com legenda, `.srt` e `.ass`); a legenda final fica a cargo do proprietário.
+- Criado `content/long/GENESIS-001/RELEASE_METADATA_v01.md` com **título, descrição, tags (414 caracteres) e capítulos com timestamps reais**, orientado a duas audiências: busca por conteúdo bíblico e reprodução em segundo plano/sono (narração calma + música ambiente).
+- `metadata.md` marcado como histórico e apontando para o metadado de release.

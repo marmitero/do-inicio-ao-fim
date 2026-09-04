@@ -20,10 +20,10 @@
 
 - **Fase do programa:** Fundação documental; narração (22/22) e cobertura visual (22/22) aprovadas; termos da Arena aprovados pelo proprietário (ADR-023); **vídeo final v03 renderizado** e `GENESIS-001` em **QA** (revisão do proprietário). **Regra global de custo zero vigente (ADR-016).**
 - **Conteúdo ativo:** `GENESIS-001` — vídeo longo, pt-BR.
-- **Estado do conteúdo ativo:** `QA` (vídeo v03_final pronto para revisão do proprietário: 1080p30, 5:58,57, legenda dinâmica palavra a palavra queimada, música ambiente a ~10% e vento na cena 07. Publicação será manual pelo proprietário).
-- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, narração Arena completa por cena (22 MP3s, 5:58,6), plano, shortlist Pexels, matriz de cobertura, revisões visuais de IA (18 candidatas e 5 rejeições), **vídeo final v03** (MP4 + SRT + ASS de legenda dinâmica), música ambiente e SFX procedimentais (registries), thumbnail v01, scripts de render reutilizáveis, metadados iniciais, backlog de Shorts e registries de candidatos.
-- **Entregáveis inexistentes de propósito:** upload e publicação (manuais, a cargo do proprietário). A sincronia da legenda dinâmica é proporcional (aproximada); ajuste fino palavra a palavra pode ser feito se o proprietário pedir.
-- **Próximo portão:** revisão do proprietário do v03 (QA) → HUMAN_REVIEW → aprovação de publicação (decisão explícita) → publicação manual pelo proprietário.
+- **Estado do conteúdo ativo:** `QA` (vídeo de release pronto: `GENESIS-001_final.mp4`, 1080p30, 5:58,56, **sem legenda** — música ambiente a ~10% e vento na cena 07. Legenda será inserida pelo proprietário. Metadados de publicação prontos em `RELEASE_METADATA_v01.md`. Publicação será manual pelo proprietário).
+- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, narração Arena completa por cena (22 MP3s, 5:58,6), plano, shortlist Pexels, matriz de cobertura, revisões visuais de IA (18 candidatas e 5 rejeições), **vídeo de release sem legenda** (`GENESIS-001_final.mp4`), música ambiente e SFX procedimentais (registries), thumbnail v01, scripts de render reutilizáveis, **metadados de publicação** (`RELEASE_METADATA_v01.md`), backlog de Shorts e registries de candidatos.
+- **Entregáveis inexistentes de propósito:** legenda final (o proprietário insere por conta própria), upload e publicação (manuais, a cargo do proprietário).
+- **Próximo portão:** revisão final do proprietário → aprovação de publicação (decisão explícita) → publicação manual pelo proprietário (usando `RELEASE_METADATA_v01.md`).
 
 ## OBJETIVO DO PROJETO
 
@@ -106,7 +106,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | Python 3 padrão | em uso | somente para `tools/validate_catalog.py`; sem dependências externas |
 | Git | em uso | memória e histórico operacional |
 | TTS | narração Arena por cena completa | `voice-00` cobre as 22 cenas em MP3s individuais persistentes (5:58,6 medidos). Manifesto `AUDIO_DRAFT_MANIFEST_v03.csv`; termos aprovados pelo proprietário (ADR-023) |
-| Edição | v03_final renderizado | ffmpeg livre (ADR-016): 1080p30, Ken Burns, narração por cena, legenda dinâmica palavra a palavra queimada, música ambiente a ~10% + vento, thumbnail v01 |
+| Edição | release renderizado (sem legenda) | ffmpeg livre (ADR-016): 1080p30, Ken Burns, narração por cena, música ambiente a ~10% + vento, thumbnail v01; legenda fica com o proprietário |
 | Stock / música / SFX | música + SFX gerados no projeto | fontes externas (Pexels/Pixabay/etc.) inacessíveis por TLS; música ambiente e vento foram **gerados internamente** com ffmpeg (custo zero, sem licença de terceiros) |
 | YouTube API | não configurada | futura preparação permitida, publicação continua manual |
 
@@ -235,3 +235,4 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-04:** Renderizado o **draft v01** do vídeo (1080p30, 5:58,56, 41 MB, legenda draft 111 cues) com ffmpeg livre; 2 placeholders pendentes (cenas 13/19).
 - **2026-09-04:** Regeneradas `AI-ASSET-0015`/`0017` (placeholders resolvidos) e renderizado o **v02_final** (1080p30, 5:58,56) com cama musical ambiente (`MUSIC-0001`) e vento (`SFX-0001`) gerados no projeto, legenda draft e thumbnail v01. Bibliotecas de áudio externas seguem inacessíveis por TLS; tudo foi gerado internamente (ADR-016).
 - **2026-09-04:** Termos da Arena **aprovados pelo proprietário** (ADR-023) para uso final e publicação manual. Renderizado o **v03_final**: legenda dinâmica palavra a palavra (karaokê, 1625 eventos) queimada, música ambiente a ~10% e vento na cena 07; 1080p30, 5:58,57. `GENESIS-001` avança para `QA`.
+- **2026-09-04:** Legenda dinâmica rejeitada pelo proprietário (sincronia proporcional fora do ritmo). Release recompilado **sem legenda** (`GENESIS-001_final.mp4`, 5:58,56); legenda será inserida pelo proprietário. Gerados título, descrição, tags e capítulos em `RELEASE_METADATA_v01.md` (foco em busca bíblica + audiência de reprodução/sono).

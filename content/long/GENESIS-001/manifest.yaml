@@ -50,6 +50,7 @@ source_files:
   asset_visual_review_v03: content/long/GENESIS-001/ASSET_VISUAL_REVIEW_v03.md
   asset_coverage_v01: content/long/GENESIS-001/ASSET_COVERAGE_v01.md
   arena_terms_assessment_v01: docs/ARENA_TERMS_ASSESSMENT_v01.md
+  release_metadata_v01: content/long/GENESIS-001/RELEASE_METADATA_v01.md
 approval:
   script_factual_review: completed_internal_v01
   script_narrative_review: completed_internal_v01
@@ -73,8 +74,8 @@ production:
   tts_license_status: arena_terms_owner_approved_2026-09-04_ADR-023
   asset_registry_status: five_pexels_candidates_0001_to_0005_no_downloads; twenty_three_ai_entries_0001_to_0023_eighteen_candidates_five_rejected; no_final_approved_assets
   audio_status: arena_per_scene_complete_22_scenes_total_5m58_6; owner_approved_qa; not_final_approved_until_review
-  edit_status: v03_final_1080p30_5m58_57_dynamic_captions_music_10pct
-  captions_status: dynamic_word_by_word_karaoke_burned_in_v03_plus_srt_sidecar
+  edit_status: release_final_1080p30_5m58_56_no_captions_music_10pct
+  captions_status: not_burned_owner_will_add_later
   music_status: procedural_bed_MUSIC-0001_mixed_10pct_pending_human_listen
   sfx_status: procedural_wind_SFX-0001_scene_07_pending_human_listen
   thumbnail_status: v01_draft_1280x720_pending_owner_review
@@ -84,10 +85,8 @@ outputs:
   audio:
     - 'audio/GENESIS-001/scenes/ (22 per-scene MP3s; manifest: content/long/GENESIS-001/AUDIO_DRAFT_MANIFEST_v03.csv)'
   video:
-    - video/GENESIS-001/GENESIS-001_v03_final.mp4
-  captions:
-    - video/GENESIS-001/GENESIS-001_v03_final.srt
-    - video/GENESIS-001/GENESIS-001_v03_captions.ass
+    - video/GENESIS-001/GENESIS-001_final.mp4
+  captions: []
   thumbnails:
     - thumbnails/GENESIS-001_thumbnail_v01.png
   music:
@@ -138,3 +137,5 @@ notes:
   - 'v02_final renderizado em 2026-09-04: placeholders resolvidos (AI-ASSET-0015/0017), cama musical ambiente MUSIC-0001 e vento SFX-0001 (cena 07) gerados no projeto (custo zero, ADR-016), thumbnail v01. Áudio de terceiros indisponível por bloqueio de rede; tudo foi gerado internamente.'
   - 'Termos da Arena aprovados pelo proprietário em 2026-09-04 (ADR-023): voz/imagens podem ser usadas no vídeo final; publicação será manual.'
   - 'v03_final renderizado em 2026-09-04: legenda dinâmica palavra a palavra (karaokê, 1625 eventos) queimada no vídeo, música ambiente a ~10% e vento na cena 07; 1080p30, 5:58,57. Ver GENESIS-001_v03_final.mp4.'
+  - 'Legenda dinâmica rejeitada pelo proprietário por sincronia (alinhamento proporcional, não fonético). Release recompilado SEM legenda: GENESIS-001_final.mp4 (1080p30, 5:58,56, música ~10%, vento na cena 07). O proprietário insere a legenda por conta própria.'
+  - 'Metadados de publicação prontos em RELEASE_METADATA_v01.md (título, descrição, tags, capítulos com timestamps reais).'
