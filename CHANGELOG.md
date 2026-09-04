@@ -56,3 +56,9 @@ Mudanças significativas do projeto. Datas em UTC.
 - Iniciada a regeneração da mídia perdida (6 imagens `AI-ASSET-0018`–`0023`) e da narração por cena, agora versionadas no Git.
 - Regeneradas as 6 imagens perdidas com os mesmos prompts; hashes atualizados no `ai_asset_registry.csv` (novos renders — re-confirmação visual recomendada, pois os pixels diferem da instância aprovada).
 - Regenerada a narração `voice-00` por cena em arquivos individuais persistentes: cenas 01–10 sintetizadas, com durações reais medidas por parser de frames MP3 (total 2:40,7) e hashes em `AUDIO_DRAFT_MANIFEST_v03.csv`. Cenas 11–22 ficam para a próxima rodada (limite de síntese por turno).
+
+## 2026-09-04 — Duração recalibrada para ~6 min e narração por cena (11–20)
+
+- Registrada a decisão ADR-021: priorizar um vídeo **coeso e fluido** em vez de longo e morto; alvo de ~6 min; se precisar alongar, ampliar a história (sem pausas demais nem frases lentas). A duração medida da narração (22 cenas ≈ 5:50) é compatível com o alvo.
+- Sintetizada a narração `voice-00` das cenas **11–20** (arquivos individuais persistentes); durações reais medidas e hashes anexados a `AUDIO_DRAFT_MANIFEST_v03.csv`. Total cenas 01–20: **5:27,6**.
+- Restam as cenas **21–22** para completar as 22 cenas por arquivo individual (limite de síntese por turno).

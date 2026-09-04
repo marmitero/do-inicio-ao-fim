@@ -67,7 +67,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | --- | --- | --- |
 | pt-BR é o idioma do MVP | aceita | validar uma audiência e workflow antes de localizar; `docs/MULTILANGUAGE.md` |
 | Começar por `GENESIS-001` | aceita | primeiro marco editorial do projeto |
-| Duração guiada por narrativa, não por meta rígida | aceita | alvo de produção 12–15 min para o MVP; pode variar após revisão |
+| Duração guiada por narrativa, não por meta rígida | aceita | alvo de produção ~6 min para o MVP, com ritmo coeso/fluido; se alongar, ampliar a história (não inserir pausas/frases lentas) — ADR-021 |
 | Roteiro autoral, sem reprodução extensa de tradução moderna | aceita | fidelidade com menor risco de copyright; `docs/EDITORIAL_GUIDELINES.md` |
 | Publicação somente manual | inegociável | proprietário retém a decisão final; pipeline bloqueia automação |
 | Nenhum asset sem registro de licença | inegociável | rastreabilidade e segurança jurídica |
@@ -77,6 +77,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | Todo o processo de desenvolvimento e produção deve ser gratuito; o que for pago será substituído por alternativa gratuita semelhante ou gerado internamente | inegociável | regra global definida pelo proprietário em 2026-09-03; ver seção "REGRA GLOBAL: CUSTO ZERO" |
 | Mídia e artefatos de trabalho (áudio, imagens, vídeo, música, SFX, legendas e projetos de edição) são versionados no Git | aceita | evita perda de binários entre sessões; altera ADR-007; ver ADR-019 |
 | Termos da Arena revisados: uso limitado a pessoal/negócio interno; exploração comercial do Output proibida; serviço gratuito hoje | aceita (constatação) | revisão operacional de 2026-09-03; ver ADR-020 e `docs/ARENA_TERMS_ASSESSMENT_v01.md` |
+| Vídeo coeso e fluido vale mais que vídeo longo e morto; alvo ~6 min; ampliar a história (não pausas/frases lentas) se precisar alongar | aceita | decisão do proprietário em 2026-09-04; ADR-021 |
 
 ## DECISÕES REJEITADAS / NÃO FAZER
 
@@ -103,7 +104,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | --- | --- | --- |
 | Python 3 padrão | em uso | somente para `tools/validate_catalog.py`; sem dependências externas |
 | Git | em uso | memória e histórico operacional |
-| TTS | rascunho Arena por cena em regeneração | `voice-00` cobriu cenas 01–10 em MP3s individuais persistentes (2:40,7 medidos); 11–22 pendentes de síntese. Manifesto `AUDIO_DRAFT_MANIFEST_v03.csv`; licença Arena restrita a uso interno (ADR-020) |
+| TTS | rascunho Arena por cena em regeneração | `voice-00` cobriu cenas 01–20 em MP3s individuais persistentes (5:27,6 medidos); 21–22 pendentes de síntese. Manifesto `AUDIO_DRAFT_MANIFEST_v03.csv`; licença Arena restrita a uso interno (ADR-020) |
 | Edição | não selecionada | escolher depois de aprovado roteiro e plano de assets |
 | Stock / música / SFX | não selecionados | validar item a item, nunca por suposição de plataforma |
 | YouTube API | não configurada | futura preparação permitida, publicação continua manual |
@@ -140,7 +141,7 @@ Produzidos também documentos de pré-produção do MVP:
 ### GENESIS-001 — *Gênesis: Como Tudo Começou*
 
 - **Escopo:** narrativa dos principais movimentos de Gênesis 1–50, conectando a criação à chegada da família de Jacó ao Egito.
-- **Roteiro:** 22 cenas, 1.617 palavras aproximadas e 12:30 de plano; revisão interna v01 aplicada e roteiro aprovado pelo proprietário em 2026-09-02 UTC para pré-produção.
+- **Roteiro:** 22 cenas, 1.617 palavras aproximadas e 12:30 de plano (alvo de duração recalibrado para ~6 min por ADR-021); revisão interna v01 aplicada e roteiro aprovado pelo proprietário em 2026-09-02 UTC para pré-produção.
 - **Áudio:** rascunho Arena integral das cenas 01–22 foi gerado em 10 segmentos, hasheado e medido em 11:37; proprietário aprovou seu uso em edição de rascunho. QA detalhado, marcadores por cena e liberação comercial permanecem pendentes.
 - **Referências:** catalogadas por cena; brief e revisão registram limites e pontos sensíveis.
 - **Bloqueios:** nova revisão se entrar contexto externo; termos comerciais/YouTube, custo e atribuição da voz Arena antes de entrega/publicação; termos da imagem IA Arena e origem/licença/download rastreável de assets antes da timeline final; cena 16 ainda precisa de uma cisterna seca candidata; aprovação final/publicação continuam pendentes.
@@ -150,7 +151,7 @@ Produzidos também documentos de pré-produção do MVP:
 
 1. **P0 — ~~Corrigir cobertura da cena 16.~~** ✅ Concluído: `AI-ASSET-0018` e `AI-ASSET-0019` (cisternas secas) foram aprovadas visualmente pelo proprietário como candidatas da cena 16 (ADR-017); `AI-ASSET-0013` e `AI-ASSET-0016` seguem rejeitadas.
 2. **P0 — ~~Completar cobertura visual~~ e revalidar/download de stock (custo zero).** ✅ Cobertura visual fechada: as 22 cenas têm candidato (`ASSET_COVERAGE_v01.md`; ADR-018). Resta o stock: revalidar página de cada candidato Pexels no momento de um download futuro (hoje bloqueado por TLS) + registrar arquivo e SHA-256. Não contornar TLS com espelhos desconhecidos.
-3. **P0 — Criar marcadores de limites para as 22 cenas (arquivos individuais persistentes).** ⏳ Em andamento: narração por cena regenerada e versionada (cenas 01–10 prontas, durações medidas e hasheadas em `AUDIO_DRAFT_MANIFEST_v03.csv`); restam 11–22 (limite de síntese por turno). Sem estimar pontos de corte sem escuta/medição.
+3. **P0 — Criar marcadores de limites para as 22 cenas (arquivos individuais persistentes).** ⏳ Em andamento: narração por cena regenerada e versionada — cenas 01–20 prontas (5:27,6 medidos e hasheados em `AUDIO_DRAFT_MANIFEST_v03.csv`); restam 21–22 (limite de síntese por turno). Sem estimar pontos de corte sem escuta/medição.
 4. **P0 — ~~Confirmar termos Arena.~~** ✅ Revisados (ADR-020): serviço gratuito hoje, mas uso restrito a pessoal/negócio interno e exploração comercial do Output proibida. Voz/imagens Arena ficam como rascunho interno. Próxima decisão do proprietário: consentimento escrito da Arena ou substituição por ferramentas gratuitas com licença comercial. Ver `docs/ARENA_TERMS_ASSESSMENT_v01.md`.
 5. **P1 — Produzir edição, legendas, opções de thumbnail e pacote de QA de Gênesis.**
 6. **P1 — Avaliar o MVP com dados de esforço, custo e qualidade; documentar lições.**
@@ -227,3 +228,4 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-03:** Registrada a política de versionar mídia e artefatos no Git (ADR-019): `.gitignore` passa a ignorar só segredos/ruído de OS; binários deixam de se perder entre sessões.
 - **2026-09-03:** Revisados os termos da Arena (ADR-020): uso restrito a pessoal/negócio interno e exploração comercial do Output proibida; serviço gratuito hoje. Voz/imagens Arena permanecem rascunho interno até consentimento escrito ou substituição gratuita.
 - **2026-09-03:** Regenerada a mídia perdida e iniciada a narração por cena em arquivos persistentes: 6 imagens (`AI-ASSET-0018`–`0023`) e cenas 01–10 de áudio (`voice-00`), com durações reais medidas e hashes em `AUDIO_DRAFT_MANIFEST_v03.csv`. Cenas 11–22 seguem na próxima rodada (limite de síntese por turno).
+- **2026-09-04:** Decisão de duração registrada (ADR-021): alvo ~6 min, vídeo coeso/fluido; se alongar, ampliar a história — nunca inserir pausas ou frases lentas. Narração das cenas 11–20 sintetizada (restam 21–22).
