@@ -74,3 +74,14 @@ Mudanças significativas do projeto. Datas em UTC.
 - Criado `scripts/render_video.py` (reutilizável) e `EDIT_TIMELINE_v01.md` (mapeamento cena→imagem→áudio).
 - **Renderizado o draft v01**: `video/GENESIS-001/GENESIS-001_draft_v01.mp4` — 1920×1080 @30fps, H.264/AAC, **5:58,56**, 41 MB, Ken Burns suave (zoom in/out alternado), sem pausas mortas. Legenda draft `GENESIS-001_draft_v01.srt` (111 cues, tempo proporcional ao texto).
 - Cenas 13 e 19 usam placeholders temporários até a regeneração de `AI-ASSET-0015`/`0017`; o `-t` por cena foi corrigido para eliminar as caudas de vídeo que criavam pausas entre cenas (ADR-021).
+
+## 2026-09-04 — v02_final: placeholders resolvidos, música/SFX gerados e thumbnail
+
+- Regeneradas `AI-ASSET-0015` (monte/carneiro) e `AI-ASSET-0017` (salão de reconciliação) com os mesmos prompts; hashes atualizados no `ai_asset_registry.csv`. Os placeholders das cenas 13/19 foram substituídos pelas imagens corretas.
+- Bibliotecas de áudio externas (archive.org, Pixabay, incompetech, freesound) estão inacessíveis neste ambiente (`000`/TLS). Por isso, e pela regra de custo zero (ADR-016), a música e o SFX foram **gerados internamente** com ffmpeg (zero licença de terceiros):
+  - `MUSIC-0001` — cama ambiente procedimental (drone em A-menor + ar de ruído rosa + reverb), mixada sob a narração.
+  - `SFX-0001` — vento seco procedimental, mixado na cena 07 (tempestade).
+- Criado `scripts/postprocess.py` (música, SFX, thumbnail via Pillow, mux final). Instaladas dependências livres: `imageio-ffmpeg` e `Pillow`.
+- **Renderizado o v02_final**: `video/GENESIS-001/GENESIS-001_v02_final.mp4` — 1080p30, **5:58,56**, H.264/AAC, com música e vento; legenda `GENESIS-001_v02_final.srt`.
+- Criada a **thumbnail v01** `thumbnails/GENESIS-001_thumbnail_v01.png` (1280×720, base criação + título "GÊNESIS — Como Tudo Começou" via Pillow/DejaVu).
+- Música/SFX/thumbnail são rascunho interno; escuta e revisão humanas pendentes.

@@ -20,13 +20,13 @@
 | 10 | 17,50 | AI-ASSET-0005 | jornada de Abrão |
 | 11 | 17,06 | AI-ASSET-0021 | tenda à noite/estrelas |
 | 12 | 17,95 | AI-ASSET-0022 | bifurcação de estrada |
-| 13 | 16,32 | **AI-ASSET-0005 (placeholder)** | aguardando AI-ASSET-0015 (monte e carneiro) |
+| 13 | 16,32 | AI-ASSET-0015 | monte e carneiro (semiarid) |
 | 14 | 17,23 | AI-ASSET-0005 | jornada/fuga |
 | 15 | 17,45 | AI-ASSET-0012 | rio noturno |
 | 16 | 15,72 | AI-ASSET-0018 | poço seco |
 | 17 | 17,78 | AI-ASSET-0006 | cárcere/armazém |
 | 18 | 15,74 | AI-ASSET-0006 | fome/irmãos |
-| 19 | 17,38 | **AI-ASSET-0006 (placeholder)** | aguardando AI-ASSET-0017 (salão de reconciliação) |
+| 19 | 17,38 | AI-ASSET-0017 | salão de reconciliação |
 | 20 | 14,28 | AI-ASSET-0005 | família no Egito |
 | 21 | 17,90 | AI-ASSET-0023 | mãos/alimento |
 | 22 | 13,10 | AI-ASSET-0006 | grão/horizonte (Êxodo) |
@@ -35,13 +35,13 @@
 
 ## Placeholders pendentes
 
-- Cena 13: `AI-ASSET-0015` (mountain test, semiarid) — regeneração pendente (limite de geração de imagem por turno atingido em 2026-09-04).
-- Cena 19: `AI-ASSET-0017` (reconciliation hall) — regeneração pendente.
+Nenhum — `AI-ASSET-0015` e `AI-ASSET-0017` foram regenerados e usados no v02.
 
-Ao regenerar, atualizar `scripts/render_video.py` (dict `SCENE_IMAGE`), o hash no `ai_asset_registry.csv` e re-renderizar para v02.
+## Notas de edição (v02)
 
-## Notas de edição
-
-- Sem música/SFX nesta versão (registries vazios; próxima etapa).
-- Legenda draft em `video/GENESIS-001/GENESIS-001_draft_v01.srt`, com tempos proporcionais ao texto (requer revisão de sincronia palavra a palavra).
-- Regra de custo zero (ADR-016): render com ffmpeg estático livre (via `imageio-ffmpeg`).
+- **Música:** cama ambiente procedimental `MUSIC-0001` (A-menor + ar de ruído rosa + reverb), gerada no projeto (ADR-016), mixada sob a narração em volume baixo.
+- **SFX:** vento seco procedimental `SFX-0001`, mixado só na cena 07 (tempestade), volume baixo.
+- **Thumbnail:** `thumbnails/GENESIS-001_thumbnail_v01.png` (1280×720, base `AI-ASSET-0001` + título via Pillow/DejaVu).
+- Legenda draft em `video/GENESIS-001/GENESIS-001_v02_final.srt`, com tempos proporcionais ao texto (requer revisão de sincronia palavra a palavra).
+- Regra de custo zero (ADR-016): render com ffmpeg estático livre (via `imageio-ffmpeg`) + Pillow.
+- Música/SFX são rascunho interno; escuta humana (QA) pendente.

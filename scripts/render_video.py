@@ -29,8 +29,8 @@ SCRIPT = "scripts/long/GENESIS-001/SCRIPT_DRAFT.md"
 IMG_DIR = Path("assets/generated/GENESIS-001")
 TMP = Path("video/GENESIS-001/tmp")
 OUT_DIR = Path("video/GENESIS-001")
-OUT_VIDEO = OUT_DIR / "GENESIS-001_draft_v01.mp4"
-OUT_SRT = OUT_DIR / "GENESIS-001_draft_v01.srt"
+OUT_VIDEO = OUT_DIR / "GENESIS-001_v02_clean.mp4"
+OUT_SRT = OUT_DIR / "GENESIS-001_v02_clean.srt"
 
 # scene -> image filename (primary). 13 and 19 are placeholders pending regeneration.
 SCENE_IMAGE = {
@@ -46,21 +46,18 @@ SCENE_IMAGE = {
  10: "AI-ASSET-0005_patriarch-journey_v01.png",
  11: "AI-ASSET-0021_tent-night-stars_v01.png",
  12: "AI-ASSET-0022_road-fork-dawn_v01.png",
- 13: "AI-ASSET-0005_patriarch-journey_v01.png",  # PLACEHOLDER -> AI-ASSET-0015
+ 13: "AI-ASSET-0015_mountain-test-revised_v01.png",
  14: "AI-ASSET-0005_patriarch-journey_v01.png",
  15: "AI-ASSET-0012_jacob-night-river_v01.png",
  16: "AI-ASSET-0018_joseph-cistern-dry_v01.png",
  17: "AI-ASSET-0006_grain-egypt_v01.png",
  18: "AI-ASSET-0006_grain-egypt_v01.png",
- 19: "AI-ASSET-0006_grain-egypt_v01.png",  # PLACEHOLDER -> AI-ASSET-0017
+ 19: "AI-ASSET-0017_reconciliation-hall-revised_v01.png",
  20: "AI-ASSET-0005_patriarch-journey_v01.png",
  21: "AI-ASSET-0023_hands-food-night_v01.png",
  22: "AI-ASSET-0006_grain-egypt_v01.png",
 }
-PLACEHOLDERS = {
- 13: "AI-ASSET-0015 (mountain test) pending regeneration",
- 19: "AI-ASSET-0017 (reconciliation hall) pending regeneration",
-}
+PLACEHOLDERS = {}
 
 def load_scenes():
     rows = list(csv.DictReader(open(MANIFEST, encoding="utf-8")))

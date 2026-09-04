@@ -71,8 +71,11 @@ production:
   tts_license_status: arena_terms_not_documented_owner_directed_draft; kokoro_mission_aborted
   asset_registry_status: five_pexels_candidates_0001_to_0005_no_downloads; twenty_three_ai_entries_0001_to_0023_eighteen_candidates_five_rejected; no_final_approved_assets
   audio_status: arena_per_scene_complete_22_scenes_total_5m58_6; owner_approved_for_draft_edit; detailed_qa_and_edit_boundaries_pending; not_final_approved
-  edit_status: draft_v01_rendered_1080p30_5m58_56_placeholders_scn13_19
+  edit_status: draft_v02_final_1080p30_5m58_56_music_sfx_thumbnail
   captions_status: draft_auto_timed_111_cues_pending_sync_review
+  music_status: procedural_ambient_bed_MUSIC-0001_pending_human_listen
+  sfx_status: procedural_wind_SFX-0001_scene_07_pending_human_listen
+  thumbnail_status: v01_draft_1280x720_pending_owner_review
   thumbnail_status: not_started
   metadata_status: draft
   qa_status: not_started
@@ -80,10 +83,15 @@ outputs:
   audio:
     - 'audio/GENESIS-001/scenes/ (22 per-scene MP3s; manifest: content/long/GENESIS-001/AUDIO_DRAFT_MANIFEST_v03.csv)'
   video:
-    - video/GENESIS-001/GENESIS-001_draft_v01.mp4
+    - video/GENESIS-001/GENESIS-001_v02_final.mp4
   captions:
-    - video/GENESIS-001/GENESIS-001_draft_v01.srt
-  thumbnails: []
+    - video/GENESIS-001/GENESIS-001_v02_final.srt
+  thumbnails:
+    - thumbnails/GENESIS-001_thumbnail_v01.png
+  music:
+    - assets/music/GENESIS-001_music_bed_v01.m4a
+  sfx:
+    - assets/sfx/GENESIS-001_wind_desert_v01.m4a
   asset_ids: []
 derived_content:
   - GENESIS-001-S01
@@ -126,3 +134,4 @@ notes:
   - 'Política de versionamento de mídia alterada (ADR-019): áudio, imagens, vídeo, legendas e projetos de edição passam a ser commitados no Git.'
   - 'Alvo de duração recalibrado para ~6 min com ritmo coeso/fluido (ADR-021, 2026-09-04); se alongar, ampliar a história.'
   - 'Draft v01 renderizado em 2026-09-04 (1080p30, 5:58,56, 41 MB, legenda draft 111 cues) via scripts/render_video.py (ffmpeg livre). Placeholders: cena 13 usa AI-ASSET-0005 e cena 19 usa AI-ASSET-0006 até regenerar AI-ASSET-0015/0017.'
+  - 'v02_final renderizado em 2026-09-04: placeholders resolvidos (AI-ASSET-0015/0017), cama musical ambiente MUSIC-0001 e vento SFX-0001 (cena 07) gerados no projeto (custo zero, ADR-016), thumbnail v01. Áudio de terceiros indisponível por bloqueio de rede; tudo foi gerado internamente.'
