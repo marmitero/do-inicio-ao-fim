@@ -59,3 +59,10 @@ Seis conceitos de IA passaram à condição de candidata e um foi rejeitado por 
 ## Segunda bateria de IA
 
 Depois de o proprietário aprovar a linguagem visual cinematográfica/documental da primeira bateria **somente para exploração interna**, a bateria v02 produziu mais dez imagens rastreadas. Seis passaram como candidatas de cobertura limitada (cenas 05, 06, 08, 13, 15 e 19); quatro foram rejeitadas por inconsistência de briefing ou por riscos visuais. A cena 16 continua sem cisterna seca candidata após duas rejeições. O detalhamento está em `ASSET_VISUAL_REVIEW_v02.md`. A aprovação de direção não é licença/termo de uso, aprovação para corte final ou autorização de publicação.
+
+
+## Terceira bateria, disponibilidade e montagem interna
+
+Na verificação local de 2026-09-05, os binários ignorados das candidatas `AI-ASSET-0001`–`0017` não estavam presentes. Os metadados permanecem no registry, mas não há permissão para renderizar caminho/arquivo ausente nem reutilizar seu hash para outra imagem. Foram criados e revisados dez novos IDs (`0018`–`0027`), incluindo a cisterna seca necessária à cena 16. A revisão está em `ASSET_VISUAL_REVIEW_v03.md`.
+
+A cobertura disponível permitiu a animática interna do capítulo 01. Sete substitutos ainda são necessários para renderizar os capítulos 02–04; veja `INTERNAL_CHAPTER_ASSEMBLY_v01.md` para a ordem cena–asset. A documentação de direitos foi atualizada em `docs/ARENA_TERMS_REVIEW_2026-09-05.md`: os termos oficiais disponíveis restringem os outputs Arena a uso pessoal/interno. Nenhuma imagem Arena deste plano é aprovada para corte final, distribuição, YouTube ou exploração comercial.

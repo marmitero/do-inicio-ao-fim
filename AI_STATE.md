@@ -1,6 +1,6 @@
 # AI_STATE — DO INÍCIO AO FIM
 
-> **Última atualização:** 2026-09-03 (America/Sao_Paulo)
+> **Última atualização:** 2026-09-05 (America/Sao_Paulo)
 > **Fonte de verdade para continuidade:** este arquivo + `content/catalog.yml` + pacote do conteúdo ativo.
 > **Regra absoluta:** nenhum upload ou publicação no YouTube pode acontecer sem aprovação humana explícita e registrada.
 
@@ -18,12 +18,12 @@
 
 ## STATUS ATUAL
 
-- **Fase do programa:** Fundação documental, voz Arena aprovada para edição de rascunho; direção visual Arena aprovada para exploração interna e segunda bateria de conceitos revisada.
+- **Fase do programa:** Montagem interna iniciada: direitos Arena foram revisados, áudio v03 foi regenerado, cobertura v03 foi criada e a animática do primeiro capítulo foi renderizada.
 - **Conteúdo ativo:** `GENESIS-001` — vídeo longo, pt-BR.
-- **Estado do conteúdo ativo:** `ASSETS` (rascunho Arena das 22 cenas aprovado para edição interna; cinco candidatos Pexels sem download e doze conceitos IA candidatos. Cinco imagens IA foram rejeitadas. Nenhum asset está aprovado para corte final; termos/licenças seguem pendentes).
-- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, decisão/logs de TTS, rascunho Arena completo em 10 segmentos com hashes/durações, plano, shortlist Pexels, duas revisões visuais de IA (12 candidatas e 5 rejeições), metadados iniciais, backlog de Shorts e registries de candidatos.
-- **Entregáveis inexistentes de propósito:** voz final aprovada por QA, marcadores/arquivos de edição por cena, downloads de assets, música, SFX, timeline, legenda sincronizada, render, thumbnail final, upload e publicação. A narração Arena permanece rascunho até que os termos comerciais sejam documentados.
-- **Próximo portão:** corrigir a cobertura da cena 16 com uma cisterna comprovadamente seca e completar assets de baixo risco; só então avançar após marcadores reais por cena, termos acessíveis e demais gates de edição.
+- **Estado do conteúdo ativo:** `ASSETS` (primeira animática interna de cenas 01–04 renderizada; dez imagens Arena atuais candidatas e sete lacunas visuais para os capítulos seguintes. Doze candidatas históricas não têm binário local e cinco imagens foram rejeitadas. O material Arena não está aprovado para corte final/comercial/publicação).
+- **Entregáveis existentes:** estrutura do repositório, documentação base, catálogo, pesquisa/outline/roteiro de Gênesis, revisão interna v01, termos oficiais Arena revisados, áudio v03 interno em 10 segmentos com hashes/durações, plano, shortlist Pexels, três revisões visuais de IA, animática interna do capítulo 01, ferramenta reprodutível de render e registries atualizados.
+- **Entregáveis inexistentes de propósito:** licença comercial/publicável para outputs Arena, QA humano completo do áudio, marcadores de edição por cena, música, SFX, capítulos 02–04, legenda sincronizada, corte final, thumbnail final, upload e publicação.
+- **Próximo portão:** gerar/revisar sete substitutos visuais para cenas 06–09, 13, 15 e 19, renderizar os capítulos 02–04 e executar QA humano interno. Direitos comerciais Arena permanecem bloqueados pela fonte primária registrada.
 
 ## OBJETIVO DO PROJETO
 
@@ -63,6 +63,7 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | Automação somente depois do MVP avaliado | aceita | evitar automatizar processo não validado |
 | `voice-00` foi aprovada para edição de rascunho por decisão do proprietário | aceita condicionalmente | licença/custo/portabilidade Arena seguem pendentes para corte final; missão Kokoro encerrada |
 | Direção visual cinematográfica/documental da primeira bateria Arena aprovada para exploração | aceita condicionalmente | orienta novos conceitos e QA interno, mas termos/custo/atribuição e uso comercial/YouTube de imagens Arena seguem pendentes |
+| Termos oficiais Arena revisados em 2026-09-05 | aceita | limitam o serviço/output a uso pessoal ou interno e vedam exploração comercial; a confirmação do proprietário não substitui licença separada/termos do provedor ausentes |
 
 ## DECISÕES REJEITADAS / NÃO FAZER
 
@@ -89,8 +90,8 @@ Bíblia → livro → capítulo → evento → cena → roteiro → vídeo → d
 | --- | --- | --- |
 | Python 3 padrão | em uso | somente para `tools/validate_catalog.py`; sem dependências externas |
 | Git | em uso | memória e histórico operacional |
-| TTS | rascunho Arena integral segmentado gerado | `voice-00` cobre cenas 01–22 em 10 MP3s; QA e pontos de corte pendentes; licença/custo/portabilidade Arena ainda não homologados |
-| Edição | não selecionada | escolher depois de aprovado roteiro e plano de assets |
+| TTS | rascunho Arena v03 interno regenerado | `voice-00` cobre cenas 01–22 em 10 MP3s; QA e pontos de corte pendentes; termos oficiais permitem somente uso interno no estado atual |
+| Edição | animática interna por FFmpeg | `tools/video/render_genesis_internal_chapters.py`; executável FFmpeg não é versionado; CH01 foi renderizado e CH02–04 aguardam cobertura |
 | Stock / música / SFX | não selecionados | validar item a item, nunca por suposição de plataforma |
 | YouTube API | não configurada | futura preparação permitida, publicação continua manual |
 
@@ -113,7 +114,7 @@ IDEA → RESEARCH → OUTLINE → SCRIPT → SCRIPT_REVIEW → SCRIPT_APPROVED
 
 ## CONTEÚDOS PRODUZIDOS
 
-Nenhum vídeo editado, render, legenda sincronizada, thumbnail final, upload ou publicação foi produzido. Há mídia efêmera de rascunho: dez segmentos de voz Arena e dezessete PNGs Arena, cuja evidência persistente é documental; nenhum é liberado para corte final.
+Uma animática interna de vídeo foi produzida para o capítulo 01 (cenas 01–04). Há mídia efêmera de rascunho: dez segmentos de voz Arena e dez PNGs Arena atuais, cuja evidência persistente é documental. Nenhum material é liberado para corte final, distribuição, YouTube, upload ou publicação.
 
 Produzidos também documentos de pré-produção do MVP:
 
@@ -127,18 +128,18 @@ Produzidos também documentos de pré-produção do MVP:
 
 - **Escopo:** narrativa dos principais movimentos de Gênesis 1–50, conectando a criação à chegada da família de Jacó ao Egito.
 - **Roteiro:** 22 cenas, 1.617 palavras aproximadas e 12:30 de plano; revisão interna v01 aplicada e roteiro aprovado pelo proprietário em 2026-09-02 UTC para pré-produção.
-- **Áudio:** rascunho Arena integral das cenas 01–22 foi gerado em 10 segmentos, hasheado e medido em 11:37; proprietário aprovou seu uso em edição de rascunho. QA detalhado, marcadores por cena e liberação comercial permanecem pendentes.
+- **Áudio:** rascunho Arena v03 das cenas 01–22 foi regenerado em 10 segmentos, hasheado e medido em 11:39,360 para montagem interna. QA detalhado e marcadores por cena permanecem pendentes; os termos oficiais atuais impedem liberação comercial/publicável.
 - **Referências:** catalogadas por cena; brief e revisão registram limites e pontos sensíveis.
-- **Bloqueios:** nova revisão se entrar contexto externo; termos comerciais/YouTube, custo e atribuição da voz Arena antes de entrega/publicação; termos da imagem IA Arena e origem/licença/download rastreável de assets antes da timeline final; cena 16 ainda precisa de uma cisterna seca candidata; aprovação final/publicação continuam pendentes.
+- **Bloqueios:** nova revisão se entrar contexto externo; termos oficiais Arena limitam áudio/imagem a uso interno até licença separada/termos do provedor identificados; sete substitutos visuais faltam aos capítulos 02–04; limites reais de cena, QA humano e aprovação final/publicação continuam pendentes.
 - **Derivados previstos:** 12 oportunidades de Shorts, ainda em `IDEA`.
 
 ## BACKLOG PRIORIZADO
 
-1. **P0 — Corrigir cobertura da cena 16.** Gerar e revisar uma cisterna explicitamente seca; manter `AI-ASSET-0013` e `AI-ASSET-0016` rejeitados.
-2. **P0 — Completar cobertura visual e revalidar/download de stock.** Verificar termos/página de cada candidato no momento do download; registrar arquivo e SHA-256 antes de uso. Não contornar TLS com espelhos desconhecidos.
-3. **P0 — Criar marcadores de limites para as 22 cenas ou regenerar arquivos individuais em armazenamento persistente.** Não estimar pontos de corte sem escuta/medição.
-4. **P0 — Confirmar termos comerciais/YouTube, custo e atribuição Arena.** Sem essa evidência, voz/imagens Arena permanecem rascunhos e não podem chegar à publicação.
-5. **P1 — Produzir edição, legendas, opções de thumbnail e pacote de QA de Gênesis.**
+1. **P0 — Completar os sete substitutos visuais faltantes.** Cobrir cenas 06–09, 13, 15 e 19, registrar hash/QA e não reutilizar bins históricos ausentes.
+2. **P0 — Renderizar e auditar os capítulos internos 02–04.** Juntar em ordem CH01→CH04 somente depois da revisão individual.
+3. **P0 — Criar marcadores de limites para as 22 cenas ou regenerar arquivos individuais em armazenamento persistente.** Não aceitar timing proporcional como corte final.
+4. **P0 — Obter licença comercial/publicável separada, identificação do provedor/modelo e termos aplicáveis se houver intenção de YouTube.** A fonte oficial atual não libera esse uso.
+5. **P1 — Produzir legendas, opções de thumbnail e pacote de QA de Gênesis depois de direitos e edição serem resolvidos.
 6. **P1 — Avaliar o MVP com dados de esforço, custo e qualidade; documentar lições.**
 7. **P2 — Selecionar e produzir poucos Shorts derivados de Gênesis após o longo estar validado.**
 8. **P2 — Criar pré-produção de `EXODUS-001` somente após aprendizagem do MVP.**
@@ -151,8 +152,8 @@ Produzidos também documentos de pré-produção do MVP:
 | Identidade nominal do proprietário/revisor não é armazenada | controlado | aprovação do roteiro foi capturada via decisão Arena; continuar exigindo decisão explícita em cada gate humano |
 | TTS, editor e fontes de assets ainda não foram escolhidos | esperado | arquitetura modular; não criar lock-in antes do teste |
 | Risco de interpretações controversas em Gênesis | aberto | revisão interna v01 preservou qualificadores; proprietário pode exigir especialista antes de aprovar roteiro |
-| Termos comerciais da voz Arena não estão registrados | aberto | voz pode ser usada para rascunho por decisão do proprietário; exigir evidência antes de entrega/publicação |
-| Direitos autorais/licença de mídia e IA | aberto | Pexels tem candidatos sem download; doze imagens Arena candidatas têm termos comerciais pendentes. Revalidar/licenciar e registrar hash antes de aprovar |
+| Termos Arena não permitem o uso comercial pretendido | bloqueado para publicação | fonte oficial revisada limita a uso pessoal/interno e exige requisitos do provedor; manter somente animáticas internas até licença separada |
+| Direitos/licença e disponibilidade de mídia | aberto | Pexels tem candidatos sem download; 12 imagens Arena históricas perderam o binário local e 10 atuais são internas. Não aprovar nem renderizar arquivo ausente |
 | Duração real do roteiro só será conhecida após teste de voz | esperado | a estimativa é provisória; recalibrar após voz aprovada |
 | Não existem métricas de canal | esperado | canal ainda não publicou; modelo de coleta está documentado |
 
@@ -185,9 +186,9 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 | A — pesquisa assistida | manual assistida por documentos |
 | B — geração de roteiro | manual assistida; roteiro de Gênesis aprovado para pré-produção |
 | C — geração de cenas | manual estruturada; modelo validado no rascunho |
-| D — assets | cinco candidatos Pexels sem download; duas baterias IA têm doze candidatas e cinco rejeitadas, com termos pendentes; a cena 16 ainda não tem cisterna seca candidata e a cobertura segue incompleta |
-| E — TTS | rascunho Arena integral aprovado pelo proprietário para edição interna; QA detalhado/limites de edição e condições comerciais ainda bloqueiam entrega final |
-| F a I — edição, legendas, thumbnail, SEO | não iniciadas operacionalmente |
+| D — assets | cinco candidatos Pexels sem download; 12 candidatas IA históricas sem binário local, 10 candidatas IA atuais e 5 rejeitadas; sete substitutos ainda faltam |
+| E — TTS | rascunho Arena v03 interno completo; QA detalhado/limites de edição e direitos bloqueiam entrega final |
+| F a I — edição, legendas, thumbnail, SEO | animática interna CH01 renderizada; CH02–04, legendas, thumbnail e QA final não iniciados |
 | J — pipeline completo | proibido por enquanto; depende de MVP avaliado |
 | publicação | sempre humana; não automatizar |
 
@@ -208,3 +209,6 @@ Foco inicial em YouTube/publicidade após validação. Nenhuma integração ou p
 - **2026-09-02:** Geradas sete imagens IA para teste visual; seis candidatas foram mantidas e a primeira versão do jardim foi rejeitada por conter ruínas. Prompts, hashes, dimensões, cenas e limitações foram registrados.
 - **2026-09-03:** Proprietário aprovou a direção visual cinematográfica/documental dos candidatos da v01 para exploração interna; a decisão não autoriza uso final/publicação.
 - **2026-09-03:** Segunda bateria IA revisada e registrada: seis novas candidatas foram mantidas, quatro imagens foram rejeitadas (incluindo duas tentativas de cisterna inadequadas) e a cena 16 permanece lacuna de cobertura.
+- **2026-09-05:** Revisados os termos oficiais Arena; uso pessoal/interno é permitido, mas exploração comercial do output não. A confirmação ampla do proprietário foi registrada sem contrariar a fonte primária.
+- **2026-09-05:** Gerados dez novos conceitos IA, resolvida visualmente a cisterna seca da cena 16 e registrados novos hashes. Os binários de 12 candidatas históricas não estavam disponíveis localmente.
+- **2026-09-05:** Regenerado áudio interno v03 em 10 segmentos e renderizada a animática interna CH01 (cenas 01–04); capítulos seguintes aguardam sete substitutos visuais.

@@ -33,3 +33,13 @@ Mudanças significativas do projeto. Datas em UTC.
 - Registrados prompts/especificações, hashes SHA-256, dimensões, tamanhos, cenas, status e limites dos assets `AI-ASSET-0008` a `AI-ASSET-0017`. As especificações de prompt de `0008`–`0014` são explicitamente marcadas como reconstruídas, pois as chamadas originais não haviam sido persistidas.
 - A cena 16 continua sem cisterna seca candidata: `AI-ASSET-0013` foi rejeitado por prop não solicitado e `AI-ASSET-0016` por conter água.
 - Nenhum conceito Arena foi liberado para uso comercial/YouTube, corte final, upload ou publicação; termos, custo e atribuição continuam gates separados.
+
+
+## 2026-09-05 — Animática interna por capítulos e revisão de direitos Arena
+
+- Revisados os Termos de Uso oficiais Arena, versão indicada como 2026-02-23; a documentação registra uso pessoal/interno e restrição de exploração comercial do output, além de requisitos do provedor de IA.
+- A confirmação do proprietário de que considerava os termos validados foi registrada, mas não foi usada para contradizer a fonte primária nem para liberar YouTube, distribuição, upload ou publicação.
+- Criadas e revisadas dez imagens Arena adicionais (`AI-ASSET-0018`–`0027`), incluindo uma cisterna seca aprovada visualmente para a cena 16; hashes, dimensões, bytes, prompts e limites foram registrados.
+- Detectada indisponibilidade local dos binários ignorados de candidatos `0001`–`0017`; seus registros permanecem preservados, mas foram marcados como indisponíveis para render até restauração ou substituição rastreada.
+- Regenerado conjunto v03 de narração interna em dez segmentos, cobrindo cenas 01–22; manifest e hashes próprios registram que não é reprodução bit idêntica do lote v02.
+- Adicionada ferramenta reprodutível de renderização interna com FFmpeg e renderizada a animática CH01 (cenas 01–04), em MP4 H.264/AAC 1280×720. Capítulos 02–04 aguardam sete substitutos visuais.

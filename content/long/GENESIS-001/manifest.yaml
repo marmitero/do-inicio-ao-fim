@@ -3,7 +3,7 @@ type: long
 language: pt-BR
 working_title: 'Gênesis: Como Tudo Começou'
 state: ASSETS
-updated_at_utc: '2026-09-03'
+updated_at_utc: '2026-09-05'
 canonical_scope:
   book: GENESIS
   chapters: '1-50'
@@ -42,10 +42,15 @@ source_files:
   audio_generation_log_v01: content/long/GENESIS-001/AUDIO_GENERATION_LOG_v01.md
   audio_draft_manifest_v02: content/long/GENESIS-001/AUDIO_DRAFT_MANIFEST_v02.csv
   audio_generation_log_v02: content/long/GENESIS-001/AUDIO_GENERATION_LOG_v02.md
+  audio_internal_chapter_manifest_v03: content/long/GENESIS-001/AUDIO_INTERNAL_CHAPTER_DRAFT_MANIFEST_v03.csv
+  audio_generation_log_v03: content/long/GENESIS-001/AUDIO_GENERATION_LOG_v03.md
+  internal_chapter_assembly: content/long/GENESIS-001/INTERNAL_CHAPTER_ASSEMBLY_v01.md
+  arena_terms_review: docs/ARENA_TERMS_REVIEW_2026-09-05.md
   asset_plan: content/long/GENESIS-001/ASSET_PLAN_v01.md
   asset_shortlist: content/long/GENESIS-001/ASSET_SHORTLIST_v01.md
   asset_visual_review_v01: content/long/GENESIS-001/ASSET_VISUAL_REVIEW_v01.md
   asset_visual_review_v02: content/long/GENESIS-001/ASSET_VISUAL_REVIEW_v02.md
+  asset_visual_review_v03: content/long/GENESIS-001/ASSET_VISUAL_REVIEW_v03.md
 approval:
   script_factual_review: completed_internal_v01
   script_narrative_review: completed_internal_v01
@@ -55,35 +60,42 @@ approval:
   voice_draft_owner_approval_record: "Owner approval via Arena decision on 2026-09-02 America/Sao_Paulo; scope: internal asset sourcing and draft edit only."
   visual_direction_owner_approval: approved_for_asset_exploration
   visual_direction_owner_approval_record: "Owner approved the v01 cinematic/documentary Arena visual direction via Arena decision on 2026-09-03 America/Sao_Paulo; scope: continued internal asset exploration and QA only."
+  owner_terms_confirmation: recorded_conflicts_with_primary_terms_review
+  owner_terms_confirmation_record: "Owner indicated via Arena decision on 2026-09-05 America/Sao_Paulo that Arena terms were validated for final cut. Official terms review found personal/internal-use and non-commercial restrictions; no separate overriding licence is archived."
   final_human_review: pending
   publish_owner_approval: pending
 production:
-  tts_provider: "Arena speech synthesis (owner-directed production draft; commercial terms pending)"
+  tts_provider: "Arena speech synthesis (internal chapter draft only)"
   tts_voice: "voice-00 (owner-selected; session-scoped)"
-  tts_license_status: arena_terms_not_documented_owner_directed_draft; kokoro_mission_aborted
-  asset_registry_status: five_pexels_candidates_0001_to_0005_no_downloads; seventeen_ai_entries_0001_to_0017_twelve_candidates_five_rejected; no_final_approved_assets
-  audio_status: arena_full_segmented_draft_scenes_01_22_owner_approved_for_draft_edit; detailed_qa_and_edit_boundaries_pending; not_final_approved
-  edit_status: not_started
+  tts_license_status: official_arena_terms_reviewed_internal_only_not_final; kokoro_mission_aborted
+  asset_registry_status: five_pexels_candidates_0001_to_0005_no_downloads; twenty_seven_ai_entries_0001_to_0027_ten_current_candidates_twelve_historical_candidates_unavailable_five_rejected; no_final_approved_assets
+  audio_status: arena_v03_internal_segmented_draft_scenes_01_22_regenerated_in_ten_segments; human_audio_qa_and_scene_boundaries_pending; not_final_or_distributable
+  edit_status: chapter_01_internal_animatic_rendered; chapters_02_to_04_pending_replacement_assets
   captions_status: not_started
   thumbnail_status: not_started
   metadata_status: draft
   qa_status: not_started
 outputs:
   audio:
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-01_SCN-01-02_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-02_SCN-03-04_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-03_SCN-05-06_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-04_SCN-07-08_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-05_SCN-09-10_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-06_SCN-11-12_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-07_SCN-13-15_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-08_SCN-16-17_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-09_SCN-18-20_voice-00_draft.mp3
-    - audio/GENESIS-001/draft-segmented/GENESIS-001_SEG-10_SCN-21-22_voice-00_draft.mp3
-  video: []
+    - audio/GENESIS-001/internal-chapter-draft/GENESIS-001_SEG-01_SCN-01-02_voice-00_internal.mp3
+    - audio/GENESIS-001/internal-chapter-draft/GENESIS-001_SEG-02_SCN-03-04_voice-00_internal.mp3
+    - audio/GENESIS-001/internal-chapter-draft/GENESIS-001_SEG-03_SCN-05-06_voice-00_internal.mp3
+    - audio/GENESIS-001/internal-chapter-draft/GENESIS-001_SEG-04_SCN-07-08_voice-00_internal.mp3
+    - audio/GENESIS-001/internal-chapter-draft/GENESIS-001_SEG-05_SCN-09-10_voice-00_internal.mp3
+    - audio/GENESIS-001/internal-chapter-draft/GENESIS-001_SEG-06_SCN-11-12_voice-00_internal.mp3
+    - audio/GENESIS-001/internal-chapter-draft/GENESIS-001_SEG-07_SCN-13-15_voice-00_internal.mp3
+    - audio/GENESIS-001/internal-chapter-draft/GENESIS-001_SEG-08_SCN-16-17_voice-00_internal.mp3
+    - audio/GENESIS-001/internal-chapter-draft/GENESIS-001_SEG-09_SCN-18-20_voice-00_internal.mp3
+    - audio/GENESIS-001/internal-chapter-draft/GENESIS-001_SEG-10_SCN-21-22_voice-00_internal.mp3
+  video:
+    - video/GENESIS-001/internal-chapter-draft/GENESIS-001_CH01_ORIGENS_E_O_JARDIM_INTERNAL_DRAFT.mp4
   captions: []
   thumbnails: []
-  asset_ids: []
+  asset_ids:
+    - AI-ASSET-0023
+    - AI-ASSET-0024
+    - AI-ASSET-0025
+    - AI-ASSET-0026
 derived_content:
   - GENESIS-001-S01
   - GENESIS-001-S02
@@ -99,20 +111,20 @@ derived_content:
   - GENESIS-001-S12
 blockers:
   - 'Qualquer novo contexto extrabíblico exige fonte secundária e nova revisão factual.'
-  - 'Termos comerciais/YouTube, custo e atribuição do ambiente Arena devem ser confirmados antes de qualquer entrega/publicação.'
-  - 'Assets precisam de origem, licença/termos, download/geração registrada e aprovação antes da timeline de edição.'
-  - 'Arena-generated image assets have commercial/YouTube terms pending and cannot be final-approved yet.'
-  - 'Plano de assets e registro/licenças antes da edição.'
+  - 'A fonte de termos oficial Arena revisada em 2026-09-05 limita o serviço/output a uso pessoal ou interno e veda exploração comercial; é necessário acordo/licença separada e termos do provedor identificados antes de qualquer entrega/publicação.'
+  - 'Assets precisam de origem, licença/termos, geração registrada e aprovação antes da timeline final.'
+  - 'Sete substitutos visuais ainda precisam ser gerados/revistos antes dos capítulos internos 02–04.'
+  - 'Marcadores reais de limites das 22 cenas e QA humano de áudio continuam obrigatórios antes de corte final.'
 notes:
   - 'Roteiro aprovado pelo proprietário para pré-produção em 2026-09-02 UTC.'
   - 'Candidato de voz voice-00 selecionado pelo proprietário para audição; não homologado para uso final.'
   - 'Missão Kokoro abortada pelo proprietário em 2026-09-02; registros v01/v02 são histórico e não devem disparar nova tentativa.'
   - 'Proprietário escolheu voice-00 para gerar rascunho de narração por cena; ver TTS_PROVIDER_DECISION_v01.md.'
   - 'Revisão interna v01 concluída; ver SCRIPT_FACTUAL_NARRATIVE_REVIEW_v01.md.'
-  - 'Rascunho integral Arena segmentado (cenas 01–22) foi gerado e aprovado pelo proprietário apenas para edição de rascunho; ver AUDIO_DRAFT_MANIFEST_v02.csv e AUDIO_GENERATION_LOG_v02.md.'
-  - 'Lote v01 por cena é histórico/efêmero e não está disponível; não usá-lo como fonte de edição.'
+  - 'Rascunho integral Arena v03 foi regenerado em dez segmentos contíguos para montagem interna; ver AUDIO_INTERNAL_CHAPTER_DRAFT_MANIFEST_v03.csv e AUDIO_GENERATION_LOG_v03.md.'
+  - 'Mídia ignorada de lotes anteriores não estava disponível localmente em 2026-09-05. Preserve somente hashes/registro histórico; não use caminhos ausentes.'
   - 'Cinco candidatos Pexels estão registrados, mas nenhum foi baixado devido a falha TLS no host de vídeo.'
-  - 'O proprietário aprovou a direção visual cinematográfica/documental da v01 apenas para exploração e QA internos de novos assets; não é aprovação de publicação ou de termos.'
-  - 'Dezessete imagens IA foram registradas: doze candidatas e cinco rejeitadas após as revisões v01/v02. A cena 16 ainda requer uma cisterna seca candidata; ver ASSET_VISUAL_REVIEW_v02.md.'
-  - 'Nenhum render, thumbnail ou publicação existe neste momento.'
+  - 'A fonte primária de termos Arena revisada em 2026-09-05 impede classificar os outputs como comerciais ou publicáveis; ver docs/ARENA_TERMS_REVIEW_2026-09-05.md.'
+  - 'Vinte e sete imagens IA estão registradas: cinco rejeitadas, doze candidatas históricas sem binário local e dez candidatas atuais. A cisterna seca da cena 16 foi resolvida por AI-ASSET-0018; ver ASSET_VISUAL_REVIEW_v03.md.'
+  - 'A animática interna do capítulo 01 foi renderizada em 2026-09-05. Capítulos 02–04 aguardam sete substitutos; ver INTERNAL_CHAPTER_ASSEMBLY_v01.md.'
   - 'Aprovação de roteiro e aprovação de publicação são gates distintos.'
